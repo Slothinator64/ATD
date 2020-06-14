@@ -1,0 +1,102 @@
+political_decisions = {
+	begin_caucasian_war = {
+		picture = unite_caucasus
+		potential = {
+			tag = RUS
+			is_greater_power = yes
+			NOT = { has_country_flag = caucasian_war }
+			exists = TCA
+			exists = TUR
+			has_global_flag = caucasian_cb
+			NOT = { has_global_flag = caucasian_war }
+		}
+		
+		allow = {
+			war = no
+			NOT = { truce_with = TUR }
+			NOT = { is_sphere_leader_of = TUR }
+			NOT = {
+				is_disarmed = yes
+				war_exhaustion = 1
+				num_of_revolts = 1
+			}
+		}
+		
+		effect = {
+			set_global_flag = caucasian_war
+			ruling_party_ideology = reactionary
+			any_pop = {
+				limit = { has_pop_religion = orthodox }
+				militancy = -3
+				dominant_issue = {
+					factor = 0.20
+					value = jingoism
+				}
+			}
+			diplomatic_influence = { who = TUR value = -200 }
+			random_country = {
+				limit = {
+					tag = FRA
+					has_country_flag = protecting_ottoman_interests
+				}
+				diplomatic_influence = { who = TUR value = 100 }
+				create_alliance = TUR
+				leave_alliance = THIS
+			}
+			random_country = {
+				limit = {
+					tag = LIT
+					has_country_flag = protecting_ottoman_interests
+				}
+				diplomatic_influence = { who = TUR value = 100 }
+				create_alliance = TUR
+				leave_alliance = THIS
+			}
+			random_country = {
+				limit = {
+					tag = NOR
+					has_country_flag = protecting_ottoman_interests
+				}
+				diplomatic_influence = { who = TUR value = 100 }
+				create_alliance = TUR
+				leave_alliance = THIS
+			}
+			random_country = {
+				limit = {
+					is_sphere_leader_of = TUR
+					NOT = { tag = THIS }
+				}
+				leave_alliance = THIS
+			}
+			#Update CB
+			casus_belli = {
+				target = TCA
+				type = conquest
+				months = 12
+			}
+			war = {
+				target = TCA
+				attacker_goal = { casus_belli = conquest }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = yes
+			}
+			TUR = {
+				war = {               
+					attacker_goal = {
+						casus_belli = humiliate
+					}
+					call_ally = yes
+				}
+				badboy = -6
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				badboy = 0.8
+			}
+		}
+	}
+}

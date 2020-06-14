@@ -1,0 +1,138 @@
+political_decisions = {
+	
+	abandon_the_finnish = {
+		picture = old_finnish_map
+		potential = {
+			NOT = { tag = SCA }
+			accepted_culture = finnish
+			has_country_modifier = leader_of_kalmar
+		}
+		
+		allow = {
+			citizenship_policy = residency
+		}
+		
+		effect = {
+			remove_accepted_culture = finnish
+			any_pop = {
+				limit = { has_pop_culture = finnish }
+				militancy = 3
+				consciousness = 6
+			}
+		}
+		
+		ai_will_do = { factor = 1 	}
+	}
+	
+	claim_finland = {
+		picture = old_finnish_map
+		potential = {
+			tag = SCA
+			343 = { NOT = { is_core = THIS } }
+		}
+		
+		allow = {
+			OR = {
+				war_policy = jingoism
+				war_policy = pro_military
+			}
+		}
+		
+		effect = {
+			badboy = 4
+			FIN = { all_core = { add_core = SCA } }
+		}
+		
+		ai_will_do = { factor = 1 	}
+	}
+	
+	embrace_the_finns = {
+		picture = form_scandinavia
+		potential = {
+			tag = SCA
+			NOT = { accepted_culture = finnish }
+		}
+		
+		allow = {
+			citizens_rights = all_voting_pops
+			citizenship_policy = full_citizenship
+		}
+		
+		effect = {
+			add_accepted_culture = finnish	
+			any_pop = {
+				limit = { has_pop_culture = finnish }
+				militancy = -1
+				consciousness = -3
+			}
+			
+			any_pop = {
+				limit = {
+					OR = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+				}
+				consciousness = 1
+			}
+			
+			any_pop = {
+				limit = {
+					is_primary_culture = no
+					is_accepted_culture = no
+				}
+			consciousness = 3
+			}
+		}
+		
+		ai_will_do = { factor = 1 	}
+	}
+	
+	move_capital_to_gothenburg = {
+		picture = declare_republic_of_neuchatel
+		alert = no
+		potential = {
+			tag = SCA
+			owns = 329 # Gothenburg
+			NOT = { capital = 329 }
+			capital = 322
+		}	
+		
+		allow = {
+			NOT = { capital = 329 }
+		}
+		
+		effect = {
+			capital = 329
+			prestige = 5
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	name_oslo = {
+		picture = declare_republic_of_neuchatel
+		potential = {
+			is_culture_group = scandinavian
+			owns = 313
+			NOT = { has_global_flag = oslo_is_back }
+		}
+		
+		allow = {
+			war = no
+			is_vassal = no
+			OR = {
+				mass_politics = 1
+				year = 1925
+			}
+		}
+		
+		effect = {
+			set_global_flag = oslo_is_back
+			prestige = 2
+			313 = { change_province_name = "Oslo" }
+		}
+	}
+}

@@ -1,0 +1,52 @@
+political_decisions = {
+	sell_louisiana = {
+		picture = new_france_louisiana
+		potential = {
+			NOT = { has_country_flag = louisiana_purchase_started }
+			NOT = { has_global_flag = louisiana_purchase_completed }
+			tag = POR
+			year = 1840
+			NOT = { year = 1848 }
+			ULA = { all_core = { owned_by = THIS }}
+			is_greater_power = no
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			set_country_flag = louisiana_purchase_started
+			remove_accepted_culture = louisianan
+			prestige = 5
+			any_country = {
+				limit = {
+					NOT = { tag = POR }
+					OR = {
+						is_greater_power = yes
+						is_secondary_power = yes
+					}
+					any_owned_province = {
+						OR = {
+							region = TEX_132
+							region = USA_106
+							region = USA_196
+							region = USA_188
+							region = USA_185
+							region = USA_178
+							region = USA_116
+						}
+					}
+				}
+				set_country_flag = louisiana_purchase_interest
+			}
+			random_country = {
+				limit = { tag = MEX }
+				relation = { who = THIS value = 50 }
+			}
+		}
+		ai_will_do = {
+			factor = 0.1
+		}
+	}
+}

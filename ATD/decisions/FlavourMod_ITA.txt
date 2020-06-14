@@ -1,0 +1,38 @@
+political_decisions = {
+	prussian_italian_alliance = {
+		picture = form_italy
+		potential = {
+			OR = {
+				tag = PRU
+				tag = NGF
+			}
+			war_with = AUS
+			exists = AUS
+			exists = ITA
+			ITA = {
+				NOT = { truce_with = AUS }
+				owns = 726 #Milan
+			}
+			AUS = { 
+				owns = 729 #Venice
+			}
+			NOT = { has_country_flag = prussian_italian_alliance }
+		}
+		
+		allow = {
+			war = yes
+			ITA = { 
+				war = no
+			}
+		}
+		
+		effect = {
+			set_country_flag = prussian_italian_alliance
+			ITA = { country_event = 99813 set_country_flag = prussian_italian_alliance }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

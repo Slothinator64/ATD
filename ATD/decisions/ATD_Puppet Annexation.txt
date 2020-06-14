@@ -1,0 +1,478 @@
+political_decisions = {
+	french_puppets = {
+		potential = {
+			tag = FRA
+			OR = {
+				SWI = {
+					vassal_of = THIS
+				}
+				BAD = {
+					vassal_of = THIS
+				}
+				SVY = {
+					vassal_of = THIS
+				}
+				SAR = {
+					vassal_of = THIS
+				}
+				MFR = {
+					vassal_of = THIS
+				}
+			}
+			is_greater_power = yes
+			revolution_n_counterrevolution = 1
+		}
+		
+		allow = {
+			war = no
+			prestige = 50
+		}
+		
+		effect = {
+			prestige = 10
+			any_country = {
+				limit = {
+					vassal_of = THIS
+					OR = {
+						tag = SVY
+						tag = SAR
+					}
+					exists = yes
+					ai = yes
+				}
+				all_core = { add_core = FRA }
+				THIS = { inherit = SVY }
+				THIS = { inherit = SAR }
+				add_accepted_culture = north_italian
+			}
+			random_country = {
+				limit = {
+					vassal_of = THIS
+					OR = {
+						tag = SVY
+						tag = SAR
+					}
+					exists = yes
+					ai = no
+				}
+				all_core = { add_core = FRA }
+				add_accepted_culture = north_italian
+				country_event = 98650
+			}
+			random_country = {
+				limit = {
+					vassal_of = THIS
+					tag = MFR
+					exists = yes
+					ai = yes
+				}
+				all_core = { add_core = FRA }
+				THIS = { inherit = MFR }
+				add_accepted_culture = north_italian
+			}
+			random_country = {
+				limit = {
+					vassal_of = THIS
+					tag = MFR
+					exists = yes
+					ai = no
+				}
+				all_core = { add_core = FRA }
+				add_accepted_culture = north_italian
+				country_event = 98650
+			}
+			random_country = {
+				limit = {
+					vassal_of = THIS
+					tag = BAD
+					exists = yes
+					ai = yes
+				}
+				all_core = { add_core = FRA }
+				THIS = { inherit = BAD }
+				add_accepted_culture = south_german
+			}
+			random_country = {
+				limit = {
+					vassal_of = THIS
+					tag = BAD
+					exists = yes
+					ai = no
+				}
+				all_core = { add_core = FRA }
+				add_accepted_culture = south_german
+				country_event = 98650
+			}
+			random_country = {
+				limit = {
+					vassal_of = THIS
+					tag = SWI
+					exists = yes
+					ai = yes
+				}
+				all_core = { add_core = FRA }
+				THIS = { inherit = SWI }
+				add_accepted_culture = swiss_german
+				add_accepted_culture = swiss_french
+				add_accepted_culture = swiss_italian
+				add_accepted_culture = romansh
+			}
+			random_country = {
+				limit = {
+					vassal_of = THIS
+					tag = SWI
+					exists = yes
+					ai = no
+				}
+				all_core = { add_core = FRA }
+				add_accepted_culture = swiss_german
+				add_accepted_culture = swiss_french
+				add_accepted_culture = swiss_italian
+				add_accepted_culture = romansh
+				country_event = 98650
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ottoman_puppets = {
+		potential = {
+			tag = TUR
+			OR = {
+				CRI = {
+					vassal_of = THIS
+				}
+				TCA = {
+					vassal_of = THIS
+				}
+				TRI = {
+					vassal_of = THIS
+				}
+				EGY = {
+					vassal_of = THIS
+				}
+			}
+			is_greater_power = yes
+			revolution_n_counterrevolution = 1
+		}
+		
+		allow = {
+			war = no
+			prestige = 50
+		}
+		
+		effect = {
+			prestige = 10
+			any_country = {
+				limit = {
+					vassal_of = THIS
+					tag = CRI
+					exists = yes
+					ai = yes
+				}
+				all_core = { add_core = TUR }
+				THIS = { inherit = CRI }
+				add_accepted_culture = tatar
+			}
+			random_country = {
+				limit = {
+					vassal_of = THIS
+					tag = CRI
+					exists = yes
+					ai = no
+				}
+				all_core = { add_core = TUR }
+				add_accepted_culture = tatar
+				country_event = 98650
+			}
+			random_country = {
+				limit = {
+					vassal_of = THIS
+					tag = TCA
+					exists = yes
+					ai = yes
+				}
+				all_core = { add_core = TUR }
+				THIS = { inherit = TCA }
+				add_accepted_culture = georgian
+				add_accepted_culture = azerbaijani
+				add_accepted_culture = armenian
+			}
+			random_country = {
+				limit = {
+					vassal_of = THIS
+					tag = TCA
+					exists = yes
+					ai = no
+				}
+				all_core = { add_core = TUR }
+				add_accepted_culture = georgian
+				add_accepted_culture = azerbaijani
+				add_accepted_culture = armenian
+				country_event = 98650
+			}
+			random_country = {
+				limit = {
+					vassal_of = THIS
+					tag = TRI
+					exists = yes
+					ai = yes
+				}
+				all_core = { add_core = TUR }
+				THIS = { inherit = TRI }
+				add_accepted_culture = maghrebi
+				add_accepted_culture = berber
+				add_accepted_culture = bedouin
+				add_accepted_culture = tuareg
+			}
+			random_country = {
+				limit = {
+					vassal_of = THIS
+					tag = TRI
+					exists = yes
+					ai = no
+				}
+				all_core = { add_core = TUR }
+				add_accepted_culture = maghrebi
+				add_accepted_culture = berber
+				add_accepted_culture = bedouin
+				add_accepted_culture = tuareg
+				country_event = 98650
+			}
+			random_country = {
+				limit = {
+					vassal_of = THIS
+					tag = EGY
+					exists = yes
+					ai = yes
+				}
+				all_core = { add_core = TUR }
+				THIS = { inherit = EGY }
+				add_accepted_culture = misri
+				add_accepted_culture = mashriqi
+				add_accepted_culture = bedouin
+			}
+			random_country = {
+				limit = {
+					vassal_of = THIS
+					tag = EGY
+					exists = yes
+					ai = no
+				}
+				all_core = { add_core = TUR }
+				add_accepted_culture = misri
+				add_accepted_culture = mashriqi
+				add_accepted_culture = bedouin
+				country_event = 98650
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	lithuanian_puppets = {
+		potential = {
+			tag = LIT
+			HUN = {
+				vassal_of = THIS
+			}
+			is_greater_power = yes
+			revolution_n_counterrevolution = 1
+		}
+		
+		allow = {
+			war = no
+			prestige = 50
+		}
+		
+		effect = {
+			prestige = 10
+			any_country = {
+				limit = {
+					vassal_of = THIS
+					tag = HUN
+					exists = yes
+					ai = yes
+				}
+				all_core = { add_core = LIT }
+				THIS = { inherit = HUN }
+				add_accepted_culture = hungarian
+			}
+			random_country = {
+				limit = {
+					vassal_of = THIS
+					tag = HUN
+					exists = yes
+					ai = no
+				}
+				all_core = { add_core = LIT }
+				add_accepted_culture = hungarian
+				country_event = 98650
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	norwegian_puppets = {
+		potential = {
+			tag = NOR
+			OR = {
+				DEN = {
+					in_sphere = THIS
+				}
+				AND = {
+					SCN = {
+						in_sphere = THIS
+					}
+					JTL = {
+						in_sphere = THIS
+					}
+				}
+			}
+			is_greater_power = yes
+			revolution_n_counterrevolution = 1
+		}
+		
+		allow = {
+			war = no
+			prestige = 50
+		}
+		
+		effect = {
+			prestige = 10
+			any_country = {
+				limit = {
+					in_sphere = THIS
+					tag = DEN
+					exists = yes
+					ai = yes
+				}
+				THIS = { inherit = DEN }
+				add_accepted_culture = danish
+			}
+			random_country = {
+				limit = {
+					in_sphere = THIS
+					tag = DEN
+					exists = yes
+					ai = no
+				}
+				add_accepted_culture = danish
+				country_event = 98650
+			}
+			any_country = {
+				limit = {
+					in_sphere = THIS
+					tag = SCN
+					exists = yes
+					ai = yes
+				}
+				THIS = { inherit = SCN }
+				add_accepted_culture = danish
+			}
+			random_country = {
+				limit = {
+					in_sphere = THIS
+					tag = SCN
+					exists = yes
+					ai = no
+				}
+				add_accepted_culture = danish
+				country_event = 98650
+			}
+			any_country = {
+				limit = {
+					in_sphere = THIS
+					tag = JTL
+					exists = yes
+					ai = yes
+				}
+				THIS = { inherit = JTL }
+				add_accepted_culture = danish
+			}
+			random_country = {
+				limit = {
+					in_sphere = THIS
+					tag = JTL
+					exists = yes
+					ai = no
+				}
+				all_core = { add_core = NOR }
+				add_accepted_culture = danish
+				country_event = 98650
+			}
+			any_owned = {
+				remove_core = NOR
+				remove_core = SWE
+				remove_core = DEN
+				remove_core = SCN
+				remove_core = JTL
+				add_core = SCA
+			}
+			change_tag = SCA
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	bohemian_puppets = {
+		potential = {
+			tag = BOH
+			OR = {
+				SLS = {
+					vassal_of = THIS
+				}
+			}
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			nationalism_n_imperialism = 1
+		}
+		
+		allow = {
+			war = no
+			prestige = 25
+		}
+		
+		effect = {
+			prestige = 5
+			any_country = {
+				limit = {
+					vassal_of = THIS
+					tag = SLS
+					exists = yes
+					ai = yes
+				}
+				all_core = { add_core = BOH }
+				THIS = { inherit = SLS }
+				add_accepted_culture = polish
+				add_accepted_culture = north_german
+				add_accepted_culture = south_german
+			}
+			random_country = {
+				limit = {
+					vassal_of = THIS
+					tag = SLS
+					exists = yes
+					ai = no
+				}
+				all_core = { add_core = BOH }
+				add_accepted_culture = polish
+				add_accepted_culture = north_german
+				add_accepted_culture = south_german
+				country_event = 98650
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

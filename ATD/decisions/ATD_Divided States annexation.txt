@@ -1,0 +1,61 @@
+political_decisions = {
+	annex_american_minors = {
+		picture = form_USCA
+		potential = {
+			NOT = { has_country_flag = statehood_we_have_applied }
+			OR = {
+				AND = {
+					has_country_flag = constitutional_convention
+					NOT = { has_country_flag = new_constitution }
+				}
+				NOT = {
+					tag = USA
+					tag = ULA
+				}
+			}
+			ai = yes
+			OR = {
+				tag = CAL
+				tag = CNO
+				tag = CSO
+				tag = USA
+				tag = CSA
+				tag = FSA
+				tag = UFL
+				tag = NEN
+				tag = ULA
+				tag = UNB
+				tag = DES
+				tag = GLK
+				tag = UIL
+			}
+		}
+		
+		allow = {
+			sphere_owner = { 
+				is_greater_power = yes
+				neighbour = THIS
+				war = no
+				NOT = { average_militancy = 5 badboy = 0.7 }
+				NOT = { any_owned_province = { any_core = { any_owned_province = { country_units_in_province = REB } } } }
+				NOT = { num_of_revolts = 1 }
+				NOT = { truce_with = THIS }
+				OR = {
+					capital_scope = { continent = north_america }
+					capital_scope = { continent = south_america }
+				}
+			}
+			is_secondary_power = no
+			war = no
+		}
+		
+		effect = {
+			set_country_flag = statehood_we_have_applied
+			sphere_owner = { 
+				war_exhaustion = -5
+				country_event = 894010
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+}

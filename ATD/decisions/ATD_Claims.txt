@@ -1,0 +1,219 @@
+political_decisions = {
+	claim_karelia = {
+		picture = concede_finland
+		potential = {
+			tag = RUS
+			NOT = { has_country_flag = claimed_karelia }
+			nationalism_n_imperialism = 1
+		}
+
+		allow = {
+			war = no
+			is_greater_power = yes
+			war_policy = jingoism
+		}
+
+		effect = {
+			set_country_flag = claimed_karelia
+			badboy = 5
+			982 = { add_core = RUS }
+			983 = { add_core = RUS }
+			984 = { add_core = RUS }
+			2587 = { add_core = RUS }
+			NOR = {
+				leave_alliance = THIS
+				relation = {
+					who = THIS
+					value = -100
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	claim_hungary = {
+		potential = {
+			tag = AUS
+			NOT = { has_country_flag = claimed_hungary }
+			nationalism_n_imperialism = 1
+		}
+
+		allow = {
+			war = no
+			is_greater_power = yes
+			war_policy = jingoism
+		}
+
+		effect = {
+			badboy = 15
+			set_country_flag = claimed_hungary
+			AUS_633 = { add_core = AUS }
+			AUS_641 = { add_core = AUS }
+			AUS_652 = { add_core = AUS }
+			AUS_654 = { add_core = AUS }
+			AUS_657 = { add_core = AUS }
+			665 = { add_core = AUS }
+			667 = { add_core = AUS }
+			668 = { add_core = AUS }
+			669 = { add_core = AUS }
+			689 = { add_core = AUS }
+			792 = { add_core = AUS }
+			2538 = { add_core = AUS }
+			2584 = { add_core = AUS }
+			LIT = {
+				leave_alliance = THIS
+				relation = {
+					who = THIS
+					value = -100
+				}
+			}
+			HUN = {
+				leave_alliance = THIS
+				relation = {
+					who = THIS
+					value = -100
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	claim_eastern_poland = {
+		picture = become_poland
+		potential = {
+			tag = POL
+			NOT = { has_country_flag = claimed_eastern_poland }
+		}
+		allow = {
+			nationalism_n_imperialism = 1
+			war_policy = jingoism
+			war = no
+			is_vassal = no
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+		}
+		effect = {
+			set_country_flag = claimed_eastern_poland
+			badboy = 15
+			684 = { add_core = POL }
+			685 = { add_core = POL }
+			689 = { add_core = POL }
+			696 = { add_core = POL }
+			702 = { add_core = POL }
+			704 = { add_core = POL }
+			705 = { add_core = POL }
+			RUS_707 = { add_core = POL }
+			709 = { add_core = POL }
+			711 = { add_core = POL }
+			714 = { add_core = POL }
+			715 = { add_core = POL }
+			951 = { add_core = POL }
+			953 = { add_core = POL }
+			2584 = { add_core = POL }
+		}
+		ai_will_do = {
+			factor = 1 
+			modifier = { factor = 0 badboy = 0.5 }
+		}
+	}
+	claim_central_australia = {
+		potential = {
+			tag = AST
+			year = 1900
+			NOT = { owns = 2601 }
+		}
+
+		allow = {
+			war = no
+		}
+
+		effect = {
+			2473 = { add_core = AST secede_province = AST }
+			2474 = { add_core = AST secede_province = AST }
+			2475 = { add_core = AST secede_province = AST }
+			2489 = { add_core = AST secede_province = AST }
+			2490 = { add_core = AST secede_province = AST }
+			2495 = { add_core = AST secede_province = AST }
+			2500 = { add_core = AST secede_province = AST }
+			2503 = { add_core = AST secede_province = AST }
+			2507 = { add_core = AST secede_province = AST }
+			2601 = { add_core = AST secede_province = AST }
+			2603 = { add_core = AST secede_province = AST }
+			2605 = { add_core = AST secede_province = AST }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	claim_northern_canada = {
+		potential = {
+			tag = CAN
+			year = 1900
+			NOT = { owns = 59 }
+		}
+
+		allow = {
+			war = no
+		}
+
+		effect = {
+			ENG_9 = { add_core = CAN secede_province = CAN }
+			CAN_13 = { add_core = CAN secede_province = CAN }
+			ENG_22 = { add_core = CAN secede_province = CAN }
+			ENG_30 = { add_core = CAN secede_province = CAN }
+			ENG_36 = { add_core = CAN secede_province = CAN }
+			CAN_60 = { add_core = CAN secede_province = CAN }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	claim_inner_lybia = {
+		potential = {
+			year = 1900
+			owns = 1740
+			NOT = { owns = 1742 }
+		}
+
+		allow = {
+			war = no
+		}
+
+		effect = {
+			1742 = { secede_province = THIS }
+			2585 = { secede_province = THIS }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	claim_northern_alaska = {
+		potential = {
+			tag = LSK
+			year = 1900
+			NOT = { owns = 2599 }
+		}
+
+		allow = {
+			war = no
+		}
+
+		effect = {
+			2599 = { add_core = LSK secede_province = LSK }
+			2630 = { add_core = LSK secede_province = LSK }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,55 @@
+political_decisions = {
+	join_california = {
+		picture = USA_annex_california
+		potential = {
+			OR = {
+				tag = CNO
+				tag = CSO
+			}
+			NOT = { exists = CAL }
+		}
+	
+		allow = {
+			war = no
+			ai = no
+			OR = {
+				is_sphere_leader_of = CNO
+				CNO = { all_core = { owned_by = THIS } }
+			}
+			OR = {
+				is_sphere_leader_of = CSO
+				CSO = { all_core = { owned_by = THIS } }
+			}
+		}
+	
+		effect = {
+			prestige = 10
+			add_accepted_culture = anglo_californian
+			add_accepted_culture = french_californian
+			random_country = {
+				limit = {
+					tag = CNO
+					exists = yes
+				}
+				THIS = { inherit = CNO }
+			}
+			random_country = {
+				limit = {
+					tag = CSO
+					exists = yes
+				}
+				THIS = { inherit = CSO }
+			}
+			any_owned = {
+				remove_core = CSO
+				remove_core = CNO
+				add_core = CAL
+			}
+			change_tag = CAL
+			capital = 104
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

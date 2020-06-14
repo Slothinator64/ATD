@@ -1,0 +1,338 @@
+political_decisions = {	
+	the_grunderzeit = {
+		potential = {
+			capital = 619
+			NOT = {
+				has_country_flag = grunderzeit_we_have_done
+			}
+		}
+		allow = {
+			iron_railroad = 1
+			puddling = 1
+		}
+		effect = {
+			619 = {
+				any_pop = {
+					ideology = {
+						value = liberal
+						factor = 0.1
+					}
+				}
+				life_rating = 5
+			}
+			prestige = 25
+			set_country_flag = grunderzeit_we_have_done
+		}
+	}
+
+	release_galicia = {
+		potential = {
+			OR = {
+				tag = AUS
+				tag = KUK
+			}
+			owns = 702
+			ai = yes
+			NOT = {
+				exists = GLM
+				has_country_flag = released_galicia
+			}
+		}
+		
+		allow = {
+			OR = {
+				NOT = { owns = 631 }
+				NOT = { owns = 2584 }
+			}
+			NOT = { owns = 637 }
+			NOT = { owns = 661 }
+		}
+		
+		effect = {
+			set_country_flag = released_galicia
+			prestige = 10
+			any_owned = {
+				limit = { is_core = GLM }
+				secede_province = GLM
+			}
+			create_vassal = GLM
+			create_alliance = GLM
+			diplomatic_influence = { who = GLM value = 200 }
+			relation = { who = GLM value = 200 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	release_silesia = {
+		potential = {
+			OR = {
+				tag = AUS
+				tag = KUK
+			}
+			owns = 2584
+			ai = yes
+			NOT = {
+				exists = SLS
+				has_country_flag = released_silesia
+			}
+		}
+		
+		allow = {
+			NOT = { owns = 632 }
+			NOT = { owns = 685 }
+			NOT = { owns = 714 }
+			NOT = { owns = 634 }
+		}
+		
+		effect = {
+			set_country_flag = released_silesia
+			prestige = 5
+			any_owned = {
+				limit = { is_core = SLS }
+				secede_province = SLS
+			}
+			create_vassal = SLS
+			create_alliance = SLS
+			diplomatic_influence = { who = SLS value = 200 }
+			relation = { who = SLS value = 200 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	release_dalmatia = {
+		potential = {
+			OR = {
+				tag = AUS
+				tag = KUK
+			}
+			owns = 781
+			ai = yes
+			NOT = {
+				exists = DLM
+				has_country_flag = released_dalmatia
+			}
+		}
+		
+		allow = {
+			NOT = { owns = 774 } #Senj
+			NOT = { owns = 784 } #Bihac
+			NOT = { owns = 800 } #Ulcinj
+		}
+		
+		effect = {
+			set_country_flag = released_dalmatia
+			prestige = 5
+			any_owned = {
+				limit = { is_core = DLM }
+				secede_province = DLM
+			}
+			create_vassal = DLM
+			create_alliance = DLM
+			diplomatic_influence = { who = DLM value = 200 }
+			relation = { who = DLM value = 200 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	embrace_slovene_minority = {
+		picture = embrace_minority
+		potential = {
+			OR = {
+				tag = KUK
+				tag = DNB
+			}
+			any_owned_province = { is_core = SLO }
+			NOT = {
+				accepted_culture = slovene
+				has_country_flag = embraced_slovenes
+				has_country_flag = danube_proposal_in_progress
+			}
+			OR = {
+				accepted_culture = croat
+				NOT = { any_owned_province = { is_core = CRO } }
+			}
+		}
+		allow = {
+			year = 1875
+			prestige = 50
+			revolution_n_counterrevolution = 1
+			psychoanalysis = 1
+			social_science = 1
+		}
+		effect = {
+			set_country_flag = embraced_slovenes
+			add_accepted_culture = slovene
+			prestige = -25
+			any_pop = {
+				limit = {
+					OR = {
+						has_pop_culture = hungarian
+						has_pop_culture = czech
+						has_pop_culture = croat
+					}
+				}
+				militancy = 4
+				consciousness = 4
+			}
+			any_pop = {
+				limit = { has_pop_culture = slovene }
+				militancy = -4
+				consciousness = -4
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	embrace_croat_minority = {
+		picture = embrace_minority
+		potential = {
+			OR = {
+				tag = KUK
+				tag = DNB
+			}
+			any_owned_province = { is_core = CRO }
+			NOT = {
+				accepted_culture = croat
+				has_country_flag = embraced_croats
+				has_country_flag = danube_proposal_in_progress
+			}
+			OR = {
+				accepted_culture = czech
+				NOT = { any_owned_province = { is_core = BOH } }
+			}
+		}
+		allow = {
+			year = 1870
+			prestige = 50
+			revolution_n_counterrevolution = 1
+			psychoanalysis = 1
+		}
+		effect = {
+			set_country_flag = embraced_croats
+			add_accepted_culture = croat
+			prestige = -25
+			any_pop = {
+				limit = {
+					OR = {
+						has_pop_culture = hungarian
+						has_pop_culture = czech
+					}
+				}
+				militancy = 4
+				consciousness = 4
+			}
+			any_pop = {
+				limit = { has_pop_culture = croat }
+				militancy = -4
+				consciousness = -4
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	embrace_polish_minority = {
+		picture = embrace_minority
+		potential = {
+			OR = {
+				tag = KUK
+				tag = DNB
+			}
+			NOT = {
+				accepted_culture = polish
+				has_country_flag = embraced_poles
+				has_country_flag = danube_proposal_in_progress
+			}
+			OR = {
+				accepted_culture = slovene
+				NOT = { any_owned_province = { is_core = SLO } }
+			}
+					
+		}
+		allow = {
+			year = 1900
+			prestige = 50
+			mass_politics = 1
+			behaviorism = 1
+			social_alienation = 1
+		}
+		effect = {
+			set_country_flag = embraced_poles
+			add_accepted_culture = polish
+			prestige = -25
+			any_pop = {
+				limit = {
+					OR = {
+						has_pop_culture = hungarian
+						has_pop_culture = czech
+						has_pop_culture = croat
+						has_pop_culture = slovene
+					}
+				}	
+				militancy = 4
+				consciousness = 4
+			}
+			any_pop = {
+				limit = { has_pop_culture = polish }
+				militancy = -4
+				consciousness = -4
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	budapest_united = {
+		picture = budapest_city
+		potential = {
+			OR = {
+				tag = KUK
+				tag = AUS
+				tag = DNB
+				tag = HUN
+				tag = GCF
+				tag = GER
+			}
+			owns = 641
+			NOT = { has_global_flag = budapest_founded }
+		}
+		
+		allow = {
+			revolution_n_counterrevolution = 1
+			money = 25000
+		}
+		
+		effect = {
+			treasury = -20000
+			set_global_flag = budapest_founded
+			random_owned = {
+				limit = { owner = { accepted_culture = hungarian } }
+				641 = { change_province_name = "Budapest" }
+			}
+			random_owned = {
+				limit = { owner = { NOT = { accepted_culture = hungarian } } }
+				641 = { change_province_name = "Ofenpesth" }
+			}
+			641 = { 
+				life_rating = 5
+				add_province_modifier = { name = recently_built_city duration = 1825 }
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+}
+

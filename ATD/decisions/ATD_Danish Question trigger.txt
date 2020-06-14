@@ -1,0 +1,76 @@
+political_decisions = {
+	danish_question = {
+		picture = sound_dues
+		potential = {
+			is_greater_power = yes
+			capital_scope = { continent = europe }
+			OR = {
+				is_sphere_leader_of = JTL
+				is_sphere_leader_of = SCN
+				tag = JTL
+				tag = SCN
+			}
+			NOT = { has_global_flag = danish_convention_called }
+		}
+
+		allow = {
+			war = no
+			OR = {
+				AND = {
+					ai = yes
+					year = 1845
+				}
+				prestige = 70
+			}
+		}
+
+		effect = {
+			set_global_flag = danish_convention_called
+			JTL = {
+				set_variable = { which = jutland_support value = 0 }
+			}
+			SCN = {
+				set_variable = { which = scania_support value = 0 }
+			}
+			any_country = {
+				limit = {
+					is_greater_power = yes
+					capital_scope = { continent = europe }
+					NOT = { tag = TUR }
+				}
+			}
+			country_event = 890000
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	form_denmark = {
+		picture = sound_dues
+		potential = {
+			OR = {
+				tag = JTL
+				tag = SCN
+			}
+			has_global_flag = danish_convention_called
+		}
+
+		allow = {
+			SCN = { all_core = { owned_by = THIS }}
+			JTL = { all_core = { owned_by = THIS }}
+			war = no
+		}
+
+		effect = {
+			SCN = { all_core = { remove_core = SCN }}
+			JTL = { all_core = { remove_core = JTL }}
+			change_tag = DEN
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,141 @@
+political_decisions = {
+
+	become_poland = {
+
+		potential = {
+			primary_culture = polish
+			NOT = { exists = POL }
+			NOT = { has_country_flag = post_colonial_country }
+			NOT = { tag = PLC }
+		}
+
+		allow = {
+			OR = {
+				prestige = 45
+				is_secondary_power = yes
+				AND = {
+					tag = CPL
+					exists = KRA KRA = { is_vassal = no }
+					exists = PZN PZN = { is_vassal = no }
+					exists = PML PML = { is_vassal = no }
+				}
+				AND = { 
+					tag = CPL 
+					year = 1900
+				}
+			}
+			war = no
+			is_vassal = no
+			owns = 706
+		}
+
+		effect = {
+			prestige = 20
+			random_owned = { 
+				limit = { owner = { accepted_culture = south_german } } owner = { remove_accepted_culture = south_german }
+			}
+			random_owned = { 
+				limit = { owner = { accepted_culture = north_german } } owner = { remove_accepted_culture = north_german }
+			}
+			random_owned = { 
+				limit = { owner = { accepted_culture = czech } } owner = { remove_accepted_culture = czech }
+			}
+			all_core = { remove_core = CPL remove_core = THIS }
+			change_tag = POL
+			capital = 706
+			
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	galicia_annex_krakow = {
+		picture = unite_with_poland
+		potential = {
+			tag = KRA
+			exists = GLM
+			NOT = { has_country_flag = galicia_annex_krakow }
+		}
+
+		allow = {
+			war = no
+			OR = {
+				part_of_sphere = no
+				sphere_owner = { is_sphere_leader_of = GLM }
+			}
+			GLM = {
+				war = no
+				neighbour = THIS
+			}
+		}
+
+		effect = {
+			set_country_flag = galicia_annex_krakow
+			all_core = { remove_core = THIS }
+			random_country = {
+				limit = {
+					tag = GLM
+					ai = yes
+					THIS = { ai = yes }
+				}
+				inherit = THIS
+			}
+			random_country = {
+				limit = {
+					tag = GLM
+					ai = yes
+					THIS = { ai = no }
+				}
+				any_owned = { secede_province = THIS }
+				THIS = {
+					random_owned = {
+						limit = { province_id = 702 }
+						owner = { capital = 702 }
+					}
+					change_tag = GLM
+				}	
+			}
+			random_country = {
+				limit = {
+					tag = GLM
+					ai = no
+				}
+				country_event = 60130
+			}
+			703 = { add_core = GLM }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}	
+	}
+
+	krakow_form_galicia = {
+		picture = become_poland
+		potential = {
+			tag = KRA
+			is_subject = no
+			not = { exists = GLM }
+		}
+
+		allow = {
+			war = no
+			owns = 702 # Lvow
+			owns = 704 # Novy Sacz
+			owns = 705 # Przemsyl
+			owns = 714 # Tarnow
+			owns = 951 # Styri
+			owns = 952 # Ternopil
+			owns = 953 # Stanislavov
+		}
+
+		effect = {
+			prestige = 10
+			all_core = { remove_core = THIS }
+			change_tag = GLM
+			capital = 702
+		}
+	}
+}
