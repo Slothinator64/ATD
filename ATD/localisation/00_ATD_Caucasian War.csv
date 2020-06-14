@@ -1,0 +1,13 @@
+;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;x;;;;
+EVTNAME893001;The Caucasian Crisis;;;;;;;;;;;;;
+EVTDESC893001;A recent bloody attack on the Orthodox community in Transcaucasia has outraged the Russian people. Our requests to send in soldiers to make sure members of our faith are not importuned have been ignored by the Ottoman authorities. This would be a valid pretext for war if we strike quickly...;;;;;;;;;;;;;;;;;;;;;
+EVT893001OPTA;Our honor cries for vengeance;;;;;;;;;;;;;;;
+EVTDESC893002;A minor incident with some of the Orthodox inhabitants of Transcaucasia has infuriated our Russian neighbors and they now threaten war. While the international community would decry such an attack, we should be prepared for a conflict.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+EVT893002OPTA;Surely they would not be so foolish?;;;;;;;;;;;;;;;
+EVTDESC893003;Due to a massacre of Orthodox people in Transcaucasia, now Russia is on the verge of war with the Ottomans. If the Russians were to take Transcaucasia that would certainly upset the balance of powers in Europe. Should we help defend the Ottomans?;;;;;;;;;;;;;;;;;;;;;;;;;;;
+EVT893003OPTA;Russia must stay within her borders;;;;;;;;;;;;;;;;
+EVT893003OPTB;This does not concern us;;;;;;;;;;;;;;;
+EVTDESC893004;The recent crisis in the Caucasus has fizzled out without violence and our people have moved on to outrage at the most recent court fashion.;;;;;;;;;;;;;;;;;;;;
+EVT893004OPTA;Who thought that hat was a good idea!?;;;;;;;;;;;;;;;;;;;;;;
+begin_caucasian_war_title;Claim the Caucasus;;;;;;;;;;;;;;;;;;;;;
+begin_caucasian_war_desc;The recent attack on the Orthodox people of Transcaucasia gives us a clear justification in taking all of the Caucasus for ourselves.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

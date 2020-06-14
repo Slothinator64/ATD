@@ -1,0 +1,39 @@
+;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;x;;;;
+EVTNAME897000;The Sick Man of Europe;;;;;;;;;;;;; 
+EVTDESC897000;The recent war has broken our great nation and now there are serious fears that $COUNTRY$ will not survive the decade. Several political figures in our country have suggested that we seek international arbitration to give us protection from future wars.;;;;;;;;;;;;
+EVT897000OPTA;We will ask one of the Great Powers to help us;;;;;;;;;;;
+EVT897000OPTB;We will not risk another humilation;;;;;;;;;;;
+EVTNAME897001;The Congress of $CAPITAL$;;;;;;;;;;;;;;;;;;;;;
+EVTDESC897001;The recent war against $FROMCOUNTRY$ has cast serious doubts on their ability to survive the decade, bringing great instability to the region. We have set ourselves as arbiters and called a congress in $CAPITAL$ where we will confer with the other Great Powers to decide the fate of $FROMCOUNTRY$.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,
+EVT897001OPTA;Keep $FROMCOUNTRY$ strong;;;;;;;;;;;;;;;;;;;;;
+EVT897001OPTB;Partition $FROMCOUNTRY$;;;;;;;;;;;;;;;;;;;;;
+EVTDESC897022;The Government of $FROMCOUNTRY$ has accepted to discuss our condition with the other Great Powers. We must now wait and see what their decision shall be.;;;;;;;;;;;;;;;
+EVT897022OPTA;I am sure they will understand our position;;;;;;;;;;;;;;;;;;;;;;;;;;;
+EVTDESC897002;we have been called to a congress to decide the fate of $FROMCOUNTRY$ after their latest disastrous war. If they collapsed naturally we would see decades of instability in the region so we are left with a difficult decision:;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+EVTNAME897004;The Congress Rules against us;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+EVTDESC897004;The recent international congress has decided for the partition of our European possessions in the hopes of accelerating our demise.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+EVTNAME897004_NEWS_TITLE;$COUNTRY$ Partitioned;;;;;;;;;;;;;;;;;
+EVTDESC897004_NEWS_LONG;The recent international congress has decided for the partition of $COUNTRY_ADJ$ Europe in the hopes of stabilizing the region and avoiding future conflict. We are confident that peace will triumph.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+EVTDESC897004_NEWS_MEDIUM;The recent international congress has partitioned $COUNTRY_ADJ$ Europe in the hopes of stabilizing the region and avoiding future conflict.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+EVTDESC897004_NEWS_SHORT;An international congress has partitioned $COUNTRY_ADJ$ Europe in the hopes of stabilizing the region.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+EVT897004OPTA;We will rise again!;;;;;;;;;;;;;;;;;;;;;;;;
+EVTNAME897003;The Congress Rules in our favor;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+EVTDESC897003;The recent international congress has decided to aid our internal situation by determining new administrative divisions in our European territories and acting as guarantors of our independence.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+EVTNAME897003_NEWS_TITLE;$COUNTRY$ Supported;;;;;;;;;;;;;;;;;
+EVTDESC897003_NEWS_LONG;The recent international congress has decided to prop up $COUNTRY$ in the hopes of stabilizing the region and avoiding future conflict. New semi-independent nations have been formed under the protection of the premier Great Powers as a buffer for the weakened $COUNTRY$.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+EVTDESC897003_NEWS_MEDIUM;The recent international congress has propped up $COUNTRY$ in the hopes of stabilizing the region and avoiding future conflict.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+EVTDESC897003_NEWS_SHORT;An international congress has propped up $COUNTRY$ in the hopes of stabilizing the region.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+EVT897003OPTA;We thank the participants to the congress;;;;;;;;;;;;;;;;;
+EVTDESC897005;The recent international congress has decided to prop up $COUNTRY$ in the hopes of stabilizing the region and avoiding future conflict. New semi-independent nations have been formed under the protection of the premier Great Powers as a buffer for the weakened $COUNTRY$.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+EVT897005OPTA;We will see how long this lasts;;;;;;;;;;;;;;;;;;;;;
+EVTDESC897006;The recent international congress has decided for the partition of $COUNTRY_ADJ$ Europe in the hopes of stabilizing the region and avoiding future conflict.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+EVTNAME897007;$COUNTRY$ Granted Autonomy;;;;;;;;;;;;x
+EVTDESC897007;Partial freedom!;;;;;;;;;;;;x
+EVTNAME897008;$COUNTRY$ Granted Independence;;;;;;;;;;;;x
+EVTDESC897008;Freedom!;;;;;;;;;;;;x
+EVTNAME897009;The Breakup of $FROMCOUNTRY$;La Dissolution de $FROMCOUNTRY$;Das Auseinanderbrechen von $FROMCOUNTRY$;;;;;;;;;;;x,,,,
+EVTDESC897009;$FROMCOUNTRY$ has been sidelined in an international congress and now treaty talks have begun to discuss the breakup of their empire. As an enemy of $FROMCOUNTRY$, any $COUNTRY_ADJ$ lands currently in $FROMCOUNTRY_ADJ$ possession will be returned to us.;;;;;;;;;;;;;x,
+EVTOPTA897009;We simply wish our lands back;Nous voulons nos terres;Wir w�nschen unsere L�nder;;;;;;;;;;;x
+EVTNAME897010;$COUNTRY_ADJ$ Freedom;Libert� $COUNTRY_ADJ$;$COUNTRY_ADJ$ Freiheit;;;;;;;;;;;x
+EVTDESC897010;The defeat of $FROMCOUNTRY$ in their war and subsequent congress has forced them to release us from their direct rule.;;;;;;;;;;;;;x
+EVTOPTA897010;$COUNTRY$ shall be free;$COUNTRY$ sera libre;$COUNTRY$ ist frei;;;;;;;;;;;x

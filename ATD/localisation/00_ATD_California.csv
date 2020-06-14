@@ -1,0 +1,13 @@
+;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;x;;;;
+EVTDESC895000;Our new province of $PROVINCENAME$ has been added to the local colonial administration.;;;;;;;;;;;;
+EVT895000OPTA;Good;;;;;;;;;;;;;;;;;;;;;;;;;;
+EVTNAME895002;California Demands Self Rule;;;;;;;;;;;;;;;;
+EVTDESC895002;The people of California have asked, or rather demanded, that we give them self rule. If their demands will not be met, they are threatening war and the intervention of other American powers.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+EVT895002OPTA;We do not negotiate with rebels;;;;;;;;;;;;;;;;;;;;;
+EVT895002OPTB;They can have their self rule;;;;;;;;;;;;;;;;;;;;;;;;
+EVTDESC895004;The people of California have rebelled against their colonial masters and are asking for our aid. Should we assist them in their fight for freedom?;;;;;;;;;;;;;;;;;;;;;;;;
+EVT895004OPTA;Kick the Europeans out of the Americas;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+EVT895004OPTB;We will give them financial support;;;;;;;;;;;;;;;;;;;;
+EVT895004OPTC;That's none of our business;;;;;;;;;;;;;;;;;
+join_california_title;Form a United California;;;;;;;;;;;;;;;;;;;;;;;;
+join_california_desc;With our position dominant position among the Californias, we can finally join our two nations into a stronger whole;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

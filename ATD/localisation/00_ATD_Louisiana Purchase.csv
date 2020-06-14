@@ -1,0 +1,22 @@
+;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;x;;;;
+sell_louisiana_title;Sell Luisiana;;;;;;;;;;;;;
+sell_louisiana_desc;The colony of Luisiana is vast and filled with potential but, with our Northern provinces occupied by Spain, it might serve better as a bargaining chip. We can send out emissaries to search for someone to buy this land and potentially help us secure our independence.;;;;;;;;;;;;;;;;;
+EVTNAME891000;The Luisiana Purchase;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
+EVTDESC891000;We hear word from the Portuguese ambassador that they are willing to sell their Luisianan colony to us, for the right price. Perhaps we should consider making an offer before someone else snaps it up? The land isn't worth much at the moment, but owning Luisiana would be a boon to our prestige.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,
+EVT891000OPTA;Make the offer.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,
+EVT891000OPTB;We don't need it.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,
+EVTDESC891001;We have received an offer from $FROMCOUNTRY$ to purchase the Luisianan colony. Should we accept?;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
+EVT891001OPTA;Sell it.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
+EVT891001OPTB;Refuse, but find another buyer.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
+EVTNAME891002;Portugal Agrees;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
+EVTDESC891002;Portugal has agreed to the sale. Luisiana is ours!;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
+EVT891002OPTA;We welcome this new addition.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
+EVTNAME891002_NEWS_TITLE;Portugal sells Luisiana;;;;;;;;;;;;
+EVTDESC891002_NEWS_LONG;Portugal has agreed to sell its colony of Luisiana to $COUNTRY$. This will surely have great influence on the future of the Americas.;;;;;;;;;;;;;
+EVTDESC891002_NEWS_MEDIUM;Portugal has agreed to sell its colony of Luisiana to $COUNTRY$. This will surely have great influence on the future of the Americas.;;;;;;;;;;;;;
+EVTDESC891002_NEWS_SHORT;Portugal has agreed to sell its colony of Luisiana to $COUNTRY$. This will surely have great influence on the future of the Americas.;;;;;;;;;;;;;
+EVTNAME891003;Portugal Refuses;;;;;;;;;;;
+EVTDESC891003;Portugal has refused our generous offer for their territory of Luisiana.;;;;;;;;;;;;;;;;
+EVT891003OPTA;They can keep their barren lands;;;;;;;;;;;;;
+EVTDESC891004;Our new province of $PROVINCENAME$ has been added to the Portuguese colonial administration.;;;;;;;;;;;;
+EVT891004OPTA;Good;;;;;;;;;;;;;;;;;;;;;;;;;;

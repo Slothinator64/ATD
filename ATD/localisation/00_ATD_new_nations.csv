@@ -1,0 +1,124 @@
+;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;x;;;;
+;;;;;;x;;;;
+MFR;Monferrato;Monferrato;Monferrato;;Monferrato;;;;;;;;;;;;x
+MFR_ADJ;Monferrine;Monferrine;Monferrine;Monferrine;;Monferrine;;;;;;;;;;;x
+MFR_reactionary;Restaurazionisti;Restaurazionisti;Restaurazionisti;;Restaurazionisti;;;;;;;;;x
+MFR_conservative;Moderati;Moderati;Moderati;;Moderati;;;;;;;;;x
+MFR_liberal;Riformisti;Riformisti;Riformisti;;Riformisti;;;;;;;;;x
+MFR_liberal_2;Liberali;Liberali;Liberali;;Liberali;;;;;;;;;x
+MFR_socialist;Socialisti;Socialisti;Socialisti;;Socialisti;;;;;;;;; x
+MFR_conservative_2;Popolari;Popolari;Popolari;;Popolari;;;;;;;;;x
+MFR_anarcho_liberal;Radicali;Radicali;Radicali;;Radicali;;;;;;;;;x
+MFR_communist;Comunisti;Comunisti;Comunisti;;Comunisti;;;;;;;;;x
+MFR_fascist;Fascisti;Fascisti;Fascisti;;Fascisti;;;;;;;;;x
+RAV;Ravensburg;Ravensburg;Ravensburg;Ravensburg;;Ravensburg;;;;;;;;;;;x
+RAV_ADJ;Ravesnburger;Ravesnburger;Ravesnburger;Ravesnburger;;Ravesnburger;;;;;;;;;;;x
+RAV_liberal;Liberaldem. Partei;Liberaldem. Partei;Liberaldem. Partei;;;;;;;;;;;;x;;;;;;;;;;;;;;
+RAV_conservative;Zentrumspartei;Zentrumspartei;Zentrumspartei;;;;;;;;;;;;x;;;;;;;;;;;;;;
+RAV_liberal_2;Nationalliberale ;Nationalliberale ;Nationalliberale ;;;;;;;;;;;;x;;;;;;;;;;;;;;
+RAV_liberal_3;Freisinnige Partei;Freisinnige Partei;Freisinnige Partei;;;;;;;;;;;;x;;;;;;;;;;;;;;
+RAV_socialist;Deutscher Arbeiterverein;Deutscher Arbeiterverein;Deutscher Arbeiterverein;;;;;;;;;;;;x;;;;;;;;;;;;;;
+RAV_socialist_2;Sozialdem. Arbeiterpartei ;Sozialdem. Arbeiterpartei ;Sozialdem. Arbeiterpartei ;;;;;;;;;;;;x;;;;;;;;;;;;;;
+RAV_socialist_3;Sozial. Arbeiterpartei ;Sozial. Arbeiterpartei ;Sozial. Arbeiterpartei ;;;;;;;;;;;;x;;;;;;;;;;;;;;
+RAV_reactionary;Nationale Partei;Nationale Partei;Nationale Partei;;;;;;;;;;;;x;;;;;;;;;;;;;;
+RAV_conservative_2;Konservative Partei;Konservative Partei;Konservative Partei;;;;;;;;;;;;x;;;;;;;;;;;;;;
+RAV_conservative_3;Christsoz. Arbeiterpartei;Christsoz. Arbeiterpartei;Christsoz. Arbeiterpartei;;;;;;;;;;;;x;;;;;;;;;;;;;;
+RAV_anarcho_liberal;Radical Arbeiterpartei;Arbeiterpartei radical;Radikale Arbeiterpartei;;;;;;;;;;;;x;;;;;;;;;;;;;;
+RAV_communist;Communist Arbeiterpartei;Arbeiterpartei communiste;Kommunistische Arbeiterpartei;;;;;;;;;;;;x;;;;;;;;;;;;;;
+RAV_fascist;NSDP;NSDP;NSDP;;;;;;;;;;;;x;;;;;;;;;;;;;;
+MNZ;Mainz;Mainz;Mainz;Mainz;;Mainz;;;;;;;;;;;x
+MNZ_ADJ;Mainzisch;Mainzisch;Mainzisch;Mainzisch;;Mainzisch;;;;;;;;;;;x
+MNZ_liberal;Liberaldem. Partei;Liberaldem. Partei;Liberaldem. Partei;;;;;;;;;;;;x;;;;;;;;;;;;;;
+MNZ_conservative;Zentrumspartei;Zentrumspartei;Zentrumspartei;;;;;;;;;;;;x;;;;;;;;;;;;;;
+MNZ_liberal_2;Nationalliberale ;Nationalliberale ;Nationalliberale ;;;;;;;;;;;;x;;;;;;;;;;;;;;
+MNZ_liberal_3;Freisinnige Partei;Freisinnige Partei;Freisinnige Partei;;;;;;;;;;;;x;;;;;;;;;;;;;;
+MNZ_socialist;Deutscher Arbeiterverein;Deutscher Arbeiterverein;Deutscher Arbeiterverein;;;;;;;;;;;;x;;;;;;;;;;;;;;
+MNZ_socialist_2;Sozialdem. Arbeiterpartei ;Sozialdem. Arbeiterpartei ;Sozialdem. Arbeiterpartei ;;;;;;;;;;;;x;;;;;;;;;;;;;;
+MNZ_socialist_3;Sozial. Arbeiterpartei ;Sozial. Arbeiterpartei ;Sozial. Arbeiterpartei ;;;;;;;;;;;;x;;;;;;;;;;;;;;
+MNZ_reactionary;Nationale Partei;Nationale Partei;Nationale Partei;;;;;;;;;;;;x;;;;;;;;;;;;;;
+MNZ_conservative_2;Konservative Partei;Konservative Partei;Konservative Partei;;;;;;;;;;;;x;;;;;;;;;;;;;;
+MNZ_conservative_3;Christsoz. Arbeiterpartei;Christsoz. Arbeiterpartei;Christsoz. Arbeiterpartei;;;;;;;;;;;;x;;;;;;;;;;;;;;
+MNZ_anarcho_liberal;Radical Arbeiterpartei;Arbeiterpartei radical;Radikale Arbeiterpartei;;;;;;;;;;;;x;;;;;;;;;;;;;;
+MNZ_communist;Communist Arbeiterpartei;Arbeiterpartei communiste;Kommunistische Arbeiterpartei;;;;;;;;;;;;x;;;;;;;;;;;;;;
+MNZ_fascist;NSDP;NSDP;NSDP;;;;;;;;;;;;x;;;;;;;;;;;;;;
+BRB;Brabant;Brabant;Brabant;Brabant;;Brabant;;;;;;;;;;;x
+BRB_ADJ;Brabantine;Brabantine;Brabantine;Brabantine;;Brabantine;;;;;;;;;;;x
+BRB_conservative;Conservatieven;Conservatieven;Conservatieven;;Conservatieven;;;;;;;;;x;;;;
+BRB_liberal;Liberale Partij ;Liberale Partij ;Liberale Partij ;;Liberale Partij ;;;;;;;;;x;;;;
+BRB_liberal_2;Liberale Unie;Liberale Unie;Liberale Unie;;Liberale Unie;;;;;;;;;x;;;;
+BRB_liberal_3;Rooms-Katholieke ;Rooms-Katholieke ;Rooms-Katholieke ;;Rooms-Katholieke ;;;;;;;;;x;;;;
+BRB_anarcho_liberal;Anti-Revolutionaire Partij;Anti-Revolutionaire Partij;Anti-Revolutionaire Partij;;Anti-Revolutionaire Parti;;;;;;;;;x;;;;
+BRB_communist;Social-Democratische Bond;Social-Democratische Bond;Social-Democratische Bond;;Social-Democratische Bond;;;;;;;;;x;;;;
+BRB_socialist;Social-Demo. Partij;Social-Demo. Partij;Social-Demo. Partij;;Social-Demo. Partij;;;;;;;;;x;;;;
+BRB_liberal_4;Christelijk Historische;Christelijk Historische;Christelijk Historische;;Christelijk Historische;;;;;;;;;x;;;;
+BRB_liberal_5;Vrije Liberalen;Vrije Liberalen;Vrije Liberalen;;Vrije Liberalen;;;;;;;;;x;;;;
+BRB_reactionary;Nationalist Partij;Partij nationaliste;Nationalist Partij;;Nationalist Partij;;;;;;;;;x;;;;
+BRB_communist_2;Communist Partij;Partij communiste;Communist Partij;;Communist Partji;;;;;;;;;x;;;;
+BRB_fascist;Fascist Partij;Partij fasciste;Fascist Partij;;Fascist Partji;;;;;;;;;x;;;;
+ANS;Ansbach;Ansbach;Ansbach;Ansbach;;Ansbach;;;;;;;;;;;x
+ANS_ADJ;Ansbacher;Ansbacher;Ansbacher;Ansbacher;;Ansbacher;;;;;;;;;;;x
+ANS_liberal;Liberaldem. Partei;Liberaldem. Partei;Liberaldem. Partei;;;;;;;;;;;;x;;;;;;;;;;;;;;
+ANS_conservative;Zentrumspartei;Zentrumspartei;Zentrumspartei;;;;;;;;;;;;x;;;;;;;;;;;;;;
+ANS_liberal_2;Nationalliberale ;Nationalliberale ;Nationalliberale ;;;;;;;;;;;;x;;;;;;;;;;;;;;
+ANS_liberal_3;Freisinnige Partei;Freisinnige Partei;Freisinnige Partei;;;;;;;;;;;;x;;;;;;;;;;;;;;
+ANS_socialist;Deutscher Arbeiterverein;Deutscher Arbeiterverein;Deutscher Arbeiterverein;;;;;;;;;;;;x;;;;;;;;;;;;;;
+ANS_socialist_2;Sozialdem. Arbeiterpartei ;Sozialdem. Arbeiterpartei ;Sozialdem. Arbeiterpartei ;;;;;;;;;;;;x;;;;;;;;;;;;;;
+ANS_socialist_3;Sozial. Arbeiterpartei ;Sozial. Arbeiterpartei ;Sozial. Arbeiterpartei ;;;;;;;;;;;;x;;;;;;;;;;;;;;
+ANS_reactionary;Nationale Partei;Nationale Partei;Nationale Partei;;;;;;;;;;;;x;;;;;;;;;;;;;;
+ANS_conservative_2;Konservative Partei;Konservative Partei;Konservative Partei;;;;;;;;;;;;x;;;;;;;;;;;;;;
+ANS_conservative_3;Christsoz. Arbeiterpartei;Christsoz. Arbeiterpartei;Christsoz. Arbeiterpartei;;;;;;;;;;;;x;;;;;;;;;;;;;;
+ANS_anarcho_liberal;Radical Arbeiterpartei;Arbeiterpartei radical;Radikale Arbeiterpartei;;;;;;;;;;;;x;;;;;;;;;;;;;;
+ANS_communist;Communist Arbeiterpartei;Arbeiterpartei communiste;Kommunistische Arbeiterpartei;;;;;;;;;;;;x;;;;;;;;;;;;;;
+ANS_fascist;NSDP;NSDP;NSDP;;;;;;;;;;;;x;;;;;;;;;;;;;;
+FOR;Foroyar;Foroyar;Foroyar;Foroyar;;Foroyar;;;;;;;;;;;x
+FOR_ADJ;Foroyarer;Foroyarer;Foroyarer;Foroyarer;;Foroyarer;;;;;;;;;;;x
+FOR_liberal;Venstre;Venstre;Venstre;;Venstre;;;;;;;;;x;;;;
+FOR_conservative;Hojre;Hojre;Hojre;;Hojre;;;;;;;;;x;;;;
+FOR_liberal_2;National-liberale;National-liberale;National-liberale;;National-liberale;;;;;;;;;x;;;;
+FOR_socialist;Socialdemokratiet;Socialdemokratiet;Socialdemokratiet;;Socialdemokratiet;;;;;;;;;x;;;;
+FOR_reactionary;Konge Partiet;Konge Partiet;Kongepartiet;;Konge Partiet;;;;;;;;;x;;;;
+FOR_anarcho_liberal;Radikale-Venstre;Radikale-Venstre;Radikale-Venstre;;Radikale-Venstre;;;;;;;;;x;;;;
+FOR_communist;Communists;Communistes;Kommunisten;;Comunistas;;;;;;;;;x;;;;
+FOR_fascist;Fascists;Fascistes;Faschisten;;Fascistas;;;;;;;;;x;;;;
+HLN;Holland;Holland;Holland;Holland;;Holland;;;;;;;;;;;x
+HLN_ADJ;Hollander;Hollander;Hollander;Hollander;;Hollander;;;;;;;;;;;x
+HLN_conservative;Conservatieven;Conservatieven;Conservatieven;;Conservatieven;;;;;;;;;x;;;;
+HLN_liberal;Liberale Partij ;Liberale Partij ;Liberale Partij ;;Liberale Partij ;;;;;;;;;x;;;;
+HLN_liberal_2;Liberale Unie;Liberale Unie;Liberale Unie;;Liberale Unie;;;;;;;;;x;;;;
+HLN_liberal_3;Rooms-Katholieke ;Rooms-Katholieke ;Rooms-Katholieke ;;Rooms-Katholieke ;;;;;;;;;x;;;;
+HLN_anarcho_liberal;Anti-Revolutionaire Partij;Anti-Revolutionaire Partij;Anti-Revolutionaire Partij;;Anti-Revolutionaire Parti;;;;;;;;;x;;;;
+HLN_communist;Social-Democratische Bond;Social-Democratische Bond;Social-Democratische Bond;;Social-Democratische Bond;;;;;;;;;x;;;;
+HLN_socialist;Social-Demo. Partij;Social-Demo. Partij;Social-Demo. Partij;;Social-Demo. Partij;;;;;;;;;x;;;;
+HLN_liberal_4;Christelijk Historische;Christelijk Historische;Christelijk Historische;;Christelijk Historische;;;;;;;;;x;;;;
+HLN_liberal_5;Vrije Liberalen;Vrije Liberalen;Vrije Liberalen;;Vrije Liberalen;;;;;;;;;x;;;;
+HLN_reactionary;Nationalist Partij;Partij nationaliste;Nationalist Partij;;Nationalist Partij;;;;;;;;;x;;;;
+HLN_communist_2;Communist Partij;Partij communiste;Communist Partij;;Communist Partji;;;;;;;;;x;;;;
+HLN_fascist;Fascist Partij;Partij fasciste;Fascist Partij;;Fascist Partji;;;;;;;;;x;;;;
+VRD;Verden;Verden;Verden;Verden;;Verden;;;;;;;;;;;x
+VRD_ADJ;Verdish;Verdish;Verdish;Verdish;;Verdish;;;;;;;;;;;x
+BRN;Brandenburg;Brandenburg;Brandenburg;Brandenburg;;Brandenburg;;;;;;;;;;;x
+BRN_ADJ;Brandenburger;Brandenburger;Brandenburger;Brandenburger;;Brandenburger;;;;;;;;;;;x
+JTL;Jutland;Jutland;Jutland;Jutland;;Jutland;;;;;;;;;;;;;;;;;;;;;;;
+JTL_ADJ;Jutlandish;Jutlandish;Jutlandish;Jutlandish;;Jutlandish;;;;;;;;;;;;;;;;;;;;;;;
+PMR;Pomerania;Pomerania;Pomerania;Pomerania;;Pomerania;;;;;;;;;;;;;;;;;;;;;;;
+PMR_ADJ;Pomeranian;Pomeranian;Pomeranian;Pomeranian;;Pomeranian;;;;;;;;;;;;;;;;;;;;;;;
+TST_ADJ;Trentine;Trentine;Trentine;Trentine;;Trentine;;;;;;;;;;;;;;;;;;;;;;;
+SCN;Scania;Scania;Scania;Scania;;Scania;;;;;;;;;;;;;;;;;;;;;;;
+SCN_ADJ;Scanian;Scanian;Scanian;Scanian;;Scanian;;;;;;;;;;;;;;;;;;;;;;;
+FRR;Ferrara;Ferrara;Ferrara;Ferrara;;Ferrara;;;;;;;;;;;;;;;;;;;;;;;
+FRR_ADJ;Ferrarese;Ferrarese;Ferrarese;Ferrarese;;Ferrarese;;;;;;;;;;;;;;;;;;;;;;;
+NAP;Naples;Naples;Naples;Naples;;Naples;;;;;;;;;;;;;;;;;;;;;;;
+NAP_ADJ;Neapolitan;Neapolitan;Neapolitan;Neapolitan;;Neapolitan;;;;;;;;;;;;;;;;;;;;;;;
+GLR;Gelre;Gelre;Gelre;Gelre;;Gelre;;;;;;;;;;;;;;;;;;;;;;;
+GLR_ADJ;Gelder;Gelder;Gelder;Gelder;;Gelder;;;;;;;;;;;;;;;;;;;;;;;
+UFL;Floride;Floride;Floride;Floride;;Floride;;;;;;;;;;;;;;;;;;;;;;;
+UFL_ADJ;Floridien;Floridien;Floridien;Floridien;;Floridien;;;;;;;;;;;;;
+GLK;Great Lakes;Great Lakes;Great Lakes;Great Lakes;;Great Lakes;;;;;;;;;;;;;;;;;;;;;;;
+GLK_ADJ;Lacustrine;Lacustrine;Lacustrine;Lacustrine;;Lacustrine;;;;;;;;;;;;;
+CNO;North California;North California;North California;North California;;North California;;;;;;;;;;;;;;;;;;;;;;;
+CNO_ADJ;North Californian;North Californian;North Californian;North Californian;;North Californian;;;;;;;;;;;;;
+CSO;South California;South California;South California;South California;;South California;;;;;;;;;;;;;;;;;;;;;;;
+CSO_ADJ;South Californian;South Californian;South Californian;South Californian;;South Californian;;;;;;;;;;;;;
+portuguese_canadian;Luso-Canadian;Luso-canadien;Lusokanadisch;;Lusocanadiense;;;;;;;;;x;;;;
+anglo_californian;Anglo-Californian;Anglo-Californian;Anglo-Californian;;Anglo-Californian;;;;;;;;;;;;;;;;;;;;;;
+french_californian;Franco-Californian;Franco-Californian;Franco-Californian;;Franco-Californian;;;;;;;;;;;;;;;;;;;;

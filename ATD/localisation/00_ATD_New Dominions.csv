@@ -1,0 +1,12 @@
+;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;x;;;;
+EVTNAME896000;The Dominion of Argentine;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
+EVTDESC896000;The colony of $COUNTRY_ADJ$ Argentine has asked to be governed as an autonomous dominion within the empire.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
+EVT896000OPTA;This can only be good for the empire.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
+EVT896000OPTB;No, they shall remain under our direct control.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
+EVT896000OPTC;Onwards to Argentine!;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
+EVTNAME896001;The Dominion of Nouvelle-Flandre;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
+EVTDESC896001;The colony of $COUNTRY_ADJ$ Nouvelle-Flandre has asked to be governed as an autonomous dominion within the empire.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
+EVT896001OPTC;Onwards to Nouvelle-Flandre!;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
+EVTNAME896001;The Dominion of Luisiana;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
+EVTDESC896001;The colony of $COUNTRY_ADJ$ Luisiana has asked to be governed as an autonomous dominion within the empire.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
+EVT896001OPTC;Onwards to Luisiana!;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
