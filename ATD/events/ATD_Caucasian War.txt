@@ -1,0 +1,133 @@
+#Caucasian War CB (Orthodox mistreated in the caucasus)
+country_event = {
+	id = 893001
+	title = "EVTNAME893001"
+	desc = "EVTDESC893001"
+	picture = "2nd_circassian_war"
+	
+	trigger = {
+		tag = RUS
+		year = 1865
+		NOT = { has_global_flag = caucasian_cb }
+		exists = TCA
+		exists = TUR
+		TCA = {
+			vassal_of = TUR
+		}
+		NOT = { exists = CRI }
+	}
+	
+	mean_time_to_happen = {
+		months = 36
+	}
+	
+	immediate = {
+		set_global_flag = caucasian_cb
+	}
+	
+	option = {
+		name = "EVT893001OPTA"
+		TUR = {
+			country_event = { id = 893002 }
+		}
+		NOR = {
+			country_event = { id = 893003 }
+		}
+		LIT = {
+			country_event = { id = 893003 }
+		}
+		FRA = {
+			country_event = { id = 893003 }
+		}
+		country_event = { id = 893004 days = 730 }
+		leave_alliance = TUR
+	}
+}
+
+#Turks informed
+country_event = {
+	id = 893002
+	title = "EVTNAME893001"
+	desc = "EVTDESC893002"
+	picture = "2nd_circassian_war"
+
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = "EVT893002OPTA"
+	}
+}
+
+#Lithuania, Norway and France informed
+country_event = {
+	id = 893003
+	title = "EVTNAME893001"
+	desc = "EVTDESC893003"
+	picture = "2nd_circassian_war"
+
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = "EVT893003OPTA" #Ally
+		prestige = 5
+		diplomatic_influence = { who = TUR value = 100 }
+		relation = { who = TUR value = 100 }
+		relation = { who = RUS value = -50 }
+		set_country_flag = protecting_ottoman_interests
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 0.5
+				alliance_with = RUS
+			}
+		}
+	}
+	
+	option = {
+		name = "EVT893003OPTB" #Refuse
+		prestige = -10
+		diplomatic_influence = { who = TUR value = -50 }
+		relation = { who = RUS value = 50 }
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 2
+				NOT = {
+					relation = { who = TUR value = 0 }
+				}
+			}
+			modifier = {
+				factor = 20
+				alliance_with = RUS
+			}
+			modifier = {
+				factor = 0.5
+				tag = NOR
+			}
+			modifier = {
+				factor = 0.5
+				tag = LIT
+			}
+		}
+	}
+}
+
+#End the crisis
+country_event = {
+	id = 893004
+	title = "EVTNAME893001"
+	desc = "EVTDESC893004"
+	picture = "southern_belle"
+
+	is_triggered_only = yes
+	
+	immediate = {
+		clr_global_flag = caucasian_cb
+	}
+	
+	option = {
+		name = "EVT893004OPTA"
+	}
+}

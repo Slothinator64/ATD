@@ -1,0 +1,589 @@
+country_event = {
+	id = 890000
+	title = "EVTNAME890001"
+	desc = "EVTDESC890001"
+	picture = "deliberation"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT890001OPTA"
+		any_country = {
+			limit = {
+				is_greater_power = yes
+				capital_scope = { continent = europe }
+				NOT = { tag = TUR }
+			}
+			country_event = { id = 890001 days = 5 }
+		}
+		JTL = {
+			change_variable = {
+				which = jutland_support
+				value = 1
+			}
+		}
+		relation = { who = NOR value = 100 }
+		relation = { who = JTL value = 100 }
+		ai_chance = {
+			factor = 45
+			modifier = {
+				factor = 0.5
+				tag = NOR
+			}
+			modifier = {
+				factor = 0.5
+				truce_with = JTL
+			}
+			modifier = {
+				factor = 0.5
+				alliance_with = SCN
+			}
+			modifier = {
+				factor = 0.5
+				is_sphere_leader_of = SCN
+			}
+			modifier = {
+				factor = 0.8
+				NOT = {
+					relation = { who = JTL value = 0 }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				NOT = {
+					relation = { who = JTL value = -100 }
+				}
+			}
+			modifier = {
+				factor = 0.8
+				relation = { who = SCN value = 50 }
+			}
+			modifier = {
+				factor = 0.5
+				relation = { who = SCN value = 100 }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = {
+					relation = { who = NOR value = 0 }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				NOT = {
+					relation = { who = NOR value = -100 }
+				}
+			}
+			modifier = {
+				factor = 0.8
+				relation = { who = BRN value = 50 }
+			}
+			modifier = {
+				factor = 0.5
+				relation = { who = BRN value = 100 }
+			}
+		}
+	}
+	option = {
+		name = "EVT890001OPTB"
+		any_country = {
+			limit = {
+				is_greater_power = yes
+				capital_scope = { continent = europe }
+				NOT = { tag = TUR }
+			}
+			country_event = { id = 890001 days = 5 }
+		}
+		SCN = {
+			change_variable = {
+				which = scania_support
+				value = 1
+			}
+		}
+		relation = { who = BRN value = 100 }
+		relation = { who = SCN value = 100 }
+		ai_chance = {
+			factor = 45
+			modifier = {
+				factor = 0.5
+				tag = BRN
+			}
+			modifier = {
+				factor = 0.5
+				alliance_with = JTL
+			}
+			modifier = {
+				factor = 0.5
+				is_sphere_leader_of = JTL
+			}
+			modifier = {
+				factor = 0.8
+				relation = { who = JTL value = 50 }
+			}
+			modifier = {
+				factor = 0.5
+				relation = { who = JTL value = 100 }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = {
+					relation = { who = SCN value = 0 }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				NOT = {
+					relation = { who = SCN value = -100 }
+				}
+			}
+			modifier = {
+				factor = 0.8
+				NOT = {
+					relation = { who = BRN value = 0 }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				NOT = {
+					relation = { who = BRN value = -100 }
+				}
+			}
+			modifier = {
+				factor = 0.8
+				relation = { who = NOR value = 50 }
+			}
+			modifier = {
+				factor = 0.5
+				relation = { who = NOR value = 100 }
+			}
+		}
+	}
+}
+
+#Gather Opinions
+country_event = {
+	id = 890001
+	title = "EVTNAME890001"
+	desc = "EVTDESC890001"
+	picture = "deliberation"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT890001OPTA"
+		JTL = {
+			change_variable = {
+				which = jutland_support
+				value = 1
+			}
+		}
+		relation = { who = NOR value = 100 }
+		relation = { who = JTL value = 100 }
+		ai_chance = {
+			factor = 45
+			modifier = {
+				factor = 0.5
+				tag = NOR
+			}
+			modifier = {
+				factor = 0.5
+				truce_with = JTL
+			}
+			modifier = {
+				factor = 0.5
+				alliance_with = SCN
+			}
+			modifier = {
+				factor = 0.5
+				is_sphere_leader_of = SCN
+			}
+			modifier = {
+				factor = 0.8
+				NOT = {
+					relation = { who = JTL value = 0 }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				NOT = {
+					relation = { who = JTL value = -100 }
+				}
+			}
+			modifier = {
+				factor = 0.8
+				relation = { who = SCN value = 50 }
+			}
+			modifier = {
+				factor = 0.5
+				relation = { who = SCN value = 100 }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = {
+					relation = { who = NOR value = 0 }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				NOT = {
+					relation = { who = NOR value = -100 }
+				}
+			}
+			modifier = {
+				factor = 0.8
+				relation = { who = BRN value = 50 }
+			}
+			modifier = {
+				factor = 0.5
+				relation = { who = BRN value = 100 }
+			}
+		}
+	}
+
+	option = {
+		name = "EVT890001OPTB"
+		SCN = {
+			change_variable = {
+				which = scania_support
+				value = 1
+			}
+		}
+		relation = { who = BRN value = 100 }
+		relation = { who = SCN value = 100 }
+		ai_chance = {
+			factor = 45
+			modifier = {
+				factor = 0.5
+				tag = BRN
+			}
+			modifier = {
+				factor = 0.5
+				alliance_with = JTL
+			}
+			modifier = {
+				factor = 0.5
+				is_sphere_leader_of = JTL
+			}
+			modifier = {
+				factor = 0.8
+				relation = { who = JTL value = 50 }
+			}
+			modifier = {
+				factor = 0.5
+				relation = { who = JTL value = 100 }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = {
+					relation = { who = SCN value = 0 }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				NOT = {
+					relation = { who = SCN value = -100 }
+				}
+			}
+			modifier = {
+				factor = 0.8
+				NOT = {
+					relation = { who = BRN value = 0 }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				NOT = {
+					relation = { who = BRN value = -100 }
+				}
+			}
+			modifier = {
+				factor = 0.8
+				relation = { who = NOR value = 50 }
+			}
+			modifier = {
+				factor = 0.5
+				relation = { who = NOR value = 100 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = 890002
+	
+	title = "EVTNAME890001" # Jutland Supported
+	desc = "EVTDESC890002"
+	news = yes
+	news_title = "EVTNAME890002_NEWS_TITLE"
+	news_desc_long = "EVTDESC890002_NEWS_LONG"
+	news_desc_medium = "EVTDESC890002_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC890002_NEWS_SHORT"	
+	picture = "deliberation"
+	major = yes
+	
+	trigger = {
+		JTL = {
+			exists = yes
+			check_variable = {
+				which = jutland_support
+				value = 1
+			}
+		}
+		is_greater_power = yes
+		OR = {
+			is_sphere_leader_of = JTL
+			tag = JTL
+		}
+		NOT = {
+			SCN = {
+				check_variable = {
+					which = scania_support
+					value = 3
+				}
+			}
+		}
+		NOT = { has_global_flag = denmark_decided }
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 0.5
+			JTL = {
+				check_variable = {
+					which = jutland_support
+					value = 2
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			JTL = {
+				check_variable = {
+					which = jutland_support
+					value = 3
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			JTL = {
+				check_variable = {
+					which = jutland_support
+					value = 4
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			JTL = {
+				check_variable = {
+					which = jutland_support
+					value = 5
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "EVT890002OPTA"
+		JTL = {
+			country_event = 890005
+		}
+		prestige = 10
+		set_global_flag = denmark_decided
+	}
+
+}
+
+country_event = {
+	
+	id = 890003
+	title = "EVTNAME890001" # Scania Supported
+	desc = "EVTDESC890003"
+	news = yes
+	news_title = "EVTNAME890003_NEWS_TITLE"
+	news_desc_long = "EVTDESC890003_NEWS_LONG"
+	news_desc_medium = "EVTDESC890003_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC890003_NEWS_SHORT"	
+	picture = "deliberation"
+	major = yes
+	
+	trigger = {
+		SCN = {
+			exists = yes
+			check_variable = {
+				which = scania_support
+				value = 1
+			}
+		}
+		is_greater_power = yes
+		OR = {
+			is_sphere_leader_of = SCN
+			tag = SCN
+		}	
+		NOT = {
+			JTL = {
+				check_variable = {
+					which = jutland_support
+					value = 3
+				}
+			}
+		}
+		NOT = { has_global_flag = denmark_decided }
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 0.5
+			SCN = {
+				check_variable = {
+					which = scania_support
+					value = 2
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			SCN = {
+				check_variable = {
+					which = scania_support
+					value = 3
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			SCN = {
+				check_variable = {
+					which = scania_support
+					value = 4
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			SCN = {
+				check_variable = {
+					which = scania_support
+					value = 5
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "EVT890002OPTA"
+		SCN = {
+			country_event = 890006
+		}
+		prestige = 10
+		set_global_flag = denmark_decided
+	}
+}
+
+country_event = {
+	
+	id = 890004
+	title = "EVTNAME890001" # Congress Fails
+	desc = "EVTDESC890004"
+	news = yes
+	news_title = "EVTNAME890004_NEWS_TITLE"
+	news_desc_long = "EVTDESC890004_NEWS_LONG"
+	news_desc_medium = "EVTDESC890004_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC890004_NEWS_SHORT"	
+	picture = "deliberation"
+	major = yes
+	
+	trigger = {
+		is_greater_power = yes
+		OR = {
+			is_sphere_leader_of = SCN
+			is_sphere_leader_of = JTL
+			tag = SCN
+			tag = JTL
+		}	
+		AND = {
+			JTL = {
+				check_variable = {
+					which = jutland_support
+					value = 3
+				}
+			}
+			SCN = {
+				check_variable = {
+					which = scania_support
+					value = 3
+				}
+			}
+		}
+		NOT = { has_global_flag = denmark_decided }
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	option = {
+		name = "EVT890004OPTA"
+		SCN = {
+			country_event = 890007
+		}
+		JTL = {
+			country_event = 890007
+		}
+		set_global_flag = denmark_decided
+	}
+}
+
+country_event = {
+	
+	id = 890005
+	title = "EVTNAME890001" # Jutland Supported
+	desc = "EVTDESC890005"
+	picture = "Expansion"
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT890005OPTA"
+		SCN = { all_core = { remove_core = SCN }}
+		JTL = { all_core = { remove_core = JTL }}
+		inherit = SCN
+		prestige = 5
+		change_tag = DEN
+	}
+}
+
+country_event = {
+	
+	id = 890006
+	title = "EVTNAME890001" # Scania Supported
+	desc = "EVTDESC890006"
+	picture = "Expansion"
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT890005OPTA"
+		SCN = { all_core = { remove_core = SCN }}
+		JTL = { all_core = { remove_core = JTL }}
+		inherit = JTL
+		prestige = 5
+		change_tag = DEN
+	}
+}
+
+country_event = {
+	
+	id = 890007
+	title = "EVTNAME890001" # Congress Fails
+	desc = "EVTDESC890007"
+	picture = "Expansion"
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT890005OPTA"
+		SCN = { all_core = { add_core = JTL }}
+		JTL = { all_core = { add_core = SCN }}
+	}
+}

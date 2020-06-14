@@ -1,0 +1,347 @@
+#Add Southern California Core
+province_event = {
+	id = 895000
+	desc = "EVTDESC895000"
+
+	trigger = {
+		NOT = {
+			is_core = MEX
+			is_core = LSK
+			is_core = CAN
+			is_core = CSO
+			is_core = ULA
+		}
+		owner = {
+			tag = FRA
+		}
+		any_neighbor_province = {
+			is_core = CSO
+		}
+	}
+	
+	mean_time_to_happen =  {
+		days = 1
+	}
+
+	option = {
+		name = "EVT895000OPTA" #OK
+		add_core = CSO
+		remove_core = CNO
+		remove_core = FRA
+	}
+}
+
+#Add Northern California Core
+province_event = {
+	id = 895001
+	desc = "EVTDESC895000"
+
+	trigger = {
+		NOT = {
+			is_core = MEX
+			is_core = LSK
+			is_core = CAN
+			is_core = CNO
+			is_core = ULA
+		}
+		owner = {
+			tag = ENL
+		}
+		any_neighbor_province = {
+			is_core = CNO
+		}
+	}
+	
+	mean_time_to_happen =  {
+		days = 1
+	}
+
+	option = {
+		name = "EVT895000OPTA" #OK
+		add_core = CNO
+		remove_core = CSO
+		remove_core = ENL
+	}
+}
+
+#Dominion or Revolution North
+country_event = {
+	id = 895002
+	title = "EVTNAME895002"
+	desc = "EVTDESC895002"
+	picture = "MEX_Bear_Flag_Revolt"
+	
+	trigger = {
+		war = no
+		revolution_n_counterrevolution = 1
+		any_owned_province = { is_core = CNO }
+		NOT = { exists = CNO }
+		is_possible_vassal = CNO
+		OR = {
+			tag = ENL
+			tag = ENG
+		}
+	}	
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	option = {
+		name = "EVT895002OPTA" #War
+		release = CNO
+		CNO = {
+			any_country = {
+				limit = {
+					is_greater_power = yes
+					OR = {
+						capital_scope = { continent = north_america }
+						capital_scope = { continent = south_america }
+					}
+				}
+				country_event = { id = 895004 days = 10 }
+			}
+		}
+	}
+	option = {
+		name = "EVT895002OPTB" #Dominion
+		prestige = -15
+		badboy = -3
+		any_pop = {
+			limit = { location = { is_core = CNO } }
+			militancy = -10
+		}
+		CNO = {
+			set_country_flag = post_colonial_country
+			all_core = { remove_core = ENL }
+			all_core = { remove_core = ENG }
+		}
+		any_owned = { limit = { is_core = CNO } secede_province = CNO }
+		create_vassal = CNO
+		CNO = {
+			prestige = -80
+			government = dominion
+		}
+		relation = {
+			who = CNO
+			value = 200
+		}
+		diplomatic_influence = {
+			who = CNO
+			value = 200
+		}
+		any_pop = { consciousness = 1 }
+	}
+}
+
+#Dominion or Revolution South
+country_event = {
+	id = 895003
+	title = "EVTNAME895002"
+	desc = "EVTDESC895002"
+	picture = "MEX_Bear_Flag_Revolt"
+	
+	trigger = {
+		war = no
+		revolution_n_counterrevolution = 1
+		any_owned_province = { is_core = CSO }
+		NOT = { exists = CSO }
+		is_possible_vassal = CSO
+		tag = FRA
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	option = {
+		name = "EVT895002OPTA" #War
+		release = CSO
+		CSO = {
+			any_country = {
+				limit = {
+					is_greater_power = yes
+					OR = {
+						capital_scope = { continent = north_america }
+						capital_scope = { continent = south_america }
+					}
+				}
+				country_event = { id = 895005 days = 10 }
+			}
+		}
+	}
+	option = {
+		name = "EVT895002OPTB" #Dominion
+		prestige = -15
+		badboy = -3
+		any_pop = {
+			limit = { location = { is_core = CSO } }
+			militancy = -10
+		}
+		CSO = {
+			set_country_flag = post_colonial_country
+			all_core = { remove_core = FRA }
+		}
+		any_owned = { limit = { is_core = CSO } secede_province = CSO }
+		create_vassal = CSO
+		CSO = {
+			prestige = -80
+			government = dominion
+		}
+		relation = {
+			who = CSO
+			value = 200
+		}
+		diplomatic_influence = {
+			who = CSO
+			value = 200
+		}
+		any_pop = { consciousness = 1 }
+	}
+}
+
+#GP Receives Call for Aid (CNO)
+country_event = {
+	id = 895004
+	title = "EVTNAME895002"
+	desc = "EVTDESC895004"
+	picture = "MEX_Bear_Flag_Revolt"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT895004OPTA" #Join war
+		create_alliance = CNO
+		FROM = {
+			add_casus_belli = {
+				target = CNO
+				type = conquest
+				months = 100
+			}
+			war = {
+				target = CNO
+				attacker_goal = { casus_belli = conquest }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = yes
+			}
+		}
+		relation = { who = CNO value = 200 }
+		diplomatic_influence = { who = CNO value = 400 }
+		relation = { who = ENL value = -100 }
+	}
+	
+	option = {
+		name = "EVT895004OPTB" #Send cash
+		treasury = -50000
+		CNO = { treasury = 50000 }
+		FROM = {
+			add_casus_belli = {
+				target = CNO
+				type = conquest
+				months = 100
+			}
+			war = {
+				target = CNO
+				attacker_goal = { casus_belli = conquest }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = yes
+			}
+		}
+		relation = { who = CNO value = 100 }
+		diplomatic_influence = { who = CNO value = 150 }
+		relation = { who = ENL value = -50 }
+	}
+	
+	option = {
+		name = "EVT895004OPTC" #Nope
+		FROM = {
+			add_casus_belli = {
+				target = CNO
+				type = conquest
+				months = 100
+			}
+			war = {
+				target = CNO
+				attacker_goal = { casus_belli = conquest }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = yes
+			}
+		}
+		relation = { who = CNO value = -100 }
+		diplomatic_influence = { who = CNO value = -200 }
+		relation = { who = ENL value = 50 }
+	}
+}
+
+#GP Receives Call for Aid (CSO)
+country_event = {
+	id = 895005
+	title = "EVTNAME895002"
+	desc = "EVTDESC895004"
+	picture = "MEX_Bear_Flag_Revolt"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT895004OPTA" #Join war
+		create_alliance = CSO
+		FROM = {
+			add_casus_belli = {
+				target = CSO
+				type = conquest
+				months = 100
+			}
+			war = {
+				target = CSO
+				attacker_goal = { casus_belli = conquest }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = yes
+			}
+		}
+		relation = { who = CSO value = 200 }
+		diplomatic_influence = { who = CSO value = 400 }
+		relation = { who = FRA value = -100 }
+	}
+	
+	option = {
+		name = "EVT895004OPTB" #Send cash
+		treasury = -50000
+		CSO = { treasury = 50000 }
+		FROM = {
+			add_casus_belli = {
+				target = CSO
+				type = conquest
+				months = 100
+			}
+			war = {
+				target = CSO
+				attacker_goal = { casus_belli = conquest }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = yes
+			}
+		}
+		relation = { who = CSO value = 100 }
+		diplomatic_influence = { who = CSO value = 150 }
+		relation = { who = FRA value = -50 }
+	}
+	
+	option = {
+		name = "EVT895004OPTC" #Nope
+		FROM = {
+			add_casus_belli = {
+				target = CSO
+				type = conquest
+				months = 100
+			}
+			war = {
+				target = CSO
+				attacker_goal = { casus_belli = conquest }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = yes
+			}
+		}
+		relation = { who = CSO value = -100 }
+		diplomatic_influence = { who = CSO value = -200 }
+		relation = { who = FRA value = 50 }
+	}
+}

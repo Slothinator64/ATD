@@ -1,0 +1,1384 @@
+#####################################################
+#													#
+#            East Indies Events						#
+#													#
+#####################################################
+
+country_event = {
+
+	id = 95251
+	title = "EVTNAME95251" #The East Indies Expansion
+	desc = "EVTDESC95251"
+	picture = "danishgovernment"
+
+	trigger = {
+		NOT = { tag = FRA }
+		civilized = yes
+		war = no
+		is_disarmed = no
+		NOT = { has_country_modifier = punitive_effects }
+		NOT = { war_policy = pacifism }
+		OR = {
+			ATJ = {
+				neighbour = THIS
+				exists = yes
+				NOT = { civilized = yes }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+			}
+			SAK = {
+				neighbour = THIS
+				exists = yes
+				NOT = { civilized = yes }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+			}
+			SLW = {
+				neighbour = THIS
+				exists = yes
+				NOT = { civilized = yes }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+			}
+			BAL = {
+				neighbour = THIS
+				exists = yes
+				NOT = { civilized = yes }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+			}
+			KTI = {
+				neighbour = THIS
+				exists = yes
+				NOT = { civilized = yes }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+			}
+			LAN = {
+				neighbour = THIS
+				exists = yes
+				NOT = { civilized = yes }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+			}
+			KLM = {
+				neighbour = THIS
+				exists = yes
+				NOT = { civilized = yes }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+			}
+			TMR = {
+				neighbour = THIS
+				exists = yes
+				NOT = { civilized = yes }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+			}
+			DJA = {
+				neighbour = THIS
+				exists = yes
+				NOT = { civilized = yes }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+			}
+			JAV = {
+				neighbour = THIS
+				exists = yes
+				NOT = { civilized = yes }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+			}
+			MAL = {
+				neighbour = THIS
+				exists = yes
+				NOT = { civilized = yes }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+			}
+			JOH = {
+				neighbour = THIS
+				exists = yes
+				NOT = { civilized = yes }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+			}
+			SLG = {
+				neighbour = THIS
+				exists = yes
+				NOT = { civilized = yes }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+			}
+			PHG = {
+				neighbour = THIS
+				exists = yes
+				NOT = { civilized = yes }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+			}
+			PRK = {
+				neighbour = THIS
+				exists = yes
+				NOT = { civilized = yes }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+			}
+			SUL = {
+				neighbour = THIS
+				exists = yes
+				NOT = { civilized = yes }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+			}
+			BRU = {
+				neighbour = THIS
+				exists = yes
+				NOT = { civilized = yes }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+			}
+		}
+		NOT = {
+			casus_belli = ATJ
+			casus_belli = SAK
+			casus_belli = SLW
+			casus_belli = BAL
+			casus_belli = KTI
+			casus_belli = LAN
+			casus_belli = KLM
+			casus_belli = TMR
+			casus_belli = DJA
+			casus_belli = JAV
+			casus_belli = MAL
+			casus_belli = JOH
+			casus_belli = SLG
+			casus_belli = PHG
+			casus_belli = PRK
+			casus_belli = SUL
+			casus_belli = BRU
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 20
+		modifier = {
+			factor = 0.5
+			nationalism_n_imperialism = 1
+		}
+		modifier = {
+			factor = 1.5
+			ai = no
+		}
+	}
+
+	option = {
+		name = "EVT95251OPTA"
+		badboy = 2
+		prestige = -2
+		random_country = {
+			limit = {
+				OR = {
+					tag = ATJ
+					tag = SAK
+					tag = SLW
+					tag = BAL
+					tag = KTI
+					tag = LAN
+					tag = KLM
+					tag = TMR
+					tag = DJA
+					tag = JAV
+					tag = MAL
+					tag = JOH
+					tag = SLG
+					tag = PHG
+					tag = PRK
+					tag = SUL
+					tag = BRU
+				}
+				exists = yes
+				neighbour = THIS
+				NOT = { number_of_states = 2 }
+				THIS = { NOT = { nationalism_n_imperialism = 1 } }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+				NOT = { civilized = yes }
+			}
+			leave_alliance = THIS
+			relation = { who = THIS value = -100 }
+			add_casus_belli = { target = THIS type = establish_protectorate_casus_belli months = 24 }
+		}
+		random_country = {
+			limit = {
+				OR = {
+					tag = ATJ
+					tag = SAK
+					tag = SLW
+					tag = BAL
+					tag = KTI
+					tag = LAN
+					tag = KLM
+					tag = TMR
+					tag = DJA
+					tag = JAV
+					tag = MAL
+					tag = JOH
+					tag = SLG
+					tag = PHG
+					tag = PRK
+					tag = SUL
+					tag = BRU
+				}
+				exists = yes
+				neighbour = THIS
+				number_of_states = 2
+				THIS = { NOT = { nationalism_n_imperialism = 1 } }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+				NOT = { civilized = yes }
+			}
+			leave_alliance = THIS
+			relation = { who = THIS value = -100 }
+			add_casus_belli = { target = THIS type = demand_concession_casus_belli months = 24 }
+		}
+		random_country = {
+			limit = {
+				OR = {
+					tag = ATJ
+					tag = SAK
+					tag = SLW
+					tag = BAL
+					tag = KTI
+					tag = LAN
+					tag = KLM
+					tag = TMR
+					tag = DJA
+					tag = JAV
+					tag = MAL
+					tag = JOH
+					tag = SLG
+					tag = PHG
+					tag = PRK
+					tag = SUL
+					tag = BRU
+				}
+				exists = yes
+				neighbour = THIS
+				NOT = { number_of_states = 2 }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+				NOT = { civilized = yes }
+				THIS = { nationalism_n_imperialism = 1 NOT = { has_global_flag = berlin_conference } }
+			}
+			leave_alliance = THIS
+			relation = { who = THIS value = -100 }
+			add_casus_belli = { target = THIS type = establish_protectorate_NI_casus_belli months = 24 }
+		}
+		random_country = {
+			limit = {
+				OR = {
+					tag = ATJ
+					tag = SAK
+					tag = SLW
+					tag = BAL
+					tag = KTI
+					tag = LAN
+					tag = KLM
+					tag = TMR
+					tag = DJA
+					tag = JAV
+					tag = MAL
+					tag = JOH
+					tag = SLG
+					tag = PHG
+					tag = PRK
+					tag = SUL
+					tag = BRU
+				}
+				exists = yes
+				neighbour = THIS
+				number_of_states = 2
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+				NOT = { civilized = yes }
+				THIS = { nationalism_n_imperialism = 1 NOT = { has_global_flag = berlin_conference } }
+			}
+			leave_alliance = THIS
+			relation = { who = THIS value = -100 }
+			add_casus_belli = { target = THIS type = demand_concession_NI_casus_belli months = 24 }
+		}
+		random_country = {
+			limit = {
+				OR = {
+					tag = ATJ
+					tag = SAK
+					tag = SLW
+					tag = BAL
+					tag = KTI
+					tag = LAN
+					tag = KLM
+					tag = TMR
+					tag = DJA
+					tag = JAV
+					tag = MAL
+					tag = JOH
+					tag = SLG
+					tag = PHG
+					tag = PRK
+					tag = SUL
+					tag = BRU
+				}
+				exists = yes
+				neighbour = THIS
+				NOT = { number_of_states = 2 }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+				NOT = { civilized = yes }
+				THIS = { nationalism_n_imperialism = 1 has_global_flag = berlin_conference }
+			}
+			leave_alliance = THIS
+			relation = { who = THIS value = -100 }
+			add_casus_belli = { target = THIS type = establish_protectorate_BC_casus_belli months = 24 }
+		}
+		random_country = {
+			limit = {
+				OR = {
+					tag = ATJ
+					tag = SAK
+					tag = SLW
+					tag = BAL
+					tag = KTI
+					tag = LAN
+					tag = KLM
+					tag = TMR
+					tag = DJA
+					tag = JAV
+					tag = MAL
+					tag = JOH
+					tag = SLG
+					tag = PHG
+					tag = PRK
+					tag = SUL
+					tag = BRU
+				}
+				exists = yes
+				neighbour = THIS
+				number_of_states = 2
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+				NOT = { civilized = yes }
+				THIS = { nationalism_n_imperialism = 1 has_global_flag = berlin_conference }
+			}
+			leave_alliance = THIS
+			relation = { who = THIS value = -100 }
+			add_casus_belli = { target = THIS type = demand_concession_BC_casus_belli months = 24 }
+		}
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 0
+				badboy = 0.92
+			}
+		}
+	}
+	option = {
+		name = "EVT95251OPTB"
+		prestige = -5
+		any_neighbor_country = {
+			limit = {
+				OR = {
+					tag = ATJ
+					tag = SAK
+					tag = SLW
+					tag = BAL
+					tag = KTI
+					tag = LAN
+					tag = KLM
+					tag = TMR
+					tag = DJA
+					tag = JAV
+					tag = MAL
+					tag = JOH
+					tag = SLG
+					tag = PHG
+					tag = PRK
+					tag = SUL
+					tag = BRU
+				}
+				exists = yes
+			}
+			relation = { who = THIS value = 25 }
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}		
+}
+
+#Indian unification
+
+country_event = {
+
+	id = 95252
+	title = "EVTNAME95252" #The Indian Expansion
+	desc = "EVTDESC95252"
+	picture = "danishgovernment"
+
+	trigger = {
+		civilized = yes
+		war = no
+		is_disarmed = no
+		NOT = { has_country_modifier = punitive_effects }
+		NOT = { war_policy = pacifism }
+		OR = {
+			SIK = {
+				neighbour = THIS
+				exists = yes
+				NOT = { civilized = yes }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+			}
+			MYS = {
+				neighbour = THIS
+				exists = yes
+				NOT = { civilized = yes }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+			}
+			CHH = {
+				neighbour = THIS
+				exists = yes
+				NOT = { civilized = yes }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+			}
+			GWA = {
+				neighbour = THIS
+				exists = yes
+				NOT = { civilized = yes }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+			}
+			MEW = {
+				neighbour = THIS
+				exists = yes
+				NOT = { civilized = yes }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+			}
+			JAS = {
+				neighbour = THIS
+				exists = yes
+				NOT = { civilized = yes }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+			}
+			BHP = {
+				neighbour = THIS
+				exists = yes
+				NOT = { civilized = yes }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+			}
+			KAL = {
+				neighbour = THIS
+				exists = yes
+				NOT = { civilized = yes }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+			}
+			MAK = {
+				neighbour = THIS
+				exists = yes
+				NOT = { civilized = yes }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+			}
+			SIN = {
+				neighbour = THIS
+				exists = yes
+				NOT = { civilized = yes }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+			}
+			PNJ = {
+				neighbour = THIS
+				exists = yes
+				NOT = { civilized = yes }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+			}
+			SHI = {
+				neighbour = THIS
+				exists = yes
+				NOT = { civilized = yes }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+			}
+			BIK = {
+				neighbour = THIS
+				exists = yes
+				NOT = { civilized = yes }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+			}
+			JOD = {
+				neighbour = THIS
+				exists = yes
+				NOT = { civilized = yes }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+			}
+			JAI = {
+				neighbour = THIS
+				exists = yes
+				NOT = { civilized = yes }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+			}
+			BER = {
+				neighbour = THIS
+				exists = yes
+				NOT = { civilized = yes }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+			}
+			IND = {
+				neighbour = THIS
+				exists = yes
+				NOT = { civilized = yes }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+			}
+			BHO = {
+				neighbour = THIS
+				exists = yes
+				NOT = { civilized = yes }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+			}
+			NAG = {
+				neighbour = THIS
+				exists = yes
+				NOT = { civilized = yes }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+			}
+			HYD = {
+				neighbour = THIS
+				exists = yes
+				NOT = { civilized = yes }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+			}
+			ASM = {
+				neighbour = THIS
+				exists = yes
+				NOT = { civilized = yes }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+			}
+		}
+		NOT = {
+			casus_belli = SIK
+			casus_belli = MYS
+			casus_belli = CHH
+			casus_belli = GWA
+			casus_belli = MEW
+			casus_belli = JAS
+			casus_belli = BHP
+			casus_belli = KAL
+			casus_belli = MAK
+			casus_belli = SIN
+			casus_belli = PNJ
+			casus_belli = SHI
+			casus_belli = BIK
+			casus_belli = JOD
+			casus_belli = JAI
+			casus_belli = BER
+			casus_belli = IND
+			casus_belli = BHO
+			casus_belli = NAG
+			casus_belli = HYD
+			casus_belli = ASM
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 20
+		modifier = {
+			factor = 0.5
+			nationalism_n_imperialism = 1
+		}
+		modifier = {
+			factor = 1.5
+			ai = no
+		}
+	}
+
+	option = {
+		name = "EVT95251OPTA"
+		badboy = 2
+		prestige = -2
+		random_country = {
+			limit = {
+				OR = {
+					tag = SIK
+					tag = MYS
+					tag = CHH
+					tag = GWA
+					tag = MEW
+					tag = JAS
+					tag = BHP
+					tag = KAL
+					tag = MAK
+					tag = SIN
+					tag = PNJ
+					tag = SHI
+					tag = BIK
+					tag = JOD
+					tag = JAI
+					tag = BER
+					tag = IND
+					tag = BHO
+					tag = NAG
+					tag = HYD
+					tag = ASM
+				}
+				exists = yes
+				neighbour = THIS
+				NOT = { number_of_states = 2 }
+				THIS = { NOT = { nationalism_n_imperialism = 1 } }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+				NOT = { civilized = yes }
+			}
+			leave_alliance = THIS
+			relation = { who = THIS value = -100 }
+			add_casus_belli = { target = THIS type = establish_protectorate_casus_belli months = 24 }
+		}
+		random_country = {
+			limit = {
+				OR = {
+					tag = SIK
+					tag = MYS
+					tag = CHH
+					tag = GWA
+					tag = MEW
+					tag = JAS
+					tag = BHP
+					tag = KAL
+					tag = MAK
+					tag = SIN
+					tag = PNJ
+					tag = SHI
+					tag = BIK
+					tag = JOD
+					tag = JAI
+					tag = BER
+					tag = IND
+					tag = BHO
+					tag = NAG
+					tag = HYD
+					tag = ASM
+				}
+				exists = yes
+				neighbour = THIS
+				number_of_states = 2
+				THIS = { NOT = { nationalism_n_imperialism = 1 } }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+				NOT = { civilized = yes }
+			}
+			leave_alliance = THIS
+			relation = { who = THIS value = -100 }
+			add_casus_belli = { target = THIS type = demand_concession_casus_belli months = 24 }
+		}
+		random_country = {
+			limit = {
+				OR = {
+					tag = SIK
+					tag = MYS
+					tag = CHH
+					tag = GWA
+					tag = MEW
+					tag = JAS
+					tag = BHP
+					tag = KAL
+					tag = MAK
+					tag = SIN
+					tag = PNJ
+					tag = SHI
+					tag = BIK
+					tag = JOD
+					tag = JAI
+					tag = BER
+					tag = IND
+					tag = BHO
+					tag = NAG
+					tag = HYD
+					tag = ASM
+				}
+				exists = yes
+				neighbour = THIS
+				NOT = { number_of_states = 2 }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+				NOT = { civilized = yes }
+				THIS = { nationalism_n_imperialism = 1 NOT = { has_global_flag = berlin_conference } }
+			}
+			leave_alliance = THIS
+			relation = { who = THIS value = -100 }
+			add_casus_belli = { target = THIS type = establish_protectorate_NI_casus_belli months = 24 }
+		}
+		random_country = {
+			limit = {
+				OR = {
+					tag = SIK
+					tag = MYS
+					tag = CHH
+					tag = GWA
+					tag = MEW
+					tag = JAS
+					tag = BHP
+					tag = KAL
+					tag = MAK
+					tag = SIN
+					tag = PNJ
+					tag = SHI
+					tag = BIK
+					tag = JOD
+					tag = JAI
+					tag = BER
+					tag = IND
+					tag = BHO
+					tag = NAG
+					tag = HYD
+					tag = ASM
+				}
+				exists = yes
+				neighbour = THIS
+				number_of_states = 2
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+				NOT = { civilized = yes }
+				THIS = { nationalism_n_imperialism = 1 NOT = { has_global_flag = berlin_conference } }
+			}
+			leave_alliance = THIS
+			relation = { who = THIS value = -100 }
+			add_casus_belli = { target = THIS type = demand_concession_NI_casus_belli months = 24 }
+		}
+		random_country = {
+			limit = {
+				OR = {
+					tag = SIK
+					tag = MYS
+					tag = CHH
+					tag = GWA
+					tag = MEW
+					tag = JAS
+					tag = BHP
+					tag = KAL
+					tag = MAK
+					tag = SIN
+					tag = PNJ
+					tag = SHI
+					tag = BIK
+					tag = JOD
+					tag = JAI
+					tag = BER
+					tag = IND
+					tag = BHO
+					tag = NAG
+					tag = HYD
+					tag = ASM
+				}
+				exists = yes
+				neighbour = THIS
+				NOT = { number_of_states = 2 }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+				NOT = { civilized = yes }
+				THIS = { nationalism_n_imperialism = 1 has_global_flag = berlin_conference }
+			}
+			leave_alliance = THIS
+			relation = { who = THIS value = -100 }
+			add_casus_belli = { target = THIS type = establish_protectorate_BC_casus_belli months = 24 }
+		}
+		random_country = {
+			limit = {
+				OR = {
+					tag = SIK
+					tag = MYS
+					tag = CHH
+					tag = GWA
+					tag = MEW
+					tag = JAS
+					tag = BHP
+					tag = KAL
+					tag = MAK
+					tag = SIN
+					tag = PNJ
+					tag = SHI
+					tag = BIK
+					tag = JOD
+					tag = JAI
+					tag = BER
+					tag = IND
+					tag = BHO
+					tag = NAG
+					tag = HYD
+					tag = ASM
+				}
+				exists = yes
+				neighbour = THIS
+				number_of_states = 2
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+				NOT = { civilized = yes }
+				THIS = { nationalism_n_imperialism = 1 has_global_flag = berlin_conference }
+			}
+			leave_alliance = THIS
+			relation = { who = THIS value = -100 }
+			add_casus_belli = { target = THIS type = demand_concession_BC_casus_belli months = 24 }
+		}
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 0
+				badboy = 0.92
+			}
+		}
+	}
+	option = {
+		name = "EVT95251OPTB"
+		prestige = -5
+		any_neighbor_country = {
+			limit = {
+				OR = {
+					tag = SIK
+					tag = MYS
+					tag = CHH
+					tag = GWA
+					tag = MEW
+					tag = JAS
+					tag = BHP
+					tag = KAL
+					tag = MAK
+					tag = SIN
+					tag = PNJ
+					tag = SHI
+					tag = BIK
+					tag = JOD
+					tag = JAI
+					tag = BER
+					tag = IND
+					tag = BHO
+					tag = NAG
+					tag = HYD
+					tag = ASM
+				}
+				exists = yes
+			}
+			relation = { who = THIS value = 25 }
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}		
+}
+	
+# Event to Inherit
+country_event = {
+	id = 95255
+	title = "EVTNAME95255" #Indonesian Unification
+	desc = "EVTDESC95255"
+	picture = "Celebration"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT95255OPTA"
+		random_country = {
+			limit = {
+				NOT = { is_our_vassal = THIS }
+				is_sphere_leader_of = THIS
+			}
+			relation = {
+				who = FROM
+				value = -25
+			}
+		}
+		random_country = {
+			limit = { is_our_vassal = THIS }
+			casus_belli = {
+				target = FROM
+				type = acquire_state
+				months = 12
+			}
+			casus_belli = {
+				target = FROM
+				type = cut_down_to_size
+				months = 12
+			}
+			relation = {
+				who = FROM
+				value = -50
+			}
+			FROM = { badboy = 1 }
+		}
+		FROM = { inherit = THIS }
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 0.5
+				is_vassal = yes
+			}
+			modifier = {
+				factor = 0.5
+				part_of_sphere = yes
+				NOT = { in_sphere = FROM }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = {
+					relation = {
+						who = FROM
+						value = 100
+					}
+				}
+			}
+			modifier = {
+				factor = 1.2
+				alliance_with = FROM
+			}
+		}
+	}
+	
+	option = {
+		name = "EVT95255OPTB"
+		prestige = 1
+		relation = {
+			who = FROM
+			value = -100
+		}
+		leave_alliance = FROM
+		any_pop = {
+			militancy = 3
+			consciousness = 2
+		}
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 2
+				is_vassal = yes
+			}
+			modifier = {
+				factor = 2
+				part_of_sphere = yes
+				NOT = { in_sphere = FROM }
+			}
+			modifier = {
+				factor = 0
+				in_sphere = FROM
+			}
+			modifier = {
+				factor = 0
+				vassal_of = FROM
+			}
+		}
+	}
+}
+
+## Indonesian colony spread
+province_event = {
+	id = 97130
+	title = "EVTNAME98800"
+	desc = "EVTDESC97130"
+	
+	trigger = {
+		OR = {
+			region = BAL_1438 #Bali
+			region = NET_1398 #Djambi
+			region = NET_1401 #Siak
+			region = ATJ_1405 #Atjeh
+			region = NET_1426 #South Borneo
+			region = NET_1423 #East Borneo
+			region = BRU_1396 #North Borneo
+			region = BRU_1394 #West Borneo
+			region = NET_1446 #Timor
+			region = NET_1449 #Celebes
+			region = NET_1447 #Mollucas
+			region = NET_1451 #Western New Guinea
+			region = AST_2528 #Southern New Guina
+			region = GER_2530 #Northern New Guinea
+		}
+		owned_by = THIS
+		controlled_by = THIS
+		any_neighbor_province = {
+			is_core = INO
+		}
+		owner = {
+			civilized = yes
+			NOT = { is_culture_group = southeast_asian }
+		}
+		OR = {
+			AND = {
+				owner = { owns = 1413 }
+				INO = { exists = no }
+			}
+			INO = {
+				vassal_of = THIS
+				is_culture_group = THIS
+			}
+		}
+		NOT = {
+			is_core = INO
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+	}
+	
+	option = {
+		name = "EVT97130OPTA"
+		state_scope = {
+			any_owned = {
+				limit = { NOT = { is_core = INO } }
+				add_core = INO
+				any_pop = { militancy = -3 }
+				add_province_modifier = {
+					name = colonial_exploitation
+					duration = 1095
+				}
+			}
+		}
+		INO = { add_accepted_culture = malay }
+		state_scope = {
+			any_owned = {
+				limit = { is_core = INO NOT = { province_id = 1446 } }
+				remove_core = JAV
+				remove_core = DJA 
+				remove_core = SAK 
+				remove_core = ATJ 
+				remove_core = BAL 
+				remove_core = SLW
+				remove_core = MAL
+				remove_core = KLM
+				remove_core = LAN
+				remove_core = KTI
+				remove_core = SUL
+				remove_core = BRU
+			}
+		}
+	}
+}
+
+province_event = {
+	id = 97131
+	title = "EVTNAME98800"
+	desc = "EVTDESC97130"
+	
+	trigger = {
+		OR = {
+			region = NET_1446 #Flores
+			region = NET_1449 #Sulawesi
+			region = NET_1447 #Moluccas
+		}
+		owned_by = THIS
+		controlled_by = THIS
+		any_neighbor_province = {
+			is_core = INO
+		}
+		owner = {
+			civilized = yes
+			NOT = { is_culture_group = southeast_asian }
+		}
+		OR = {
+			AND = {
+				owner = { owns = 1413 }
+				INO = { exists = no }
+			}
+			INO = {
+				vassal_of = THIS
+				is_culture_group = THIS
+			}
+		}
+		NOT = {
+			is_core = INO
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+	}
+	
+	option = {
+		name = "EVT97130OPTA"
+		state_scope = {
+			any_owned = {
+				limit = {
+					NOT = { is_core = INO }
+				}
+				add_core = INO
+				any_pop = { militancy = -3 }
+				add_province_modifier = {
+					name = colonial_exploitation
+					duration = 1095
+				}
+			}
+		}
+		INO = { add_accepted_culture = moluccan }
+		state_scope = {
+			any_owned = {
+				limit = { is_core = INO NOT = { province_id = 1446 } }
+				remove_core = JAV
+				remove_core = DJA 
+				remove_core = SAK 
+				remove_core = ATJ 
+				remove_core = BAL 
+				remove_core = SLW
+				remove_core = MAL
+				remove_core = KLM
+				remove_core = LAN
+				remove_core = KTI
+				remove_core = SUL
+				remove_core = BRU
+			}
+		}
+	}
+}
+
+province_event = {
+	id = 97132
+	title = "EVTNAME98800"
+	desc = "EVTDESC97130"
+	
+	trigger = {
+		OR = {
+			region = NET_1451 #West New Guinea
+			region = AST_2528 #Southeast New Guinea
+			region = GER_2530 #Northeast New Guinea
+		}
+		owned_by = THIS
+		controlled_by = THIS
+		any_neighbor_province = {
+			is_core = INO
+		}
+		owner = {
+			civilized = yes
+			NOT = { is_culture_group = southeast_asian }
+		}
+		OR = {
+			AND = {
+				owner = { owns = 1413 }
+				INO = { exists = no }
+			}
+			INO = {
+				vassal_of = THIS
+				is_culture_group = THIS
+			}
+		}
+		NOT = {
+			is_core = INO
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+	}
+	
+	option = {
+		name = "EVT97130OPTA"
+		state_scope = {
+			any_owned = {
+				limit = {
+					NOT = { is_core = INO }
+				}
+				add_core = INO
+				any_pop = { militancy = -3 }
+				add_province_modifier = {
+					name = colonial_exploitation
+					duration = 1095
+				}
+			}
+		}
+		INO = { add_accepted_culture = melanesian }
+		state_scope = {
+			any_owned = {
+				limit = { is_core = INO NOT = { province_id = 1446 } }
+				remove_core = JAV
+				remove_core = DJA 
+				remove_core = SAK 
+				remove_core = ATJ 
+				remove_core = BAL 
+				remove_core = SLW
+				remove_core = MAL
+				remove_core = KLM
+				remove_core = LAN
+				remove_core = KTI
+				remove_core = SUL
+				remove_core = BRU
+			}
+		}
+	}
+}
+
+# Unification of Lan Xang (Laos)
+country_event = {
+	id = 97120
+	title = "EVTNAME97120"
+	desc = "EVTDESC97120"
+	picture = "Celebration"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT97120OPTA"
+		any_owned = { limit = { is_core = THIS } add_core = LXA remove_core = THIS }
+		FROM = {
+			inherit = THIS
+			badboy = 1
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.5
+				in_sphere = FROM
+			}
+			modifier = {
+				factor = 1.5
+				relation = {
+					who = FROM
+					value = 100
+				}
+			}
+			modifier = {
+				factor = 1.5
+				relation = {
+					who = FROM
+					value = 175
+				}
+			}
+			modifier = {
+				factor = 1.5
+				alliance_with = FROM
+			}
+			modifier = {
+				factor = 2
+				government = fascist_dictatorship
+				FROM = {
+					government = fascist_dictatorship
+				}
+			}
+			modifier = {
+				factor = 2
+				government = proletarian_dictatorship
+				FROM = {
+					government = proletarian_dictatorship
+				}
+			}
+			modifier = {
+				factor = 3
+				vassal_of = FROM
+			}
+		}
+	}
+		
+	option = {
+		name = "EVT97120OPTB"
+		prestige = 1
+		relation = {
+			who = FROM
+			value = -100
+		}
+		leave_alliance = FROM
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.5
+				NOT = {
+					relation = {
+						who = FROM
+						value = -100
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				NOT = {
+					relation = {
+						who = FROM
+						value = -175
+					}
+				}
+			}
+			modifier = {
+				factor = 10
+				government = fascist_dictatorship
+				FROM = {
+					government = proletarian_dictatorship
+				}
+			}
+			modifier = {
+				factor = 10
+				government = proletarian_dictatorship
+				FROM = {
+					government = fascist_dictatorship
+				}
+			}
+		}
+	}
+}

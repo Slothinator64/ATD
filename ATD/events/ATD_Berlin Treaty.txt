@@ -1,0 +1,818 @@
+#Trigger the treaty
+country_event = {
+	id = 897000
+	title = "EVTNAME897000"
+	desc = "EVTDESC897000"
+	picture = "Rebellion"
+
+	major = yes
+
+	trigger = {
+		year = 1870
+		capital_scope = { continent = europe }
+		NOT = { rank = 8 }
+		war = no
+		OR = {
+			is_greater_power = yes
+			is_secondary_power = yes
+		}
+		OR = {
+			war_exhaustion = 40
+			NOT = { military_score = 10 }
+		}
+		great_wars_enabled = no
+		number_of_states = 3
+		any_country = {
+			capital_scope = { continent = europe }
+			is_greater_power = yes
+			NOT = { tag = THIS }
+			truce_with = THIS
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = "EVT897000OPTA"
+		war_exhaustion = -20
+		random_country = {
+			limit = {
+				capital_scope = { continent = europe }
+				is_greater_power = yes
+				NOT = { tag = THIS }
+				NOT = { truce_with = THIS }
+				OR = {
+					relation = {
+						who = THIS
+						value = 0
+					}
+					is_sphere_leader_of = THIS
+					tag = GER
+					tag = NGF
+					tag = SGF
+					tag = ITA
+					tag = FRA
+				}
+			}
+			country_event = { id = 897001 days = 10 }
+		}
+		any_neighbor_country = {
+			limit = {
+				truce_with = THIS
+			}
+			set_country_flag = berlin_aggressor
+		}
+		set_country_flag = berlin_victim
+	}
+	option = {
+		name = "EVT897000OPTB"
+		badboy = -10
+		prestige = -10
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#Leader starts the voting
+country_event = {
+	id = 897001
+	title = "EVTNAME897001"
+	desc = "EVTDESC897001"
+	picture = "berlin_congress_htm"
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = berlin_congress_leader
+		FROM = {
+			set_variable = {
+				which = ascendant_support
+				value = 0
+			}
+			set_variable = {
+				which = descendant_support
+				value = 0
+			}
+		}
+	}
+	
+	option = {
+		name = "EVT897001OPTA"
+		FROM = {
+			country_event = { id = 897022 days = 10 }
+		}
+		FROM = {
+			change_variable = {
+				which = descendant_support
+				value = 1
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				alliance_with = FROM
+			}
+			modifier = {
+				factor = 2
+				is_sphere_leader_of = FROM
+			}
+			modifier = {
+				factor = 2
+				relation = { who = FROM value = 50 }
+			}
+			modifier = {
+				factor = 2
+				relation = { who = FROM value = 100 }
+			}
+		}
+	}
+	option = {
+		name = "EVT897001OPTB"
+		FROM = {
+			country_event = { id = 897022 days = 10 }
+		}
+		FROM = {
+			change_variable = {
+				which = ascendant_support
+				value = 1
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				truce_with = FROM
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					relation = { who = FROM value = 0 }
+				}
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					relation = { who = FROM value = -100 }
+				}
+			}
+		}
+	}
+}
+
+#Ping from the loser
+country_event = {
+	id = 897022
+	title = "EVTNAME897000"
+	desc = "EVTDESC897022"
+	picture = "berlin_congress_htm"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT897022OPTA"
+		any_country = {
+			limit = {
+				is_greater_power = yes
+				capital_scope = { continent = europe }
+				NOT = { tag = FROM }
+			}
+			country_event = { id = 897002 days = 10 }
+		}
+	}
+}
+
+#Gather Opinions
+country_event = {
+	id = 897002
+	title = "EVTNAME897000"
+	desc = "EVTDESC897002"
+	picture = "berlin_congress_htm"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT897001OPTA"
+		FROM = {
+			change_variable = {
+				which = descendant_support
+				value = 1
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				OR = {
+					rank = 1
+					rank = 2
+					rank = 3
+					rank = 4
+					NOT = { rank = 5 }
+					NOT = { rank = 6 }
+					NOT = { rank = 7 }
+					NOT = { rank = 8 }
+				}
+			}
+			modifier = {
+				factor = 2
+				alliance_with = FROM
+			}
+			modifier = {
+				factor = 2
+				is_sphere_leader_of = FROM
+			}
+			modifier = {
+				factor = 2
+				relation = { who = FROM value = 50 }
+			}
+			modifier = {
+				factor = 2
+				relation = { who = FROM value = 100 }
+			}
+			
+			modifier = {
+				factor = 2
+				any_country = {
+					limit = {
+						has_country_flag = berlin_congress_leader
+					}
+					alliance_with = THIS
+				}
+			}
+			modifier = {
+				factor = 2
+				any_country = {
+					limit = {
+						has_country_flag = berlin_congress_leader
+					}
+					relation = { who = THIS value = 50 }
+				}
+			}
+			modifier = {
+				factor = 2
+				any_country = {
+					limit = {
+						has_country_flag = berlin_congress_leader
+					}
+					relation = { who = THIS value = 100 }
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVT897001OPTB"
+		FROM = {
+			change_variable = {
+				which = ascendant_support
+				value = 1
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				has_country_flag = berlin_aggressor
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					NOT = { rank = 1 }
+					NOT = { rank = 2 }
+					NOT = { rank = 3 }
+					NOT = { rank = 4 }
+					rank = 5
+					rank = 6
+					rank = 7
+					rank = 8
+				}
+			}			
+			modifier = {
+				factor = 2
+				any_country = {
+					limit = {
+						has_country_flag = berlin_congress_leader
+					}
+					truce_with = THIS
+				}
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					relation = { who = FROM value = 0 }
+				}
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					relation = { who = FROM value = -100 }
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Buffer events because reasons
+	id = 907004
+	desc = "EVTDESC907004"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT907004OPTA"
+	}
+}
+
+country_event = {
+	id = 897004
+	title = "EVTNAME897004" # Ascendant Supported
+	desc = "EVTDESC897004"
+	news = yes
+	news_title = "EVTNAME897004_NEWS_TITLE"
+	news_desc_long = "EVTDESC897004_NEWS_LONG"
+	news_desc_medium = "EVTDESC897004_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC897004_NEWS_SHORT"
+	picture = "berlin_congress_htm"
+	major = yes
+	
+	trigger = {
+		has_country_flag = berlin_victim
+		check_variable = {
+			which = ascendant_support
+			value = 1
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 0.5
+			check_variable = {
+				which = ascendant_support
+				value = 2
+			}
+		}
+		modifier = {
+			factor = 0.5
+			check_variable = {
+				which = ascendant_support
+				value = 3
+			}
+		}
+		modifier = {
+			factor = 0.5
+			check_variable = {
+				which = ascendant_support
+				value = 4
+			}
+		}
+		modifier = {
+			factor = 0.5
+			check_variable = {
+				which = ascendant_support
+				value = 5
+			}
+		}
+	}
+
+	option = {
+		name = "EVT897004OPTA"
+		#Any countries of a different culture group are released as spheres of the winner
+		prestige = -10
+		any_country = {
+			limit = {
+				has_country_flag = berlin_aggressor
+			}
+			prestige = 5
+			clr_country_flag = berlin_aggressor
+		}
+		#Release cores of existing country
+		any_country = {
+			limit = {
+				exists = yes
+				any_core = { owned_by = THIS }
+				NOT = { this_culture_union = THIS }
+				capital_scope = { continent = europe }
+			}
+			all_core = {
+				limit = {
+					is_core = THIS
+					state_scope = {
+						NOT = { any_owned_province = { is_capital = yes } }
+					}
+				}
+				remove_core = THIS
+			}
+			country_event = 897009
+		}
+
+		#release all vassals
+		any_country = {
+			limit = { vassal_of = THIS }
+			leave_alliance = THIS
+			country_event = 897010
+		}
+		#Release new countries
+		any_country = {
+			limit = {
+				any_core = { owned_by = THIS }
+				exists = no
+				NOT = {
+					AND = {
+						is_primary_culture = THIS
+						culture_has_union_tag = yes
+					}
+				}
+				capital_scope = { continent = europe }
+			}
+			all_core = {
+				limit = {
+					is_core = THIS
+					state_scope = {
+						NOT = { any_owned_province = { is_capital = yes } }
+					}
+				}
+				remove_core = THIS
+			}
+			country_event = 897008
+		}
+		clr_country_flag = berlin_victim
+		any_country = {
+			limit = {
+				is_greater_power = yes
+				capital_scope = { continent = europe }
+			}
+			country_event = 897006 #Notification of end
+			clr_country_flag = berlin_aggressor
+			clr_country_flag = berlin_congress_leader
+		}
+	}
+}
+
+
+country_event = {
+	id = 897003 #Don't ask about the number, it just doesn't work otherwise for some reason
+	title = "EVTNAME897003" # Descendant Supported
+	desc = "EVTDESC897003"
+	news = yes
+	news_title = "EVTNAME897003_NEWS_TITLE"
+	news_desc_long = "EVTDESC897003_NEWS_LONG"
+	news_desc_medium = "EVTDESC897003_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC897003_NEWS_SHORT"
+	picture = "berlin_congress_htm"
+	major = yes
+	
+	trigger = {
+		has_country_flag = berlin_victim
+		check_variable = {
+			which = descendant_support
+			value = 1
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 0.5
+			check_variable = {
+				which = descendant_support
+				value = 2
+			}
+		}
+		modifier = {
+			factor = 0.5
+			check_variable = {
+				which = descendant_support
+				value = 3
+			}
+		}
+		modifier = {
+			factor = 0.5
+			check_variable = {
+				which = descendant_support
+				value = 4
+			}
+		}
+		modifier = {
+			factor = 0.5
+			check_variable = {
+				which = descendant_support
+				value = 5
+			}
+		}
+	}
+
+	option = {
+		name = "EVT897003OPTA"
+		prestige = 10
+		clr_country_flag = berlin_victim
+		any_country = {
+			limit = {
+				has_country_flag = berlin_aggressor
+				capital_scope = { continent = europe }
+			}
+			any_owned = { 
+				limit = { 
+					is_core = THIS	
+					NOT = { is_core = THIS }
+				}
+				secede_province = THIS
+			}
+			clr_country_flag = berlin_aggressor
+		}
+		#Release new Puppets
+		any_country = {
+			limit = {
+				any_core = { owned_by = THIS }
+				exists = no
+				NOT = {
+					AND = {
+						is_primary_culture = THIS
+						culture_has_union_tag = yes
+					}
+				}
+				capital_scope = { continent = europe }
+			}
+			all_core = {
+				limit = {
+					is_core = THIS
+					state_scope = {
+						NOT = { any_owned_province = { is_capital = yes } }
+					}
+				}
+				remove_core = THIS
+			}
+			country_event = 897007
+		}
+		any_country = {
+			limit = {
+				has_country_flag = berlin_congress_leader
+				capital_scope = { continent = europe }
+			}
+			create_alliance = THIS
+		}
+		clr_country_flag = berlin_victim
+		any_country = {
+			limit = {
+				is_greater_power = yes
+				capital_scope = { continent = europe }
+			}
+			country_event = 897005 #Notification of end
+			clr_country_flag = berlin_aggressor
+			clr_country_flag = berlin_congress_leader
+		}
+	}
+}
+
+country_event = {
+	
+	id = 897005
+	title = "EVTNAME897000" # Descendant Supported
+	desc = "EVTDESC897005"
+	picture = "berlin_congress_htm"
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT897005OPTA"
+	}
+}
+
+country_event = {
+	
+	id = 897006
+	title = "EVTNAME897000" # Ascendant Supported
+	desc = "EVTDESC897006"
+	picture = "berlin_congress_htm"
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT897005OPTA"
+	}
+}
+
+
+# Countries becoming puppets as a result of Berlin
+country_event = {
+	
+	id = 897007
+	title = "EVTNAME897007"
+	desc = "EVTDESC897007"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA897007" #Great
+		FROM = {
+			any_state = {
+				limit = {
+					any_owned_province = { is_core = THIS }
+					NOT = { any_owned_province = { is_capital = yes } }
+				}
+				any_owned = {
+					limit = { is_core = THIS }
+					secede_province = THIS
+				}
+			}
+		}
+		FROM = {		
+			create_alliance = THIS
+			create_vassal = THIS
+		}
+		random_country = {
+			limit = {
+				is_greater_power = yes
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = 100
+			}
+		}
+		any_country = {
+			limit = {
+				NOT = { truce_with = FROM }
+				is_greater_power = yes
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = 100
+			}
+			relation = {
+				who = THIS
+				value = 100
+			}
+		}
+		any_neighbor_country = {
+			limit = {
+				NOT = { truce_with = FROM }
+				is_greater_power = yes
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = 100
+			}
+			relation = {
+				who = THIS
+				value = 100
+			}
+		}
+	}
+}
+
+# Countries becoming independent as a result of Berlin
+country_event = {
+	
+	id = 897008
+	title = "EVTNAME897008"
+	desc = "EVTDESC897008"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA897008" #Great
+		FROM = {
+			any_state = {
+				limit = {
+					any_owned_province = { is_core = THIS }
+					NOT = { any_owned_province = { is_capital = yes } }
+				}
+				any_owned = {
+					limit = { is_core = THIS }
+					secede_province = THIS
+				}
+			}
+		}
+		random_country = {
+			limit = {
+				is_greater_power = yes
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = 100
+			}
+		}
+		any_country = {
+			limit = {
+				truce_with = FROM
+				is_greater_power = yes
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = 100
+			}
+			relation = {
+				who = THIS
+				value = 100
+			}
+		}
+		any_neighbor_country = {
+			limit = {
+				truce_with = FROM
+				is_greater_power = yes
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = 100
+			}
+			relation = {
+				who = THIS
+				value = 100
+			}
+		}
+	}
+}
+
+# Country will automatically get all its cores returned
+
+country_event = {
+	id = 897009
+	title = "EVTNAME897009" 
+	desc = "EVTDESC897009"
+	picture = "treaty"
+
+	is_triggered_only = yes
+	
+	immediate = {
+		FROM = {
+			any_state = {
+				limit = {
+					any_owned_province = { is_core = THIS }
+				}
+				any_owned = {
+					limit = {
+						is_core = THIS
+						is_capital = no
+					}
+					secede_province = THIS
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTA897009" #We simply wish our lands back
+	}
+}
+
+# All vassals will automatically gain independence
+country_event = {
+	id = 897010
+	title = "EVTNAME897010"
+	desc = "EVTDESC897010"
+	picture = "treaty"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA897010" #$COUNTRY$ shall be free
+		FROM = { release_vassal = THIS }
+		random_country = {
+			limit = {
+				is_greater_power = yes
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = 100
+			}
+		}
+		any_country = {
+			limit = {
+				is_greater_power = yes
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = 100
+			}
+			relation = {
+				who = THIS
+				value = 100
+			}
+		}
+		any_neighbor_country = {
+			limit = {
+				is_greater_power = yes
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = 100
+			}
+			relation = {
+				who = THIS
+				value = 100
+			}
+		}
+		FROM = {
+			relation = {
+				who = THIS
+				value = -200
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = -200
+			}
+			leave_alliance = THIS
+		}
+	}
+}

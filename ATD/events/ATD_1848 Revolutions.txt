@@ -1,0 +1,1658 @@
+country_event = {
+	id = 892000
+	title = "EVTNAME892000" #The Norwegian Revolution
+	desc = "EVTDESC892000"
+	news = yes
+	news_desc_long = "EVTDESC892000_NEWS_LONG"
+	news_desc_medium = "EVTDESC892000_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC892000_NEWS_SHORT"
+	picture = "hungarian_revolution_1848"
+
+	major = yes
+	
+	trigger = {
+		OR = {
+			is_greater_power = yes
+			is_secondary_power = yes
+			tag = NOR
+		}
+		NOT = { government = democracy }
+		NOT = { has_country_flag = had_liberal_revolution }
+		OR = {
+			has_country_modifier = springtime_of_nations
+			has_country_flag = liberal_revolution_in_progress
+			year = 1848
+		}
+		OR = {
+			tag = NOR
+			has_global_flag = norwegian_revolution_1848
+		}
+		NOT = { tag = TUR }
+		is_vassal = no
+		OR = {
+			AND = {
+				average_militancy = 4
+				has_country_modifier = springtime_of_nations
+			}
+			AND = {
+				average_militancy = 6
+				NOT = { has_country_modifier = springtime_of_nations }
+			}
+			any_owned_province = {
+				is_capital = yes
+				controlled_by = REB
+			}
+			revolt_percentage = 0.50
+			year = 1848
+		}
+	}
+	
+	mean_time_to_happen =  {
+		months = 1
+		modifier = {
+			factor = 0.5
+			has_country_modifier = springtime_of_nations
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { has_country_modifier = springtime_of_nations }
+		}
+		modifier = {
+			factor = 0.01
+			capital_scope = { controlled_by = REB }
+		}
+		modifier = {
+			factor = 0.8
+			average_militancy = 6
+		}
+		modifier = {
+			factor = 0.8
+			average_militancy = 7
+		}
+		modifier = {
+			factor = 0.8
+			average_militancy = 8
+		}
+		modifier = {
+			factor = 0.8
+			average_militancy = 9
+		}
+		modifier = {
+			factor = 0.6
+			revolt_percentage = 0.60
+		}
+		modifier = {
+			factor = 0.6
+			revolt_percentage = 0.70
+		}
+		modifier = {
+			factor = 0.6
+			revolt_percentage = 0.80
+		}
+	}
+
+	immediate = {
+		set_global_flag = norwegian_revolution_1848
+		clr_country_flag = liberal_revolution_fired
+		clr_country_flag = liberal_revolution_in_progress
+		set_country_flag = had_liberal_revolution
+		random_owned = {
+			limit = {
+				is_capital = yes
+				controlled_by_rebels = yes
+			}
+			change_controller = THIS
+		}
+	}
+	
+	option = {
+		name = "EVT892000OPTA" #Cede to the republic
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 10
+				tag = NOR
+			}
+			modifier = {
+				factor = 2
+				ruling_party_ideology = liberal
+			}
+			modifier = {
+				factor = 2
+				government = hms_government
+			}
+			modifier = {
+				factor = 0.5
+				ruling_party_ideology = conservative
+			}
+			modifier = {
+				factor = 0.1
+				ruling_party_ideology = reactionary
+			}
+			modifier = {
+				factor = 0.1
+				government = absolute_monarchy
+			}
+			modifier = {
+				factor = 0.5
+				is_greater_power = yes
+			}
+			modifier = {
+				factor = 0
+				tag = FRA
+			}
+			modifier = {
+				factor = 0
+				tag = LIT
+			}
+			modifier = {
+				factor = 0
+				tag = SPA
+			}
+			modifier = {
+				factor = 0
+				tag = ENL
+			}
+			modifier = {
+				factor = 0
+				tag = PAP
+			}
+			modifier = {
+				factor = 0
+				tag = BOH
+			}
+		}
+		prestige = -25
+		any_owned = { remove_province_modifier = liberal_agitation }
+		remove_country_modifier = springtime_of_nations
+		remove_country_modifier = global_liberal_agitation
+		government = democracy
+		ruling_party_ideology = liberal
+		political_reform = universal_voting
+		political_reform = population_equal_weight
+		political_reform = yes_meeting
+		political_reform = free_press
+		random_owned = {
+			limit = { owner = { NOT = { border_policy = open_borders } } }
+			owner = { political_reform = open_borders }
+		}
+		random_owned = {
+			limit = { owner = { NOT = { political_parties = secret_ballots } } }
+			owner = { political_reform = non_secret_ballots }
+		}
+		random_owned = {
+			limit = { owner = { NOT = { trade_unions = all_trade_unions } } }
+			owner = { political_reform = non_socialist }
+		}
+		add_country_modifier = {
+			name = power_vacuum
+			duration = 1825
+		}
+		any_pop = {
+			limit = {
+				is_primary_culture = yes
+				is_accepted_culture = yes
+				OR = {
+					type = soldiers
+					type = officers
+				}
+			}
+			ideology = { factor = 0.3 value = conservative }
+			dominant_issue = { factor = 0.20 value = jingoism }
+		}
+		any_pop = {
+			limit = {
+				strata = poor
+				location = { is_core = THIS }
+			}
+			ideology = { factor = 0.25 value = conservative }
+			dominant_issue = { factor = 0.10 value = jingoism }
+		}
+		any_pop = {
+			limit = {
+				location = { is_core = THIS }
+			}
+			scaled_militancy = {
+				ideology = reactionary
+				factor = 4
+			}
+			scaled_militancy = {
+				ideology = conservative
+				factor = -6
+			}
+			scaled_militancy = {
+				ideology = liberal
+				factor = -6
+			}
+			scaled_militancy = {
+				ideology = socialist
+				factor = -2
+			}
+		}
+		any_country = {
+			limit = {
+				OR = {
+					has_country_flag = liberal_revolution_in_progress
+					has_country_modifier = springtime_of_nations
+				}
+				NOT = { government = democracy }
+				NOT = { government = hms_government }
+				neighbour = THIS
+			}
+			any_pop = {
+				scaled_militancy = {
+					ideology = liberal
+					factor = 4
+				}
+			}
+		}
+		any_country = {
+			limit = {
+				alliance_with = THIS
+				NOT = {
+					vassal_of = THIS
+					substate_of = THIS
+					in_sphere = THIS
+				}
+			}
+			relation = { who = THIS value = -100 }
+			leave_alliance = THIS
+		}
+		any_country = {
+			limit = {
+				vassal_of = THIS
+			}
+			leave_alliance = THIS
+			country_event = 892017
+		}
+		any_country = {
+			limit = {
+				government = democracy
+				NOT = {
+					vassal_of = THIS
+					substate_of = THIS
+					in_sphere = THIS
+				}
+			}
+			relation = { who = THIS value = 200 }
+		}
+	}
+	
+	option = {
+		name = "EVT892000OPTB" #Adopt a constitution
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.01
+				tag = NOR
+			}
+			modifier = {
+				factor = 0.5
+				ruling_party_ideology = liberal
+			}
+			modifier = {
+				factor = 4
+				government = hms_government
+			}
+			modifier = {
+				factor = 2
+				ruling_party_ideology = conservative
+			}
+			modifier = {
+				factor = 0.1
+				ruling_party_ideology = reactionary
+			}
+			modifier = {
+				factor = 0.5
+				government = absolute_monarchy
+			}
+			modifier = {
+				factor = 0
+				tag = PAP
+			}
+		}
+		prestige = -10
+		badboy = 2
+		any_owned = { remove_province_modifier = liberal_agitation }
+		remove_country_modifier = global_liberal_agitation
+		government = hms_government
+		ruling_party_ideology = conservative
+		political_reform = yes_meeting
+		political_reform = free_press
+		random_owned = {
+			limit = { owner = { NOT = { border_policy = universal_weighted_voting } } }
+			owner = { political_reform = wealth_voting }
+		}
+		random_owned = {
+			limit = { owner = { NOT = { political_parties = population_equal_weight } } }
+			owner = { political_reform = state_equal_weight }
+		}
+		any_pop = {
+			limit = {
+				is_primary_culture = yes
+				is_accepted_culture = yes
+				OR = {
+					type = soldiers
+					type = officers
+				}
+			}
+			ideology = { factor = 0.15 value = conservative }
+			dominant_issue = { factor = 0.10 value = jingoism }
+		}
+		any_pop = {
+			limit = {
+				strata = poor
+				location = { is_core = THIS }
+			}
+			ideology = { factor = 0.10 value = conservative }
+			dominant_issue = { factor = 0.05 value = jingoism }
+		}
+		any_pop = {
+			limit = {
+				location = { is_core = THIS }
+			}
+			scaled_militancy = {
+				ideology = reactionary
+				factor = 2
+			}
+			scaled_militancy = {
+				ideology = conservative
+				factor = -3
+			}
+			scaled_militancy = {
+				ideology = liberal
+				factor = -3
+			}
+			scaled_militancy = {
+				ideology = socialist
+				factor = 2
+			}
+		}
+		any_country = {
+			limit = {
+				OR = {
+					has_country_flag = liberal_revolution_in_progress
+					has_country_modifier = springtime_of_nations
+				}
+				NOT = { government = democracy }
+				NOT = { government = hms_government }
+				neighbour = THIS
+			}
+			any_pop = {
+				scaled_militancy = {
+					ideology = liberal
+					factor = 2
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVT892000OPTC" #Resist
+		badboy = 5
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 0.01
+				tag = NOR
+			}
+			modifier = {
+				factor = 0.1
+				ruling_party_ideology = liberal
+			}
+			modifier = {
+				factor = 0.5
+				government = hms_government
+			}
+			modifier = {
+				factor = 0.5
+				ruling_party_ideology = conservative
+			}
+			modifier = {
+				factor = 2
+				ruling_party_ideology = reactionary
+			}
+			modifier = {
+				factor = 2
+				government = absolute_monarchy
+			}
+			modifier = {
+				factor = 1.5
+				is_greater_power = yes
+			}
+		}
+		any_pop = {
+			scaled_militancy = {
+				ideology = reactionary
+				factor = -2
+			}
+			scaled_militancy = {
+				ideology = conservative
+				factor = 6
+			}
+			scaled_militancy = {
+				ideology = liberal
+				factor = 6
+			}
+			scaled_militancy = {
+				ideology = socialist
+				factor = 4
+			}
+		}
+	}
+}
+
+#Hungarian Revolution
+country_event = {
+	id = 892001
+	title = "EVTNAME892001"
+	desc = "EVTDESC892001"
+	picture = "hungarian_revolution_1848"
+	
+	trigger = {
+		tag = HUN
+		vassal_of = LIT
+		has_global_flag = norwegian_revolution_1848
+		NOT = { has_global_flag = hungarian_revolution_1848 }
+	}
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	immediate = {
+		set_global_flag = hungarian_revolution_1848
+	}
+	
+	option = {
+		name = "EVT892001OPTA"
+		RUS = {
+			country_event = { id = 892002 days = 10 }
+		}
+		leave_alliance = LIT
+		LIT = { diplomatic_influence = { who = HUN value = -400 }}
+		LIT = { release_vassal = HUN }
+		LIT = { country_event = 892018 }
+	}
+}
+
+#Russia Receives Call for Aid
+country_event = {
+	id = 892002
+	title = "EVTNAME892001"
+	desc = "EVTDESC892002"
+	picture = "hungarian_revolution_1848"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT892002OPTA" #Join war
+		ai_chance = {
+			factor = 50
+		}
+		create_alliance = HUN
+		LIT = {
+			add_casus_belli = {
+				target = HUN
+				type = make_puppet
+				months = 100
+			}
+			war = {
+				target = HUN
+				attacker_goal = { casus_belli = make_puppet }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = yes
+			}
+		}
+		military_access = HUN
+		relation = { who = HUN value = 200 }
+		relation = { who = LIT value = -100 }
+		diplomatic_influence = { who = HUN value = 400 }
+	}
+	
+	option = {
+		name = "EVT892002OPTB" #Send cash
+		ai_chance = {
+			factor = 25
+		}
+		treasury = -50000
+		HUN = { treasury = 50000 }
+		LIT = {
+			add_casus_belli = {
+				target = HUN
+				type = make_puppet
+				months = 100
+			}
+			war = {
+				target = HUN
+				attacker_goal = { casus_belli = make_puppet }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = yes
+			}
+		}
+		relation = { who = HUN value = 100 }
+		relation = { who = LIT value = -50 }
+		diplomatic_influence = { who = HUN value = 150 }
+	}
+	
+	option = {
+		name = "EVT892002OPTC" #Nope
+		ai_chance = {
+			factor = 25
+		}
+		relation = { who = HUN value = -100 }
+		LIT = {
+			add_casus_belli = {
+				target = HUN
+				type = make_puppet
+				months = 100
+			}
+			war = {
+				target = HUN
+				attacker_goal = { casus_belli = make_puppet }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = yes
+			}
+		}
+		relation = { who = LIT value = 50 }
+		diplomatic_influence = { who = HUN value = -200 }
+	}
+}
+
+#Italian Revolution
+country_event = {
+	id = 892003
+	title = "EVTNAME892003"
+	desc = "EVTDESC892003"
+	picture = "sicilian_revolution"
+	
+	trigger = {
+		OR = {
+			AND = {
+				vassal_of = FRA
+				OR = {
+					has_global_flag = hungarian_revolution_1848
+					AND = {
+						has_global_flag = norwegian_revolution_1848
+						NOT = { has_global_flag = hungarian_revolution_1848 }
+						year = 1849
+					}
+				}
+				NOT = { has_global_flag = italian_revolution_1848 }
+				OR = {
+					primary_culture = north_italian
+					primary_culture = south_italian
+				}
+			}
+			AND = {
+				has_country_flag = second_revolution_override
+				NOT = { has_country_flag = got_1848_revolution }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	immediate = {
+		set_global_flag = italian_revolution_1848
+		set_country_flag = got_1848_revolution
+	}
+	
+	option = {
+		name = "EVT892003OPTA"
+		leave_alliance = FRA
+		FRA = { diplomatic_influence = { who = THIS value = -400 }}
+		FRA = { release_vassal = THIS }
+		random_country = {
+			limit = {
+				OR = {
+					primary_culture = north_italian
+					primary_culture = south_italian
+				}
+				OR = {
+					is_greater_power = yes
+					is_secondary_power = yes
+				}
+				NOT = { alliance_with = FRA }
+				NOT = { in_sphere = FRA }
+				NOT = { vassal_of = FRA }
+				NOT = { tag = THIS }
+			}
+			country_event = { id = 892004 days = 10 }
+		}
+		any_country = {
+			limit = {
+				OR = {
+					primary_culture = north_italian
+					primary_culture = south_italian
+				}
+				vassal_of = FRA
+				NOT = { tag = THIS }
+			}
+			leave_alliance = FRA
+			set_country_flag = second_revolution_override
+			FRA = { release_vassal = THIS }
+			country_event = 892003
+		}
+		FRA = { country_event = 892018 }
+	}
+}
+
+#Make other italians join
+country_event = {
+	id = 892004
+	title = "EVTNAME892004"
+	desc = "EVTDESC892004"
+	picture = "sicilian_revolution"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT892004OPTA" #Join war
+		ai_chance = {
+			factor = 50
+		}
+		create_alliance = FROM 
+		FRA = {
+			add_casus_belli = {
+				target = FROM
+				type = make_puppet
+				months = 100
+			}
+			war = {
+				target = FROM
+				attacker_goal = { casus_belli = make_puppet }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = yes
+			}
+		}
+		military_access = FROM
+		relation = { who = FROM value = 200 }
+		relation = { who = FRA value = -100 }
+		diplomatic_influence = { who = FROM value = 150 }
+	}
+	
+	option = {
+		name = "EVT892002OPTB" #Send cash
+		ai_chance = {
+			factor = 25
+		}
+		treasury = -25000
+		FROM = { treasury = 25000 }
+		FRA = {
+			add_casus_belli = {
+				target = FROM
+				type = make_puppet
+				months = 100
+			}
+			war = {
+				target = FROM
+				attacker_goal = { casus_belli = make_puppet }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = yes
+			}
+		}
+		relation = { who = FROM value = 100 }
+		relation = { who = FRA value = -50 }
+		diplomatic_influence = { who = FROM value = 100 }
+	}
+	
+	option = {
+		name = "EVT892002OPTC" #Nope
+		ai_chance = {
+			factor = 25
+		}
+		FRA = {
+			add_casus_belli = {
+				target = FROM
+				type = make_puppet
+				months = 100
+			}
+			war = {
+				target = FROM
+				attacker_goal = { casus_belli = make_puppet }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = yes
+			}
+		}
+		relation = { who = FROM value = -100 }
+		relation = { who = FRA value = 50 }
+		diplomatic_influence = { who = FROM value = -200 }
+	}
+}
+
+#German Revolution
+country_event = {
+	id = 892005
+	title = "EVTNAME892003"
+	desc = "EVTDESC892003"
+	picture = "prussian_constitution"
+	
+	trigger = {
+		OR = {
+			AND = {
+				vassal_of = FRA
+				OR = {
+					has_global_flag = hungarian_revolution_1848
+					AND = {
+						has_global_flag = norwegian_revolution_1848
+						NOT = { has_global_flag = hungarian_revolution_1848 }
+						year = 1849
+					}
+				}
+				NOT = { has_global_flag = german_revolution_1848 }
+				OR = {
+					primary_culture = north_german
+					primary_culture = south_german
+					tag = SWI
+				}
+			}
+			AND = {
+				has_country_flag = second_revolution_override
+				NOT = { has_country_flag = got_1848_revolution }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	immediate = {
+		set_global_flag = german_revolution_1848
+		set_country_flag = got_1848_revolution
+	}
+	
+	option = {
+		name = "EVT892005OPTA"
+		random_country = {
+			limit = {
+				OR = {
+					primary_culture = north_german
+					primary_culture = south_german
+				}
+				OR = {
+					is_greater_power = yes
+					is_secondary_power = yes
+				}
+				NOT = { alliance_with = FRA }
+				NOT = { in_sphere = FRA }
+				NOT = { vassal_of = FRA }
+				NOT = { tag = THIS }
+			}
+			country_event = { id = 892006 days = 10 }
+		}
+		any_country = {
+			limit = {
+				OR = {
+					primary_culture = north_german
+					primary_culture = south_german
+					tag = SWI
+				}
+				vassal_of = FRA
+				NOT = { tag = THIS }
+			}
+			leave_alliance = FRA
+			FRA = { release_vassal = THIS }
+			set_country_flag = second_revolution_override
+			country_event = 892005
+		}
+		leave_alliance = FRA
+		FRA = { diplomatic_influence = { who = THIS value = -400 }}
+		FRA = { release_vassal = THIS }
+		FRA = { country_event = 892018 }
+	}
+}
+
+#Make other germans join
+country_event = {
+	id = 892006
+	title = "EVTNAME892004"
+	desc = "EVTDESC892004"
+	picture = "prussian_constitution"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT892004OPTA" #Join war
+		ai_chance = {
+			factor = 50
+		}
+		create_alliance = FROM
+		FRA = {
+			add_casus_belli = {
+				target = FROM
+				type = make_puppet
+				months = 100
+			}
+			war = {
+				target = FROM
+				attacker_goal = { casus_belli = make_puppet }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = yes
+			}
+		}
+		military_access = FROM
+		relation = { who = FROM value = 200 }
+		relation = { who = FRA value = -100 }
+		diplomatic_influence = { who = FROM value = 150 }
+	}
+	
+	option = {
+		name = "EVT892002OPTB" #Send cash
+		ai_chance = {
+			factor = 25
+		}
+		treasury = -25000
+		FROM = { treasury = 25000 }
+		FRA = {
+			add_casus_belli = {
+				target = FROM
+				type = make_puppet
+				months = 100
+			}
+			war = {
+				target = FROM
+				attacker_goal = { casus_belli = make_puppet }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = yes
+			}
+		}
+		relation = { who = FROM value = 100 }
+		relation = { who = FRA value = -50 }
+		diplomatic_influence = { who = FROM value = 100 }
+	}
+	
+	option = {
+		name = "EVT892002OPTC" #Nope
+		ai_chance = {
+			factor = 25
+		}
+		relation = { who = FROM value = -100 }
+		FRA = {
+			add_casus_belli = {
+				target = FROM
+				type = make_puppet
+				months = 100
+			}
+			war = {
+				target = FROM
+				attacker_goal = { casus_belli = make_puppet }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = yes
+			}
+		}
+		relation = { who = FRA value = 50 }
+		diplomatic_influence = { who = FROM value = -200 }
+	}
+}
+
+#Gelder Revolution
+country_event = {
+	id = 892007
+	title = "EVTNAME892007"
+	desc = "EVTDESC892007"
+	picture = "yound_irelander_rebellion"
+	
+	trigger = {
+		OR = {
+			has_global_flag = hungarian_revolution_1848
+			AND = {
+				has_global_flag = norwegian_revolution_1848
+				NOT = { has_global_flag = hungarian_revolution_1848 }
+				year = 1849
+			}
+		}
+		NOT = { has_global_flag = gelre_revolution_1848 }
+		tag = BRN
+		any_owned_province = { is_core = GLR }
+		GLR = { exists = no }
+	}
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	immediate = {
+		set_global_flag = gelre_revolution_1848
+	}
+	
+	option = {
+		name = "EVT892007OPTA"
+		release = GLR
+		NET = { all_core = { secede_province = GLR }}
+		LBG = { all_core = { secede_province = GLR }}
+		HLN = { all_core = { secede_province = GLR }}
+		FLA = { all_core = { secede_province = GLR }}
+		BRB = { all_core = { secede_province = GLR }}
+		GLR = {
+			all_core = { 
+				remove_core = GER
+				remove_core = BRN
+			}
+		}
+		remove_accepted_culture = dutch
+		GLR = {
+			create_alliance = HLN
+			create_alliance = BRB
+		}
+		BRN = {
+			add_casus_belli = {
+				target = GLR
+				type = conquest
+				months = 100
+			}
+			war = {
+				target = GLR
+				defender_goal = {
+					casus_belli = status_quo
+				}
+				attacker_goal = {
+					casus_belli = conquest
+				}
+				call_ally = yes
+			}
+		}
+	}
+	option = {
+		name = "EVT892007OPTB"
+		release = GLR
+		NET = { all_core = { secede_province = GLR }}
+		LBG = { all_core = { secede_province = GLR }}
+		HLN = { all_core = { secede_province = GLR }}
+		FLA = { all_core = { secede_province = GLR }}
+		BRB = { all_core = { secede_province = GLR }}
+		GLR = {
+			all_core = { 
+				remove_core = GER
+				remove_core = BRN
+			}
+		}
+		remove_accepted_culture = dutch
+		GLR = {
+			create_alliance = HLN
+			create_alliance = BRB
+		}
+		BRN = {
+			add_casus_belli = {
+				target = GLR
+				type = conquest
+				months = 100
+			}
+			war = {
+				target = GLR
+				defender_goal = {
+					casus_belli = status_quo
+				}
+				attacker_goal = {
+					casus_belli = conquest
+				}
+				call_ally = yes
+			}
+		}
+		change_tag_no_core_switch = GLR		
+	}
+}
+
+
+country_event = {
+	id = 892008
+	title = "EVTNAME892007" #Gelder Revolution Fails
+	desc = "EVTDESC892008"
+	picture = "failed_revolution"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = BRN
+		war = no
+		GLR = { exists = no }
+		owns = 384
+		has_global_flag = gelre_revolution_1848
+		NOT = { year = 1860 }
+	}
+	
+	mean_time_to_happen =  {
+		months = 1
+	}
+
+	option = {
+		name = "EVT892008OPTA"
+		add_accepted_culture = dutch
+		GLR = { 
+			all_core = { 
+				add_core = GER
+				add_core = BRN
+			}
+		}
+	}
+}
+
+
+#Scottish Revolution
+country_event = {
+	id = 892009
+	title = "EVTNAME892009"
+	desc = "EVTDESC892009"
+	picture = "yound_irelander_rebellion"
+	
+	trigger = {
+		tag = SCO
+		vassal_of = ENL
+		OR = {
+			has_global_flag = german_revolution_1848
+			has_global_flag = italian_revolution_1848
+			has_global_flag = gelre_revolution_1848
+		}
+		NOT = { has_global_flag = scottish_revolution_1848 }
+	}
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	immediate = {
+		set_global_flag = scottish_revolution_1848
+	}
+	
+	option = {
+		name = "EVT892009OPTA"
+		NOR = {
+			country_event = { id = 892010 days = 10 }
+		}
+		leave_alliance = ENL
+		ENL = { diplomatic_influence = { who = SCO value = -400 }}
+		ENL = { release_vassal = SCO }
+		ENL = { country_event = 892018 }
+	}
+}
+
+#Norway Receives Call for Aid
+country_event = {
+	id = 892010
+	title = "EVTNAME892009"
+	desc = "EVTDESC892010"
+	picture = "yound_irelander_rebellion"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT892010OPTA" #Join war
+		ai_chance = {
+			factor = 50
+		}
+		create_alliance = SCO
+		ENL = {
+			add_casus_belli = {
+				target = SCO
+				type = make_puppet
+				months = 100
+			}
+			war = {
+				target = SCO
+				attacker_goal = { casus_belli = make_puppet }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = yes
+			}
+		}
+		military_access = SCO
+		relation = { who = SCO value = 200 }
+		relation = { who = ENL value = -100 }
+		diplomatic_influence = { who = SCO value = 400 }
+	}
+	
+	option = {
+		name = "EVT892002OPTB" #Send cash
+		ai_chance = {
+			factor = 25
+		}
+		treasury = -50000
+		SCO = { treasury = 50000 }
+		ENL = {
+			add_casus_belli = {
+				target = SCO
+				type = make_puppet
+				months = 100
+			}
+			war = {
+				target = SCO
+				attacker_goal = { casus_belli = make_puppet }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = yes
+			}
+		}
+		relation = { who = SCO value = 100 }
+		relation = { who = ENL value = -50 }
+		diplomatic_influence = { who = SCO value = 150 }
+	}
+	
+	option = {
+		name = "EVT892002OPTC" #Nope
+		ai_chance = {
+			factor = 25
+		}
+		ENL = {
+			add_casus_belli = {
+				target = SCO
+				type = make_puppet
+				months = 100
+			}
+			war = {
+				target = SCO
+				attacker_goal = { casus_belli = make_puppet }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = yes
+			}
+		}
+		relation = { who = SCO value = -100 }
+		relation = { who = ENL value = 50 }
+		diplomatic_influence = { who = SCO value = -200 }
+	}
+}
+
+#Portuguese Revolution
+country_event = {
+	id = 892011
+	title = "EVTNAME892011"
+	desc = "EVTDESC892011"
+	picture = "portuguese_republican_revolution"
+	
+	trigger = {
+		tag = POR
+		vassal_of = SPA
+		OR = {
+			has_global_flag = german_revolution_1848
+			has_global_flag = italian_revolution_1848
+			has_global_flag = gelre_revolution_1848
+		}
+		NOT = { has_global_flag = portuguese_revolution_1848 }
+	}
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	immediate = {
+		set_global_flag = portuguese_revolution_1848
+	}
+	
+	option = {
+		name = "EVT892011OPTA"
+		FRA = {
+			country_event = { id = 892012 days = 10 }
+		}
+		leave_alliance = SPA
+		SPA = { diplomatic_influence = { who = POR value = -400 }}
+		SPA = { release_vassal = POR }
+		SPA = { country_event = 892018 }
+	}
+}
+
+#France Receives Call for Aid
+country_event = {
+	id = 892012
+	title = "EVTNAME892011"
+	desc = "EVTDESC892012"
+	picture = "yound_irelander_rebellion"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT892012OPTA" #Join war
+		ai_chance = {
+			factor = 50
+		}
+		create_alliance = POR
+		SPA = {
+			add_casus_belli = {
+				target = FROM
+				type = make_puppet
+				months = 100
+			}
+			war = {
+				target = FROM
+				attacker_goal = { casus_belli = make_puppet }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = yes
+			}
+		}
+		military_access = POR
+		relation = { who = POR value = 200 }
+		relation = { who = SPA value = -100 }
+		diplomatic_influence = { who = POR value = 400 }
+	}
+	
+	option = {
+		name = "EVT892002OPTB" #Send cash
+		ai_chance = {
+			factor = 25
+		}
+		treasury = -50000
+		POR = { treasury = 50000 }
+		SPA = {
+			add_casus_belli = {
+				target = FROM
+				type = make_puppet
+				months = 100
+			}
+			war = {
+				target = FROM
+				attacker_goal = { casus_belli = make_puppet }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = yes
+			}
+		}
+		relation = { who = POR value = 100 }
+		relation = { who = SPA value = -50 }
+		diplomatic_influence = { who = POR value = 150 }
+	}
+	
+	option = {
+		name = "EVT892002OPTC" #Nope
+		ai_chance = {
+			factor = 25
+		}
+		SPA = {
+			add_casus_belli = {
+				target = FROM
+				type = make_puppet
+				months = 100
+			}
+			war = {
+				target = FROM
+				attacker_goal = { casus_belli = make_puppet }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = yes
+			}
+		}
+		relation = { who = POR value = -100 }
+		relation = { who = SPA value = 50 }
+		diplomatic_influence = { who = POR value = -200 }
+	}
+}
+
+
+#American Revolution
+country_event = {
+	id = 892013
+	title = "EVTNAME892013"
+	desc = "EVTDESC892013"
+	picture = "yankee"
+	
+	trigger = {
+		OR = {
+			has_global_flag = portuguese_revolution_1848
+			has_global_flag = scottish_revolution_1848
+			year = 1850
+		}
+		NOT = { has_global_flag = american_revolution_1848 }
+		NOT = {
+			capital_scope = { continent = north_america }
+			capital_scope = { continent = south_america }
+		}
+		any_owned_province = { is_core = USA }
+		USA = { exists = no }
+		NOT = { year = 1855 }
+	}
+	
+	mean_time_to_happen = {
+		months = 4
+	}
+	
+	immediate = {
+		set_global_flag = american_revolution_1848
+	}
+	
+	option = {
+		name = "EVT892013OPTA"
+		release = USA
+		USA = { all_core = { secede_province = USA }}
+		USA = {
+			all_core = { 
+				remove_core = THIS
+			}
+			government = democracy
+			prestige = -1000
+		}
+		random_country = {
+			limit = {
+				OR = {
+					is_greater_power = yes
+					tag = MEX
+				}
+				OR = {
+					capital_scope = { continent = north_america }
+					capital_scope = { continent = south_america }
+				}
+				NOT = { war_with = THIS }
+			}
+			country_event = { id = 892014 days = 10 }
+		}
+		remove_accepted_culture = yankee
+		remove_accepted_culture = dixie
+	}
+	option = {
+		name = "EVT892013OPTB"
+		release = USA
+		USA = { all_core = { secede_province = USA }}
+		USA = {
+			all_core = { 
+				remove_core = THIS
+			}
+			government = democracy
+			prestige = -1000
+		}
+		random_country = {
+			limit = {
+				OR = {
+					is_greater_power = yes
+					tag = MEX
+				}
+				OR = {
+					capital_scope = { continent = north_america }
+					capital_scope = { continent = south_america }
+				}
+				NOT = { war_with = THIS }
+			}
+			country_event = { id = 892014 days = 10 }
+		}
+		remove_accepted_culture = yankee
+		remove_accepted_culture = dixie
+		change_tag_no_core_switch = USA
+	}
+}
+
+#Other American Receives Call for Aid
+country_event = {
+	id = 892014
+	title = "EVTNAME892013"
+	desc = "EVTDESC892014"
+	picture = "yankee"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT892014OPTA" #Join war
+		ai_chance = {
+			factor = 50
+		}
+		create_alliance = USA
+		FRA = {
+			add_casus_belli = {
+				target = USA
+				type = conquest
+				months = 100
+			}
+			war = {
+				target = USA
+				attacker_goal = { casus_belli = conquest }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = yes
+			}
+		}
+		military_access = USA
+		relation = { who = USA value = 200 }
+		relation = { who = FROM value = -100 }
+		diplomatic_influence = { who = USA value = 400 }
+	}
+	
+	option = {
+		name = "EVT892014OPTB" #Send cash
+		ai_chance = {
+			factor = 25
+		}
+		treasury = -50000
+		USA = { treasury = 50000 }
+		FRA = {
+			add_casus_belli = {
+				target = USA
+				type = conquest
+				months = 100
+			}
+			war = {
+				target = USA
+				attacker_goal = { casus_belli = conquest }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = yes
+			}
+		}
+		relation = { who = USA value = 100 }
+		relation = { who = FROM value = -50 }
+		diplomatic_influence = { who = USA value = 150 }
+	}
+	
+	option = {
+		name = "EVT892014OPTC" #Nope
+		FRA = {
+			add_casus_belli = {
+				target = USA
+				type = conquest
+				months = 100
+			}
+			war = {
+				target = USA
+				attacker_goal = { casus_belli = conquest }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = yes
+			}
+		}
+		relation = { who = USA value = -100 }
+		relation = { who = FROM value = 50 }
+		diplomatic_influence = { who = USA value = -200 }
+	}
+}
+
+#Louisianan Revolution
+country_event = {
+	id = 892015
+	title = "EVTNAME892015"
+	desc = "EVTDESC892015"
+	picture = "yankee"
+	
+	trigger = {
+		OR = {
+			has_global_flag = portuguese_revolution_1848
+			has_global_flag = scottish_revolution_1848
+			year = 1850
+		}
+		NOT = { has_global_flag = louisianan_revolution_1848 }
+		NOT = {
+			capital_scope = { continent = north_america }
+			capital_scope = { continent = south_america }
+		}
+		any_owned_province = { is_core = ULA }
+		ULA = { exists = no }
+		NOT = { year = 1855 }
+	}
+	
+	mean_time_to_happen = {
+		months = 4
+	}
+	
+	immediate = {
+		set_global_flag = louisianan_revolution_1848
+	}
+	
+	option = {
+		name = "EVT892013OPTA"
+		release = ULA
+		ULA = { all_core = { secede_province = ULA }}
+		ULA = {
+			all_core = { 
+				remove_core = THIS
+			}
+			government = democracy
+			prestige = -1000
+		}
+		random_country = {
+			limit = {
+				OR = {
+					is_greater_power = yes
+					tag = MEX
+				}
+				OR = {
+					capital_scope = { continent = north_america }
+					capital_scope = { continent = south_america }
+				}
+				NOT = { war_with = THIS }
+			}
+			country_event = { id = 892016 days = 10 }
+		}
+		remove_accepted_culture = yankee
+		remove_accepted_culture = dixie
+	}
+	option = {
+		name = "EVT892013OPTB"
+		release = ULA
+		ULA = { all_core = { secede_province = ULA }}
+		ULA = {
+			all_core = { 
+				remove_core = THIS
+			}
+			government = democracy
+			prestige = -1000
+		}
+		random_country = {
+			limit = {
+				OR = {
+					is_greater_power = yes
+					tag = MEX
+				}
+				OR = {
+					capital_scope = { continent = north_america }
+					capital_scope = { continent = south_america }
+				}
+				NOT = { war_with = THIS }
+			}
+			country_event = { id = 892016 days = 10 }
+		}
+		remove_accepted_culture = yankee
+		remove_accepted_culture = dixie
+		change_tag_no_core_switch = ULA
+	}
+}
+
+#Other American Receives Call for Aid
+country_event = {
+	id = 892016
+	title = "EVTNAME892015"
+	desc = "EVTDESC892016"
+	picture = "yankee"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT892016OPTA" #Join war
+		ai_chance = {
+			factor = 50
+		}
+		create_alliance = ULA
+		FROM = {
+			add_casus_belli = {
+				target = ULA
+				type = conquest
+				months = 100
+			}
+			war = {
+				target = ULA
+				attacker_goal = { casus_belli = conquest }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = yes
+			}
+		}
+		military_access = ULA
+		relation = { who = ULA value = 200 }
+		relation = { who = FROM value = -100 }
+		diplomatic_influence = { who = ULA value = 400 }
+	}
+	
+	option = {
+		name = "EVT892016OPTB" #Send cash
+		ai_chance = {
+			factor = 25
+		}
+		treasury = -50000
+		USA = { treasury = 50000 }
+		FROM = {
+			add_casus_belli = {
+				target = ULA
+				type = conquest
+				months = 100
+			}
+			war = {
+				target = ULA
+				attacker_goal = { casus_belli = conquest }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = yes
+			}
+		}
+		relation = { who = ULA value = 100 }
+		relation = { who = FROM value = -50 }
+		diplomatic_influence = { who = ULA value = 150 }
+	}
+	
+	option = {
+		name = "EVT892016OPTC" #Nope
+		ai_chance = {
+			factor = 25
+		}
+		FROM = {
+			add_casus_belli = {
+				target = ULA
+				type = conquest
+				months = 100
+			}
+			war = {
+				target = ULA
+				attacker_goal = { casus_belli = conquest }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = yes
+			}
+		}
+		relation = { who = ULA value = -100 }
+		relation = { who = FROM value = 50 }
+		diplomatic_influence = { who = ULA value = -200 }
+	}
+}
+
+# All vassals will automatically gain independence
+country_event = {
+	id = 892017
+	title = "EVTNAME892017"
+	desc = "EVTDESC892017"
+	picture = "treaty"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA892017" #$COUNTRY$ shall be free
+		FROM = { release_vassal = THIS }
+		FROM = {
+			relation = {
+				who = THIS
+				value = -200
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = -200
+			}
+			leave_alliance = THIS
+		}
+	}
+}
+
+# Notify of Rebellion
+country_event = {
+	id = 892018
+	title = "EVTNAME892018"
+	desc = "EVTDESC892018"
+	picture = "Rebellion"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA892018"
+	}
+}

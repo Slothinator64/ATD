@@ -1,0 +1,697 @@
+#Give the cores to the countries USA
+country_event = {
+	id = 894000
+	title = "EVTNAME894000"
+	desc = "EVTDESC894000"
+	picture = "constitutional_convention"
+	
+	trigger = {
+		tag = USA
+		war = no
+		NOT = { has_country_flag = constitutional_convention }
+		is_vassal = no
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_country_flag = constitutional_convention
+		set_country_flag = new_constitution
+	}
+	
+	option = {
+		name = "EVT894000OPTA"
+		country_event = { id = 894002 days = 30 }
+		#Add substate cores
+		USA_196 = { add_core = UFL }
+		USA_200 = { add_core = UFL }
+		USA_201 = { add_core = UFL }
+		USA_205 = { add_core = CSA }
+		USA_2556 = { add_core = CSA }
+		188 = { add_core = CSA }
+		190 = { add_core = CSA }
+		191 = { add_core = CSA }
+		USA_178 = { add_core = FSA }
+		221 = { add_core = FSA }
+		USA_223 = { add_core = FSA }
+		USA_231 = { add_core = FSA }
+		USA_232 = { add_core = FSA }
+		USA_243 = { add_core = NEN }
+		246 = { add_core = NEN }
+		247 = { add_core = NEN }
+		248 = { add_core = NEN }
+		249 = { add_core = NEN }
+		
+		#Remove USA cores
+		USA_196 = { remove_core = USA }
+		USA_200 = { remove_core = USA }
+		USA_201 = { remove_core = USA }
+		USA_205 = { remove_core = USA }
+		USA_2556 = { remove_core = USA }
+		188 = { remove_core = USA }
+		190 = { remove_core = USA }
+		191 = { remove_core = USA }
+		USA_178 = { remove_core = USA }
+		221 = { remove_core = USA }
+		USA_223 = { remove_core = USA }
+		USA_231 = { remove_core = USA }
+		USA_232 = { remove_core = USA }
+		USA_243 = { remove_core = USA }
+		246 = { remove_core = USA }
+		247 = { remove_core = USA }
+		248 = { remove_core = USA }
+		249 = { remove_core = USA }
+	}
+}
+
+#Give the cores to the countries ULA
+country_event = {
+	id = 894001
+	title = "EVTNAME894000"
+	desc = "EVTDESC894000"
+	picture = "constitutional_convention"
+	
+	trigger = {
+		tag = ULA
+		war = no
+		NOT = { has_country_flag = constitutional_convention }
+		is_vassal = no
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_country_flag = constitutional_convention
+		set_country_flag = new_constitution
+	}
+	
+	option = {
+		name = "EVT894000OPTA"
+		country_event = { id = 894003 days = 30 }
+		#Add substate cores
+		106 = { add_core = DES }
+		112 = { add_core = DES }
+		115 = { add_core = DES }
+		116 = { add_core = DES }
+		126 = { add_core = UIL }
+		127 = { add_core = UIL }
+		USA_148 = { add_core = UIL }
+		USA_168 = { add_core = UIL }
+		USA_170 = { add_core = UIL }
+		USA_118 = { add_core = UNB }
+		USA_121 = { add_core = UNB }
+		USA_124 = { add_core = UNB }
+		USA_151 = { add_core = GLK }
+		USA_158 = { add_core = GLK }
+		USA_162 = { add_core = GLK }
+		USA_176 = { add_core = GLK }
+		
+		#Remove ULA cores
+		106 = { remove_core = ULA }
+		112 = { remove_core = ULA }
+		115 = { remove_core = ULA }
+		116 = { remove_core = ULA }
+		126 = { remove_core = ULA }
+		127 = { remove_core = ULA }
+		USA_148 = { remove_core = ULA }
+		USA_168 = { remove_core = ULA }
+		USA_170 = { remove_core = ULA }
+		USA_118 = { remove_core = ULA }
+		USA_121 = { remove_core = ULA }
+		USA_124 = { remove_core = ULA }
+		USA_151 = { remove_core = ULA }
+		USA_158 = { remove_core = ULA }
+		USA_162 = { remove_core = ULA }
+		USA_176 = { remove_core = ULA }
+	}
+}
+
+#Centralisation USA
+country_event = {
+	id = 894002
+	title = "EVTNAME894000"
+	desc = "EVTDESC894002"
+	picture = "constitutional_convention"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT894002OPTA"
+		ai_chance = {
+			factor = 20
+		}
+		set_country_flag = no_change
+		release = NEN
+		release = FSA
+		release = CSA
+		release = UFL
+		create_vassal = NEN
+		create_vassal = FSA
+		create_vassal = CSA
+		create_vassal = UFL
+		NEN = { all_core = { secede_province = NEN }}
+		FSA = { all_core = { secede_province = FSA }}
+		CSA = { all_core = { secede_province = CSA }}
+		UFL = { all_core = { secede_province = UFL }}
+		clr_country_flag = no_change
+	}
+	option = {
+		name = "EVT894002OPTB"
+		ai_chance = {
+			factor = 30
+		}
+		political_reform = federalism
+		any_pop = {
+			limit = { 
+				OR = {
+					location = { is_core = NEN }
+					location = { is_core = FSA }
+					location = { is_core = CSA }
+					location = { is_core = UFL }
+				}
+			}
+			militancy = 1.5
+		}
+		country_event = { id = 894004 days = 30 }
+	}
+	option = {
+		name = "EVT894002OPTC"
+		ai_chance = {
+			factor = 10
+		}
+		political_reform = unitary
+		any_pop = {
+			limit = { 
+				OR = {
+					location = { is_core = NEN }
+					location = { is_core = FSA }
+					location = { is_core = CSA }
+					location = { is_core = UFL }
+				}
+			}
+			militancy = 3
+		}
+		country_event = { id = 894004 days = 30 }
+	}
+}
+
+#Centralisation ULA
+country_event = {
+	id = 894003
+	title = "EVTNAME894000"
+	desc = "EVTDESC894002"
+	picture = "constitutional_convention"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT894002OPTA"
+		ai_chance = {
+			factor = 20
+		}
+		set_country_flag = no_change
+		release = DES
+		release = UIL
+		release = UNB
+		release = GLK
+		create_vassal = DES
+		create_vassal = UIL
+		create_vassal = UNB
+		create_vassal = GLK
+		DES = { all_core = { secede_province = DES }}
+		UIL = { all_core = { secede_province = UIL }}
+		UNB = { all_core = { secede_province = UNB }}
+		GLK = { all_core = { secede_province = GLK }}
+		clr_country_flag = no_change
+	}
+	option = {
+		name = "EVT894002OPTB"
+		ai_chance = {
+			factor = 30
+		}
+		political_reform = federalism
+		any_pop = {
+			limit = { 
+				OR = {
+					location = { is_core = DES }
+					location = { is_core = UIL }
+					location = { is_core = UNB }
+					location = { is_core = GLK }
+				}
+			}
+			militancy = 1.5
+		}
+		country_event = { id = 894005 days = 30 }
+	}
+	option = {
+		name = "EVT894002OPTC"
+		ai_chance = {
+			factor = 10
+		}
+		political_reform = unitary
+		any_pop = {
+			limit = { 
+				OR = {
+					location = { is_core = DES }
+					location = { is_core = UIL }
+					location = { is_core = UNB }
+					location = { is_core = GLK }
+				}
+			}
+			militancy = 3
+		}
+		country_event = { id = 894005 days = 30 }
+	}
+}
+
+#Government USA
+country_event = {
+	id = 894004
+	title = "EVTNAME894000"
+	desc = "EVTDESC894004"
+	picture = "constitutional_convention"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT894004OPTA" #Reactionary
+		ai_chance = {
+			factor = 10
+		}
+		country_event = { id = 894006 days = 30 }
+		political_reform = appointed
+		political_reform = none_voting
+		political_reform = peonage
+		political_reform = censored_press
+		political_reform = no_meeting
+		political_reform = no_trade_unions
+		political_reform = underground_parties
+		government = presidential_dictatorship
+		any_pop = {
+			limit = { 
+				OR = {
+					location = { is_core = NEN }
+					location = { is_core = FSA }
+				}
+			}
+			militancy = 3
+		}
+	}
+	option = {
+		name = "EVT894004OPTB" #Conservative
+		ai_chance = {
+			factor = 20
+		}
+		country_event = { id = 894006 days = 30 }
+		political_reform = state_equal_weight
+		political_reform = wealth_voting
+		political_reform = peonage
+		political_reform = free_press
+		political_reform = yes_meeting
+		political_reform = state_controlled
+		political_reform = harassment
+		government = democracy
+		any_pop = {
+			limit = { 
+				OR = {
+					location = { is_core = NEN }
+					location = { is_core = FSA }
+					location = { is_core = CSA }
+					location = { is_core = UFL }
+				}
+			}
+			militancy = 1.5
+		}
+	}
+	option = {
+		name = "EVT894004OPTC" #Liberal
+		ai_chance = {
+			factor = 10
+		}
+		country_event = { id = 894006 days = 30 }
+		political_reform = population_equal_weight
+		political_reform = universal_weighted_voting
+		political_reform = debtors_prisons
+		political_reform = free_press
+		political_reform = yes_meeting
+		political_reform = all_trade_unions
+		political_reform = non_secret_ballots
+		government = democracy
+		any_pop = {
+			limit = { 
+				OR = {
+					location = { is_core = CSA }
+					location = { is_core = UFL }
+				}
+			}
+			militancy = 3
+		}
+	}
+}
+
+#Government ULA
+country_event = {
+	id = 894005
+	title = "EVTNAME894000"
+	desc = "EVTDESC894004"
+	picture = "constitutional_convention"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT894004OPTA" #Reactionary
+		ai_chance = {
+			factor = 10
+		}
+		country_event = { id = 894007 days = 30 }
+		political_reform = appointed
+		political_reform = none_voting
+		political_reform = peonage
+		political_reform = censored_press
+		political_reform = no_meeting
+		political_reform = no_trade_unions
+		political_reform = underground_parties
+		government = presidential_dictatorship
+		any_pop = {
+			limit = { 
+				OR = {
+					location = { is_core = UIL }
+					location = { is_core = GLK }
+				}
+			}
+			militancy = 3
+		}
+	}
+	option = {
+		name = "EVT894004OPTB" #Conservative
+		ai_chance = {
+			factor = 20
+		}
+		country_event = { id = 894007 days = 30 }
+		political_reform = state_equal_weight
+		political_reform = wealth_voting
+		political_reform = peonage
+		political_reform = free_press
+		political_reform = yes_meeting
+		political_reform = state_controlled
+		political_reform = harassment
+		government = democracy
+		any_pop = {
+			limit = { 
+				OR = {
+					location = { is_core = DES }
+					location = { is_core = UIL }
+					location = { is_core = UNB }
+					location = { is_core = GLK }
+				}
+			}
+			militancy = 1.5
+		}
+	}
+	option = {
+		name = "EVT894004OPTC" #Liberal
+		ai_chance = {
+			factor = 10
+		}
+		country_event = { id = 894007 days = 30 }
+		political_reform = population_equal_weight
+		political_reform = universal_weighted_voting
+		political_reform = debtors_prisons
+		political_reform = free_press
+		political_reform = yes_meeting
+		political_reform = all_trade_unions
+		political_reform = non_secret_ballots
+		government = democracy
+		any_pop = {
+			limit = { 
+				OR = {
+					location = { is_core = DES }
+					location = { is_core = UNB }
+				}
+			}
+			militancy = 3
+		}
+	}
+}
+
+#Slavery USA
+country_event = {
+	id = 894006
+	title = "EVTNAME894000"
+	desc = "EVTDESC894006"
+	picture = "constitutional_convention"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT894006OPTA" #Full Slavery
+		ai_chance = {
+			factor = 10
+		}
+		country_event = { id = 894008 days = 3650 }
+		political_reform = yes_slavery
+		any_pop = {
+			limit = { 
+				OR = {
+					location = { is_core = NEN }
+					location = { is_core = FSA }
+				}
+			}
+			militancy = 3
+		}
+	}
+	option = {
+		name = "EVT894006OPTB" #Freedom of Womb
+		ai_chance = {
+			factor = 20
+		}
+		country_event = { id = 894008 days = 3650 }
+		political_reform = freedom_of_womb
+		any_pop = {
+			limit = { 
+				OR = {
+					location = { is_core = NEN }
+					location = { is_core = FSA }
+					location = { is_core = CSA }
+					location = { is_core = UFL }
+				}
+			}
+			militancy = 1.5
+		}
+	}
+	option = {
+		name = "EVT894006OPTC" #Freedom
+		ai_chance = {
+			factor = 10
+		}
+		country_event = { id = 894008 days = 3650 }
+		political_reform = no_slavery
+		any_pop = {
+			limit = { 
+				OR = {
+					location = { is_core = CSA }
+					location = { is_core = UFL }
+				}
+			}
+			militancy = 3
+		}
+	}
+}
+
+#Natives ULA
+country_event = {
+	id = 894007
+	title = "EVTNAME894000"
+	desc = "EVTDESC894007"
+	picture = "constitutional_convention"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT894007OPTA" #Remove
+		ai_chance = {
+			factor = 20
+		}
+		country_event = { id = 894009 days = 3650 }
+		political_reform = primary_culture_only
+		add_country_modifier = { name = native_removal_act_policy duration = 7300 }
+		any_pop = {
+			limit = { 
+				OR = {
+					location = { is_core = UIL }
+					location = { is_core = GLK }
+				}
+			}
+			militancy = 3
+		}
+	}
+	option = {
+		name = "EVT894007OPTB" #Assimilate
+		ai_chance = {
+			factor = 20
+		}
+		country_event = { id = 894009 days = 3650 }
+		political_reform = culture_voting_only
+		add_country_modifier = { name = native_assimilation_act_policy duration = 7300 }
+		any_pop = {
+			limit = { 
+				OR = {
+					location = { is_core = DES }
+					location = { is_core = UIL }
+					location = { is_core = UNB }
+					location = { is_core = GLK }
+				}
+			}
+			militancy = 1.5
+		}
+	}
+	option = {
+		name = "EVT894007OPTC" #Integrate
+		ai_chance = {
+			factor = 10
+		}
+		country_event = { id = 894009 days = 3650 }
+		political_reform = all_voting_pops
+		add_accepted_culture = cherokee
+		add_accepted_culture = dakota
+		add_accepted_culture = native_american_minor
+		any_pop = {
+			limit = { 
+				OR = {
+					location = { is_core = DES }
+					location = { is_core = UNB }
+				}
+			}
+			militancy = 3
+		}
+	}
+}
+
+#Return USA cores
+country_event = {
+	id = 894008
+	title = "EVTNAME894008"
+	desc = "EVTDESC894008"
+	picture = "36_parallel"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT894008OPTA"
+		clr_country_flag = new_constitution
+		any_owned_province = {
+			UFL = { all_core = { add_core = USA }}
+			CSA = { all_core = { add_core = USA }}
+			FSA = { all_core = { add_core = USA }}
+			NEN = { all_core = { add_core = USA }}
+		}
+	}
+}
+
+#Return ULA cores
+country_event = {
+	id = 894009
+	title = "EVTNAME894008"
+	desc = "EVTDESC894008"
+	picture = "36_parallel"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT894008OPTA"
+		clr_country_flag = new_constitution
+		any_owned_province = {
+			GLK = { all_core = { add_core = ULA }}
+			DES = { all_core = { add_core = ULA }}
+			UIL = { all_core = { add_core = ULA }}
+			UNB = { all_core = { add_core = ULA }}
+		}
+	}
+}
+
+# Apply for Statehood
+country_event = {
+	id = 894010
+	title = "EVTNAME894010"
+	desc = "EVTDESC894010"
+	news = yes
+	news_title = "EVTNAME894010_NEWS_TITLE"
+	news_desc_long = "EVTDESC894010_NEWS_LONG"
+	news_desc_medium = "EVTDESC894010_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC894010_NEWS_SHORT"
+	picture = "deliberation"
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = "EVT894010OPTA"
+		prestige = 5
+		FROM = {
+			all_core = { add_core = THIS }
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					FROM = { tag = ULA }
+					FROM = { tag = UIL }
+					FROM = { tag = GLK }
+					FROM = { tag = UNB }
+				}
+			}
+			owner = { add_accepted_culture = louisianan }
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					FROM = { tag = USA }
+					FROM = { tag = NEN }
+					FROM = { tag = FSA }
+				}
+			}
+			owner = { add_accepted_culture = yankee }
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					FROM = { tag = CSA }
+					FROM = { tag = UFL }
+				}
+			}
+			owner = { add_accepted_culture = dixie }
+		}
+		random_owned = {
+			limit = {
+				FROM = { tag = CSO }
+				FROM = { tag = CAL }
+			}
+			owner = { add_accepted_culture = french_californian }
+		}
+		random_owned = {
+			limit = {
+				FROM = { tag = CNO }
+				FROM = { tag = CAL }
+			}
+			owner = { add_accepted_culture = anglo_californian }
+		}
+		inherit = FROM
+		ai_chance = {
+			factor = 10
+		}
+	}
+	
+	option = {
+		name = "EVT894010OPTB"
+		relation = {
+			who = FROM
+			value = -100
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}

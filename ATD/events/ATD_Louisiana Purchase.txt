@@ -1,0 +1,282 @@
+
+# Louisiana Purchase 1/3
+country_event = {
+	id = 891000
+	title = "EVTNAME891000" #the Louisiana Purchase
+	desc = "EVTDESC891000"
+	picture = "36_parallel"
+	
+	trigger = {
+		POR = {
+			war = no
+			any_owned_province = { is_core = ULA }
+		}
+		NOT = {
+			has_global_flag = louisiana_purchase_process_global
+			has_global_flag = louisiana_purchase_completed
+			has_country_flag = refused_louisiana
+			any_owned_province = { is_core = POR }
+			truce_with = POR
+		}
+		OR = {
+			tag = MEX
+			tag = FRA
+			alliance_with = POR
+		}
+		relation = { who = POR value = 0 }
+		is_greater_power = yes
+		war = no
+		has_country_flag = louisiana_purchase_interest
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+		modifier = {
+			factor = 0.5
+			tag = MEX
+		}
+		modifier = {
+			factor = 0.8
+			alliance_with = POR
+		}
+		modifier = {
+			factor = 0.8
+			relation = { who = POR value = 100 }
+		}
+		modifier = {
+			factor = 1.2
+			NOT = { relation = { who = POR value = 50 } }
+		}
+		modifier = {
+			factor = 0.1
+			year = 1845
+		}
+	}
+	
+	immediate = {
+		set_global_flag = louisiana_purchase_process_global
+	}
+	
+	option = {
+		name = "EVT891000OPTA"
+		random_owned = { limit = { owner = { ai = no } } owner = { treasury = -100000 } }
+		random_owned = {
+			limit = { owner = { ai = yes NOT = { check_variable = { which = owed_cash_money value = 1 } } } }
+			owner = { set_variable = { which = owed_cash_money value = 100 } }
+		}
+		random_owned = {
+			limit = { owner = { ai = yes check_variable = { which = owed_cash_money value = 9 } } }
+			owner = { change_variable = { which = owed_cash_money value = 100 } }
+		}
+		POR = { country_event = 891001 }
+		ai_chance = {
+			factor = 95
+		}
+	}
+	
+	option = {
+		name = "EVT891000OPTB"
+		clr_country_flag = louisiana_purchase_interest
+		set_country_flag = refused_louisiana
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0
+				tag = MEX
+			}
+		}
+	}
+}
+
+#the Louisianan Purchase
+country_event = {
+	id = 891001
+	title = "EVTNAME891000"
+	desc = "EVTDESC891001"
+	picture = "36_parallel"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT891001OPTA"
+		set_global_flag = louisiana_purchase_completed
+		prestige = 10
+		treasury = 100000
+		ULA = { all_core = { remove_core = POR }}
+		FROM = { country_event = 891002 }
+		ai_chance = {
+			factor = 75
+		}
+	}
+	
+	option = {
+		name = "EVT891001OPTB"
+		clr_global_flag = louisiana_purchase_process_global
+		FROM = {
+			clr_country_flag = louisiana_purchase_interest
+			country_event = 891003
+		}
+		random_country = { limit = { tag = FROM } treasury = 100000 }
+		any_country = {
+			limit = {
+				NOT = { tag = POR }
+				OR = {
+					is_greater_power = yes
+					is_secondary_power = yes
+				}
+				any_owned_province = {
+					OR = {
+						region = TEX_132
+						region = USA_106
+						region = USA_196
+						region = USA_188
+						region = USA_185
+						region = USA_178
+						region = USA_116
+					}
+				}
+			}
+			set_country_flag = louisiana_purchase_interest
+		}
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				FROM = {
+					tag = MEX
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = 891002
+	title = "EVTNAME891002"
+	desc = "EVTDESC891002"
+	news = yes
+	news_title = "EVTNAME891002_NEWS_TITLE"
+	news_desc_long = "EVTDESC891002_NEWS_LONG"
+	news_desc_medium = "EVTDESC891002_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC891002_NEWS_SHORT"
+	picture = "36_parallel"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT891002OPTA"
+		prestige = 10
+		POR = { create_alliance = THIS }
+		ULA = { all_core = { secede_province = THIS }} #Add core if Mexico
+		ULA = { add_accepted_culture = louisianan }
+		ULA = { government = democracy }
+		ULA = { all_core = { add_core = THIS }}
+		ULA = { all_core = { remove_core = FRA }}
+		ULA = { all_core = { remove_core = ENL }}
+		ULA = { all_core = { remove_core = SPA }}
+		ULA = { all_core = { remove_core = POR }}
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						is_culture_group = american_cultures
+						is_culture_group = neo_european_cultures
+						is_culture_group = latin_american_cultures
+					}
+				}
+			}
+			ULA = { primary_culture = THIS }
+		}
+		FROM = {
+			remove_accepted_culture = louisianan
+		}
+		ULA = {
+			clr_country_flag = sunni_country
+			clr_country_flag = shiite_country
+			clr_country_flag = ibadi_country
+			clr_country_flag = catholic_country
+			clr_country_flag = protestant_country
+			clr_country_flag = mormon_country
+			clr_country_flag = orthodox_country
+			clr_country_flag = coptic_country
+			clr_country_flag = jewish_country
+			clr_country_flag = yazidi_country
+			clr_country_flag = mahayana_country
+			clr_country_flag = gelugpa_country
+			clr_country_flag = theravada_country
+			clr_country_flag = hindu_country
+			clr_country_flag = shinto_country
+			clr_country_flag = sikh_country
+			clr_country_flag = animist_country
+		}
+		
+		random_owned = { limit = { owner = { has_country_flag = catholic_country } } ULA = { religion = catholic set_country_flag = catholic_country } }
+		random_owned = {
+			limit = { owner = { has_country_flag = protestant_country } }
+			ULA = { religion = protestant set_country_flag = protestant_country }
+		}
+		random_owned = { limit = { owner = { has_country_flag = orthodox_country } } ULA = { religion = orthodox set_country_flag = orthodox_country } }
+		random_owned = { limit = { owner = { has_country_flag = mormon_country } } ULA = { religion = mormon set_country_flag = mormon_country } }
+		random_owned = { limit = { owner = { has_country_flag = coptic_country } } ULA = { religion = coptic set_country_flag = coptic_country } }
+		random_owned = { limit = { owner = { has_country_flag = sunni_country } } ULA = { religion = sunni set_country_flag = sunni_country } }
+		random_owned = { limit = { owner = { has_country_flag = shiite_country } } ULA = { religion = shiite set_country_flag = shiite_country } }
+		random_owned = { limit = { owner = { has_country_flag = shinto_country } } ULA = { religion = shinto set_country_flag = shinto_country } }
+		random_owned = { limit = { owner = { has_country_flag = mahayana_country } } ULA = { religion = mahayana set_country_flag = mahayana_country } }
+		random_owned = { limit = { owner = { has_country_flag = gelugpa_country } } ULA = { religion = gelugpa set_country_flag = gelugpa_country } }
+		random_owned = { limit = { owner = { has_country_flag = theravada_country } } ULA = { religion = theravada set_country_flag = theravada_country } }
+		random_owned = { limit = { owner = { has_country_flag = hindu_country } } ULA = { religion = hindu set_country_flag = hindu_country } }
+		random_owned = { limit = { owner = { has_country_flag = sikh_country } } ULA = { religion = sikh set_country_flag = sikh_country } }
+		random_owned = { limit = { owner = { has_country_flag = jewish_country } } ULA = { religion = jewish set_country_flag = jewish_country } }
+		random_owned = { limit = { owner = { has_country_flag = ibadi_country } } ULA = { religion = ibadi set_country_flag = ibadi_country } }
+		random_owned = { limit = { owner = { has_country_flag = yazidi_country } } ULA = { religion = yazidi set_country_flag = yazidi_country } }
+		80 = { life_rating = 10 }
+		92 = { life_rating = 10 }
+		111 = { life_rating = 10 }
+		113 = { life_rating = 10 }
+	}
+}
+
+country_event = {
+	id = 891003
+	title = "EVTNAME891003"
+	desc = "EVTDESC891003"
+	picture = "36_parallel"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT891003OPTA"
+		prestige = -5
+		treasury = 100000
+		relation = { who = POR value = -25 }
+	}
+}
+
+#Transfer Spanish provinces
+province_event = {
+	id = 891004
+	desc = "EVTDESC891004"
+
+	trigger = {
+		owner = {
+			tag = SPA
+		}
+		POR = { vassal_of = THIS }
+		any_neighbor_province = { 
+			AND = {
+				owned_by = POR
+				is_core = CAN
+			}
+		}
+	}
+	
+	mean_time_to_happen =  {
+		days = 1
+	}
+
+	option = {
+		name = "EVT891004OPTA" #OK
+		add_core = CAN
+		secede_province = POR
+	}
+}

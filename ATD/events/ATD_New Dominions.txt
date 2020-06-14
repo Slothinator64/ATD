@@ -1,0 +1,1043 @@
+#The Argentine Dominion - ARG asks for independence
+country_event = {
+	id = 896000
+	title = "EVTNAME896000"
+	desc = "EVTDESC896000"
+	picture = "danishgovernment"
+
+	major = yes
+
+	trigger = {
+		war = no
+		year = 1900
+		any_owned_province = { is_core = ARG }
+		NOT = { exists = ARG }
+		is_possible_vassal = ARG
+		NOT = {
+			capital_scope = { continent = north_america }
+			capital_scope = { continent = south_america }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 6
+		modifier = {
+			factor = 10
+			has_country_flag = ARG_independence_refused
+		}
+		modifier = {
+			factor = 0.8
+			any_state = {
+				any_owned_province = { is_core = ARG }
+				average_militancy = 3
+			}
+		}
+		modifier = {
+			factor = 0.8
+			any_state = {
+				any_owned_province = { is_core = ARG }
+				average_militancy = 4
+			}
+		}
+		modifier = {
+			factor = 0.5
+			year = 1915
+			NOT = { has_country_flag = ARG_independence_refused }
+		}
+	}
+
+	option = {
+		name = "EVT896000OPTA"
+		clr_country_flag = ARG_independence_refused
+		prestige = -15
+		badboy = -3
+		any_pop = {
+			limit = { location = { is_core = ARG } }
+			militancy = -10
+		}
+		ARG = {
+			set_country_flag = post_colonial_country
+			all_core = { remove_core = THIS remove_core = FRA }
+		}
+		any_owned = { limit = { is_core = ARG } secede_province = ARG }
+		create_vassal = ARG
+		ARG = {
+			prestige = -80
+			capital = 2512
+			government = dominion
+		}
+		relation = {
+			who = ARG
+			value = 200
+		}
+		diplomatic_influence = {
+			who = ARG
+			value = 200
+		}
+		any_pop = { consciousness = 1 }
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 0
+				OR = {
+					government = proletarian_dictatorship
+					government = bourgeois_dictatorship
+					government = fascist_dictatorship
+					government = presidential_dictatorship
+				}
+			}
+			modifier = {
+				factor = 0.25
+				government = absolute_monarchy
+			}
+			modifier = {
+				factor = 1.5
+				exists = AST
+			}
+			modifier = {
+				factor = 1.5
+				government = democracy
+			}
+			modifier = {
+				factor = 0.5
+				war_policy = jingoism
+			}
+			modifier = {
+				factor = 0.75
+				war_policy = pro_military
+			}
+			modifier = {
+				factor = 1.25
+				war_policy = anti_military
+			}
+			modifier = {
+				factor = 1.5
+				war_policy = pacifism
+			}
+			modifier = {
+				factor = 1.2
+				militancy = 3
+			}
+			modifier = {
+				factor = 1.2
+				militancy = 5
+			}
+			
+		}	
+	}
+	option = {
+		name = "EVT896000OPTB"
+		set_country_flag = ARG_independence_refused
+		any_owned = {
+			limit = { is_core = ARG }
+			any_pop = { militancy = 3 }
+		}
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 1.75
+				government = absolute_monarchy
+			}
+			modifier = {
+				factor = 0.5
+				government = democracy
+			}
+			modifier = {
+				factor = 1.5
+				war_policy = jingoism
+			}
+			modifier = {
+				factor = 1.25
+				war_policy = pro_military
+			}
+			modifier = {
+				factor = 0.75
+				war_policy = anti_military
+			}
+			modifier = {
+				factor = 0.5
+				war_policy = pacifism
+			}
+			modifier = {
+				factor = 0.8
+				militancy = 3
+			}
+			modifier = {
+				factor = 0.8
+				militancy = 5
+			}
+		}
+	}
+	option = {
+		name = "EVT896000OPTC"
+		clr_country_flag = ARG_independence_refused
+		prestige = -15
+		badboy = -3
+		any_pop = {
+			limit = { location = { is_core = ARG } }
+			militancy = -10
+		}
+		ARG = {
+			all_core = { remove_core = THIS remove_core = FRA }
+		}
+		release_vassal = ARG
+		ARG = {
+			prestige = -80
+			capital = 2512
+			government = dominion
+		}
+		relation = {
+			who = ARG
+			value = 200
+		}
+		diplomatic_influence = {
+			who = ARG
+			value = 200
+		}
+		any_pop = {
+			consciousness = 1
+		}
+		change_tag_no_core_switch = ARG
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#The USAentine Dominion - USA asks for independence
+country_event = {
+	id = 896001
+	title = "EVTNAME896001"
+	desc = "EVTDESC896001"
+	picture = "danishgovernment"
+
+	major = yes
+
+	trigger = {
+		war = no
+		year = 1870
+		any_owned_province = { is_core = USA }
+		NOT = { exists = USA }
+		is_possible_vassal = USA
+		NOT = {
+			capital_scope = { continent = north_america }
+			capital_scope = { continent = south_america }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 6
+		modifier = {
+			factor = 10
+			has_country_flag = USA_independence_refused
+		}
+		modifier = {
+			factor = 0.8
+			any_state = {
+				any_owned_province = { is_core = USA }
+				average_militancy = 3
+			}
+		}
+		modifier = {
+			factor = 0.8
+			any_state = {
+				any_owned_province = { is_core = USA }
+				average_militancy = 4
+			}
+		}
+		modifier = {
+			factor = 0.5
+			year = 1915
+			NOT = { has_country_flag = USA_independence_refused }
+		}
+	}
+
+	option = {
+		name = "EVT896000OPTA"
+		clr_country_flag = USA_independence_refused
+		prestige = -15
+		badboy = -3
+		any_pop = {
+			limit = { location = { is_core = USA } }
+			militancy = -10
+		}
+		USA = {
+			set_country_flag = post_colonial_country
+			all_core = { remove_core = THIS remove_core = FRA }
+		}
+		any_owned = { limit = { is_core = USA } secede_province = USA }
+		create_vassal = USA
+		USA = {
+			prestige = -80
+			capital = 2512
+			government = dominion
+		}
+		relation = {
+			who = USA
+			value = 200
+		}
+		diplomatic_influence = {
+			who = USA
+			value = 200
+		}
+		any_pop = { consciousness = 1 }
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 0
+				OR = {
+					government = proletarian_dictatorship
+					government = bourgeois_dictatorship
+					government = fascist_dictatorship
+					government = presidential_dictatorship
+				}
+			}
+			modifier = {
+				factor = 0.25
+				government = absolute_monarchy
+			}
+			modifier = {
+				factor = 1.5
+				exists = AST
+			}
+			modifier = {
+				factor = 1.5
+				government = democracy
+			}
+			modifier = {
+				factor = 0.5
+				war_policy = jingoism
+			}
+			modifier = {
+				factor = 0.75
+				war_policy = pro_military
+			}
+			modifier = {
+				factor = 1.25
+				war_policy = anti_military
+			}
+			modifier = {
+				factor = 1.5
+				war_policy = pacifism
+			}
+			modifier = {
+				factor = 1.2
+				militancy = 3
+			}
+			modifier = {
+				factor = 1.2
+				militancy = 5
+			}
+			
+		}	
+	}
+	option = {
+		name = "EVT896000OPTB"
+		set_country_flag = USA_independence_refused
+		any_owned = {
+			limit = { is_core = USA }
+			any_pop = { militancy = 3 }
+		}
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 1.75
+				government = absolute_monarchy
+			}
+			modifier = {
+				factor = 0.5
+				government = democracy
+			}
+			modifier = {
+				factor = 1.5
+				war_policy = jingoism
+			}
+			modifier = {
+				factor = 1.25
+				war_policy = pro_military
+			}
+			modifier = {
+				factor = 0.75
+				war_policy = anti_military
+			}
+			modifier = {
+				factor = 0.5
+				war_policy = pacifism
+			}
+			modifier = {
+				factor = 0.8
+				militancy = 3
+			}
+			modifier = {
+				factor = 0.8
+				militancy = 5
+			}
+		}
+	}
+	option = {
+		name = "EVT896001OPTC"
+		clr_country_flag = USA_independence_refused
+		prestige = -15
+		badboy = -3
+		any_pop = {
+			limit = { location = { is_core = USA } }
+			militancy = -10
+		}
+		USA = {
+			all_core = { remove_core = THIS remove_core = FRA }
+		}
+		release_vassal = USA
+		USA = {
+			prestige = -80
+			capital = 2512
+			government = dominion
+		}
+		relation = {
+			who = USA
+			value = 200
+		}
+		diplomatic_influence = {
+			who = USA
+			value = 200
+		}
+		any_pop = {
+			consciousness = 1
+		}
+		change_tag_no_core_switch = USA
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#The ULAentine Dominion - ULA asks for independence
+country_event = {
+	id = 896002
+	title = "EVTNAME896002"
+	desc = "EVTDESC896002"
+	picture = "danishgovernment"
+
+	major = yes
+
+	trigger = {
+		war = no
+		year = 1870
+		any_owned_province = { is_core = ULA }
+		NOT = { exists = ULA }
+		is_possible_vassal = ULA
+		NOT = {
+			capital_scope = { continent = north_america }
+			capital_scope = { continent = south_america }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 6
+		modifier = {
+			factor = 10
+			has_country_flag = ULA_independence_refused
+		}
+		modifier = {
+			factor = 0.8
+			any_state = {
+				any_owned_province = { is_core = ULA }
+				average_militancy = 3
+			}
+		}
+		modifier = {
+			factor = 0.8
+			any_state = {
+				any_owned_province = { is_core = ULA }
+				average_militancy = 4
+			}
+		}
+		modifier = {
+			factor = 0.5
+			year = 1915
+			NOT = { has_country_flag = ULA_independence_refused }
+		}
+	}
+
+	option = {
+		name = "EVT896000OPTA"
+		clr_country_flag = ULA_independence_refused
+		prestige = -15
+		badboy = -3
+		any_pop = {
+			limit = { location = { is_core = ULA } }
+			militancy = -10
+		}
+		ULA = {
+			set_country_flag = post_colonial_country
+			all_core = { remove_core = THIS remove_core = FRA }
+			all_core = { remove_core = THIS remove_core = IBR }
+			all_core = { remove_core = THIS remove_core = POR }
+		}
+		any_owned = { limit = { is_core = ULA } secede_province = ULA }
+		create_vassal = ULA
+		ULA = {
+			prestige = -80
+			capital = 2512
+			government = dominion
+		}
+		relation = {
+			who = ULA
+			value = 200
+		}
+		diplomatic_influence = {
+			who = ULA
+			value = 200
+		}
+		any_pop = { consciousness = 1 }
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 0
+				OR = {
+					government = proletarian_dictatorship
+					government = bourgeois_dictatorship
+					government = fascist_dictatorship
+					government = presidential_dictatorship
+				}
+			}
+			modifier = {
+				factor = 0.25
+				government = absolute_monarchy
+			}
+			modifier = {
+				factor = 1.5
+				exists = AST
+			}
+			modifier = {
+				factor = 1.5
+				government = democracy
+			}
+			modifier = {
+				factor = 0.5
+				war_policy = jingoism
+			}
+			modifier = {
+				factor = 0.75
+				war_policy = pro_military
+			}
+			modifier = {
+				factor = 1.25
+				war_policy = anti_military
+			}
+			modifier = {
+				factor = 1.5
+				war_policy = pacifism
+			}
+			modifier = {
+				factor = 1.2
+				militancy = 3
+			}
+			modifier = {
+				factor = 1.2
+				militancy = 5
+			}
+			
+		}	
+	}
+	option = {
+		name = "EVT896000OPTB"
+		set_country_flag = ULA_independence_refused
+		any_owned = {
+			limit = { is_core = ULA }
+			any_pop = { militancy = 3 }
+		}
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 1.75
+				government = absolute_monarchy
+			}
+			modifier = {
+				factor = 0.5
+				government = democracy
+			}
+			modifier = {
+				factor = 1.5
+				war_policy = jingoism
+			}
+			modifier = {
+				factor = 1.25
+				war_policy = pro_military
+			}
+			modifier = {
+				factor = 0.75
+				war_policy = anti_military
+			}
+			modifier = {
+				factor = 0.5
+				war_policy = pacifism
+			}
+			modifier = {
+				factor = 0.8
+				militancy = 3
+			}
+			modifier = {
+				factor = 0.8
+				militancy = 5
+			}
+		}
+	}
+	option = {
+		name = "EVT896002OPTC"
+		clr_country_flag = ULA_independence_refused
+		prestige = -15
+		badboy = -3
+		any_pop = {
+			limit = { location = { is_core = ULA } }
+			militancy = -10
+		}
+		ULA = {
+			all_core = { remove_core = THIS remove_core = POR }
+			all_core = { remove_core = THIS remove_core = IBR }
+			all_core = { remove_core = THIS remove_core = FRA }
+		}
+		release_vassal = ULA
+		ULA = {
+			prestige = -80
+			capital = 2512
+			government = dominion
+		}
+		relation = {
+			who = ULA
+			value = 200
+		}
+		diplomatic_influence = {
+			who = ULA
+			value = 200
+		}
+		any_pop = {
+			consciousness = 1
+		}
+		change_tag_no_core_switch = ULA
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+
+#The CNOentine Dominion - CNO asks for independence
+country_event = {
+	id = 896002
+	title = "EVTNAME896002"
+	desc = "EVTDESC896002"
+	picture = "danishgovernment"
+
+	major = yes
+
+	trigger = {
+		war = no
+		year = 1890
+		any_owned_province = { is_core = CNO }
+		NOT = { exists = CNO }
+		is_possible_vassal = CNO
+		NOT = {
+			capital_scope = { continent = north_america }
+			capital_scope = { continent = south_america }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 6
+		modifier = {
+			factor = 10
+			has_country_flag = CNO_independence_refused
+		}
+		modifier = {
+			factor = 0.8
+			any_state = {
+				any_owned_province = { is_core = CNO }
+				average_militancy = 3
+			}
+		}
+		modifier = {
+			factor = 0.8
+			any_state = {
+				any_owned_province = { is_core = CNO }
+				average_militancy = 4
+			}
+		}
+		modifier = {
+			factor = 0.5
+			year = 1915
+			NOT = { has_country_flag = CNO_independence_refused }
+		}
+	}
+
+	option = {
+		name = "EVT896000OPTA"
+		clr_country_flag = CNO_independence_refused
+		prestige = -15
+		badboy = -3
+		any_pop = {
+			limit = { location = { is_core = CNO } }
+			militancy = -10
+		}
+		CNO = {
+			set_country_flag = post_colonial_country
+			all_core = { remove_core = THIS remove_core = FRA }
+			all_core = { remove_core = THIS remove_core = IBR }
+			all_core = { remove_core = THIS remove_core = POR }
+		}
+		any_owned = { limit = { is_core = CNO } secede_province = CNO }
+		create_vassal = CNO
+		CNO = {
+			prestige = -80
+			capital = 2512
+			government = dominion
+		}
+		relation = {
+			who = CNO
+			value = 200
+		}
+		diplomatic_influence = {
+			who = CNO
+			value = 200
+		}
+		any_pop = { consciousness = 1 }
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 0
+				OR = {
+					government = proletarian_dictatorship
+					government = bourgeois_dictatorship
+					government = fascist_dictatorship
+					government = presidential_dictatorship
+				}
+			}
+			modifier = {
+				factor = 0.25
+				government = absolute_monarchy
+			}
+			modifier = {
+				factor = 1.5
+				exists = AST
+			}
+			modifier = {
+				factor = 1.5
+				government = democracy
+			}
+			modifier = {
+				factor = 0.5
+				war_policy = jingoism
+			}
+			modifier = {
+				factor = 0.75
+				war_policy = pro_military
+			}
+			modifier = {
+				factor = 1.25
+				war_policy = anti_military
+			}
+			modifier = {
+				factor = 1.5
+				war_policy = pacifism
+			}
+			modifier = {
+				factor = 1.2
+				militancy = 3
+			}
+			modifier = {
+				factor = 1.2
+				militancy = 5
+			}
+			
+		}	
+	}
+	option = {
+		name = "EVT896000OPTB"
+		set_country_flag = CNO_independence_refused
+		any_owned = {
+			limit = { is_core = CNO }
+			any_pop = { militancy = 3 }
+		}
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 1.75
+				government = absolute_monarchy
+			}
+			modifier = {
+				factor = 0.5
+				government = democracy
+			}
+			modifier = {
+				factor = 1.5
+				war_policy = jingoism
+			}
+			modifier = {
+				factor = 1.25
+				war_policy = pro_military
+			}
+			modifier = {
+				factor = 0.75
+				war_policy = anti_military
+			}
+			modifier = {
+				factor = 0.5
+				war_policy = pacifism
+			}
+			modifier = {
+				factor = 0.8
+				militancy = 3
+			}
+			modifier = {
+				factor = 0.8
+				militancy = 5
+			}
+		}
+	}
+	option = {
+		name = "EVT896002OPTC"
+		clr_country_flag = CNO_independence_refused
+		prestige = -15
+		badboy = -3
+		any_pop = {
+			limit = { location = { is_core = CNO } }
+			militancy = -10
+		}
+		CNO = {
+			all_core = { remove_core = THIS remove_core = POR }
+			all_core = { remove_core = THIS remove_core = IBR }
+			all_core = { remove_core = THIS remove_core = FRA }
+		}
+		release_vassal = CNO
+		CNO = {
+			prestige = -80
+			capital = 2512
+			government = dominion
+		}
+		relation = {
+			who = CNO
+			value = 200
+		}
+		diplomatic_influence = {
+			who = CNO
+			value = 200
+		}
+		any_pop = {
+			consciousness = 1
+		}
+		change_tag_no_core_switch = CNO
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+
+#The CSOentine Dominion - CSO asks for independence
+country_event = {
+	id = 896002
+	title = "EVTNAME896002"
+	desc = "EVTDESC896002"
+	picture = "danishgovernment"
+
+	major = yes
+
+	trigger = {
+		war = no
+		year = 1890
+		any_owned_province = { is_core = CSO }
+		NOT = { exists = CSO }
+		is_possible_vassal = CSO
+		NOT = {
+			capital_scope = { continent = north_america }
+			capital_scope = { continent = south_america }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 6
+		modifier = {
+			factor = 10
+			has_country_flag = CSO_independence_refused
+		}
+		modifier = {
+			factor = 0.8
+			any_state = {
+				any_owned_province = { is_core = CSO }
+				average_militancy = 3
+			}
+		}
+		modifier = {
+			factor = 0.8
+			any_state = {
+				any_owned_province = { is_core = CSO }
+				average_militancy = 4
+			}
+		}
+		modifier = {
+			factor = 0.5
+			year = 1915
+			NOT = { has_country_flag = CSO_independence_refused }
+		}
+	}
+
+	option = {
+		name = "EVT896000OPTA"
+		clr_country_flag = CSO_independence_refused
+		prestige = -15
+		badboy = -3
+		any_pop = {
+			limit = { location = { is_core = CSO } }
+			militancy = -10
+		}
+		CSO = {
+			set_country_flag = post_colonial_country
+			all_core = { remove_core = THIS remove_core = FRA }
+			all_core = { remove_core = THIS remove_core = IBR }
+			all_core = { remove_core = THIS remove_core = POR }
+		}
+		any_owned = { limit = { is_core = CSO } secede_province = CSO }
+		create_vassal = CSO
+		CSO = {
+			prestige = -80
+			capital = 2512
+			government = dominion
+		}
+		relation = {
+			who = CSO
+			value = 200
+		}
+		diplomatic_influence = {
+			who = CSO
+			value = 200
+		}
+		any_pop = { consciousness = 1 }
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 0
+				OR = {
+					government = proletarian_dictatorship
+					government = bourgeois_dictatorship
+					government = fascist_dictatorship
+					government = presidential_dictatorship
+				}
+			}
+			modifier = {
+				factor = 0.25
+				government = absolute_monarchy
+			}
+			modifier = {
+				factor = 1.5
+				exists = AST
+			}
+			modifier = {
+				factor = 1.5
+				government = democracy
+			}
+			modifier = {
+				factor = 0.5
+				war_policy = jingoism
+			}
+			modifier = {
+				factor = 0.75
+				war_policy = pro_military
+			}
+			modifier = {
+				factor = 1.25
+				war_policy = anti_military
+			}
+			modifier = {
+				factor = 1.5
+				war_policy = pacifism
+			}
+			modifier = {
+				factor = 1.2
+				militancy = 3
+			}
+			modifier = {
+				factor = 1.2
+				militancy = 5
+			}
+			
+		}	
+	}
+	option = {
+		name = "EVT896000OPTB"
+		set_country_flag = CSO_independence_refused
+		any_owned = {
+			limit = { is_core = CSO }
+			any_pop = { militancy = 3 }
+		}
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 1.75
+				government = absolute_monarchy
+			}
+			modifier = {
+				factor = 0.5
+				government = democracy
+			}
+			modifier = {
+				factor = 1.5
+				war_policy = jingoism
+			}
+			modifier = {
+				factor = 1.25
+				war_policy = pro_military
+			}
+			modifier = {
+				factor = 0.75
+				war_policy = anti_military
+			}
+			modifier = {
+				factor = 0.5
+				war_policy = pacifism
+			}
+			modifier = {
+				factor = 0.8
+				militancy = 3
+			}
+			modifier = {
+				factor = 0.8
+				militancy = 5
+			}
+		}
+	}
+	option = {
+		name = "EVT896002OPTC"
+		clr_country_flag = CSO_independence_refused
+		prestige = -15
+		badboy = -3
+		any_pop = {
+			limit = { location = { is_core = CSO } }
+			militancy = -10
+		}
+		CSO = {
+			all_core = { remove_core = THIS remove_core = POR }
+			all_core = { remove_core = THIS remove_core = IBR }
+			all_core = { remove_core = THIS remove_core = FRA }
+		}
+		release_vassal = CSO
+		CSO = {
+			prestige = -80
+			capital = 2512
+			government = dominion
+		}
+		relation = {
+			who = CSO
+			value = 200
+		}
+		diplomatic_influence = {
+			who = CSO
+			value = 200
+		}
+		any_pop = {
+			consciousness = 1
+		}
+		change_tag_no_core_switch = CSO
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
