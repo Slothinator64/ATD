@@ -1,0 +1,669 @@
+country_event = {
+
+	id = 44113
+	news = yes
+	news_desc_long = "EVTDESC44113_NEWS_LONG"
+	news_desc_medium = "EVTDESC44113_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC44113_NEWS_SHORT"
+
+	trigger = {
+		year = 1871
+		owns = 163 #Chicago
+		NOT = {
+			year = 1874
+		}
+	}
+	
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1872
+		}
+
+
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1873
+		}
+	}
+
+	title = "EVTNAME44113"
+	desc = "EVTDESC44113"
+	picture = "chicagofire"
+
+	option = {
+		name = "EVTOPTA44113" 
+		treasury = -25
+	}
+}
+
+country_event = {
+
+	id = 44114
+	news = yes
+	news_desc_long = "EVTDESC44114_NEWS_LONG"
+	news_desc_medium = "EVTDESC44114_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC44114_NEWS_SHORT"
+
+	trigger = {
+		year = 1881
+		owns = 102 #S Arizona
+		NOT = {
+			year = 1884
+		}	
+	}
+	
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1882
+		}
+
+
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1883
+		}
+	}
+
+	title = "EVTNAME44114"
+	desc = "EVTDESC44114"
+	picture = "WyattEarp"
+
+	option = {
+		name = "EVTOPTA44114" 
+		prestige = 1
+	}
+}
+
+#Great Migration of 1843 to Oregon
+country_event = {
+
+	id = 44123
+	title = "EVTNAME44123"
+	desc = "EVTDESC44123"
+	picture = "1843_GreatMigration"
+
+	trigger = {  
+		year = 1841
+		81 = { empty = yes }
+		82 = { empty = yes }
+		83 = { empty = yes }
+		owns = 91
+		owns = 92
+	}
+	
+	fire_only_once = yes
+
+	mean_time_to_happen = { 
+		months = 24
+		
+		modifier = {
+			factor = 0.5 #increase likelihood to happen
+			year = 1843
+		}
+	}
+
+	option = {
+		name = "EVTOPTA44123" 
+		81 = { 
+			change_province_name = "Portland"
+			life_rating = 15
+			secede_province = THIS
+			random_list = {
+				33 = { any_pop = { limit = { has_pop_culture = yankee } reduce_pop = 2 } }
+				33 = { any_pop = { limit = { has_pop_culture = yankee } reduce_pop = 2.5 } }
+				33 = { any_pop = { limit = { has_pop_culture = yankee } reduce_pop = 3 } }
+			}
+		}
+			
+		82 = {
+			change_province_name = "Baker City"
+			life_rating = 15
+			secede_province = THIS
+			random_list = {
+				33 = { any_pop = { limit = { has_pop_culture = yankee } reduce_pop = 2 } }
+				33 = { any_pop = { limit = { has_pop_culture = yankee } reduce_pop = 2.5 } }
+				33 = { any_pop = { limit = { has_pop_culture = yankee } reduce_pop = 3 } }
+			}
+		}
+		83 = {
+			change_province_name = "Eugene"
+			life_rating = 15
+			secede_province = THIS
+			random_list = {
+				33 = { any_pop = { limit = { has_pop_culture = yankee } reduce_pop = 2 } }
+				33 = { any_pop = { limit = { has_pop_culture = yankee } reduce_pop = 2.5 } }
+				33 = { any_pop = { limit = { has_pop_culture = yankee } reduce_pop = 3 } }
+			}
+		}
+	}
+}
+	
+#Founding Seattle - Candidate for removal and integration?
+country_event = {
+
+	id = 441255
+	title = "EVTNAME441255"
+	desc = "EVTDESC441255"
+	picture = "seattle_1870"
+
+	trigger = { 
+		owns = 78
+		owns = 79
+	}
+	
+	fire_only_once = yes
+ 
+	mean_time_to_happen = { days = 10 }
+
+	option = {
+		name = "EVTOPTA441255" 
+		prestige = 2
+		78 = { change_province_name = "Seattle" }
+		79 = { change_province_name = "Olympia" }
+		ai_chance = { factor = 100 }
+		78 = {
+			any_pop = {
+				limit = {
+					is_culture_group = native_american
+				}
+				reduce_pop = 0.3
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB441255" 
+		ai_chance = { factor = 0 }
+	}
+}
+
+#Independence of Liberia
+country_event = {
+
+	id = 441266
+	title = "EVTNAME441266"
+	desc = "EVTDESC441266"
+	picture = "guinea_coast"
+
+	trigger = {
+		tag = MEX  
+		war = no
+		owns = 1887
+		owns = 1888
+		year = 1846
+	}
+	
+	fire_only_once = yes
+ 
+	mean_time_to_happen = { months = 12 }
+
+	option = {
+		name = "EVTOPTA441266"
+		1887 = { add_core = LIB }
+		1888 = { add_core = LIB }
+		LIB = { all_core = { remove_core = MEX } }
+		release = LIB
+		relation = { who = LIB value = 400 }
+		diplomatic_influence = { who = LIB value = 400 }
+		LIB = {
+			capital = 1887 
+			election = yes
+			add_country_modifier = { name = unrecognized_country duration = 3650 }
+		}
+		ai_chance = { factor = 100 }
+	}
+	
+	option = {
+		name = "EVTOPTC441266" 
+		1887 = { add_core = LIB }
+		1888 = { add_core = LIB }
+		LIB = { all_core = { remove_core = MEX } }
+		release = LIB
+		relation = { who = LIB value = 400 }
+		diplomatic_influence = { who = LIB value = 400 }
+		LIB = {
+			capital = 1887 
+			election = yes
+			add_country_modifier = { name = unrecognized_country duration = 3650 }
+		}
+		change_tag_no_core_switch = LIB
+		ai_chance = { factor = 0 }
+	}
+	
+	option = {
+		name = "EVTOPTB441266" 
+		treasury = -200000
+		1887 = { add_core = LIB }
+		1888 = { add_core = LIB }
+		LIB = {  all_core = { remove_core = MEX }  }
+		any_owned = {
+			limit = { is_core = LIB }
+			add_province_modifier = { name = nationalist_agitation duration = 1095 }
+			any_pop = { militancy = 5 consciousness = 7 }
+		}
+			
+		ai_chance = { factor = 0 }
+	}
+}
+
+#Gadsden Purchase
+country_event = {
+	id = 16453
+	title = "EVTNAME16453"
+	desc = "EVTDESC16453"
+	picture = "gadsden_treaty"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA16453" #Sell everything they want
+		FROM = { country_event = 16454 }
+		ai_chance = {
+			factor = 5
+				modifier = {
+					factor = 1.1
+					relation = { who = FROM value = 180 }
+				}
+				modifier = {
+					factor = 0
+					is_greater_power = yes
+				}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB16453" #Sell only historical borders
+		FROM = { country_event = 16455 }
+		ai_chance = { factor = 90 }
+	}
+	
+	option = {
+		name = "EVTOPTC16453" #We will not sell anything
+		FROM = { country_event = 16456 }
+		ai_chance = {
+			factor = 5
+				modifier = {
+					factor = 1.2
+					NOT = { relation = { who = FROM value = -50 } }
+				}
+				modifier = {
+					factor = 1.8
+					is_greater_power = yes
+				}
+				modifier = {
+					factor = 8.0
+					USA = { any_owned_province = { is_core = MEX } ai = no }
+			}
+		}
+	}
+}
+
+#Guantanamo Lease
+country_event = {
+	id = 16458
+	title = "EVTNAME16458"
+	desc = "EVTDESC16458"
+	picture = "Danishgovernment"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA16458"
+		44 = { secede_province = FROM }
+		relation = { who = FROM value = 50 }
+		FROM = { diplomatic_influence = { who = THIS value = 100 } }
+		FROM = { treasury = -10000 }
+		treasury = 100000
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "EVTOPTB16458"
+		prestige = 5
+		relation = { who = FROM value = -400 }
+		44 = { remove_core = THIS }
+		
+		random_owned = {
+			limit = { owner = { NOT = { number_of_states = 2 } owns = 2209 } }
+			owner = { add_casus_belli = { target = FROM type = conquest months = 36 } }
+		}
+		
+		random_owned = {
+			limit = { owner = { number_of_states = 2 owns = 2209 capital = 2209 } }
+			owner = { add_casus_belli = { target = FROM type = cut_down_to_size months = 36 } }
+		}
+		
+		random_owned = {
+			limit = { owner = { 2209 = { owned_by = THIS state_scope = { is_colonial = yes } } } }
+			owner = { add_casus_belli = { target = FROM type = place_in_the_sun months = 36 } }
+		}
+		
+		ai_chance = {
+			factor = 0.1
+			modifier = {
+				factor = 0.7
+				OR = {
+					ruling_party_ideology = fascist
+					ruling_party_ideology = reactionary
+					ruling_party_ideology = communist
+				}
+			}
+		}
+	}
+}
+
+#Dust Bowl
+country_event = {
+	id = 16459
+	title = "EVTNAME16459"
+	desc = "EVTDESC16459"
+	picture = "dust_bowl"
+
+	trigger = {
+		year = 1929
+		any_owned_province = {
+			has_province_modifier = local_tractors
+			OR = {
+				province_id = 135
+				province_id = 136
+				province_id = 129
+				province_id = 105
+				province_id = 128
+				province_id = 103
+			}
+		}
+	}
+	
+	fire_only_once = yes
+	
+	allow_multiple_instances = no
+	
+	mean_time_to_happen = { months = 12 }
+	
+	option = {
+		name = "EVTOPTA16459"
+		random_list = {
+			50 = {
+				any_owned = {
+					limit = {
+						OR = {
+							province_id = 135
+							province_id = 136
+							province_id = 129
+							province_id = 105
+							province_id = 2148
+							province_id = 103
+							province_id = 106
+							province_id = 127
+							province_id = 128
+							province_id = 131
+							province_id = 134
+							province_id = 133
+							province_id = 43
+							province_id = 130
+							province_id = 126
+							province_id = 125
+							province_id = 2662
+							province_id = 123
+							province_id = 124
+							province_id = 138
+							province_id = 137
+						}
+					}
+					add_province_modifier = { name = dust_bowl duration = 1825 }
+				}
+				any_country = {
+						any_owned = {
+						limit = {
+							OR = {
+								province_id = 135
+								province_id = 136
+								province_id = 129
+								province_id = 105
+								province_id = 2148
+								province_id = 103
+								province_id = 106
+								province_id = 127
+								province_id = 128
+								province_id = 131
+								province_id = 134
+								province_id = 133
+								province_id = 43
+								province_id = 130
+								province_id = 126
+								province_id = 125
+								province_id = 2662
+								province_id = 123
+								province_id = 124
+								province_id = 138
+								province_id = 137
+							}
+						}
+						add_province_modifier = { name = dust_bowl duration = 1825 }
+					}
+				}
+			}
+			
+			50 = {
+				any_owned = {
+					limit = {
+						OR = {
+							province_id = 135
+							province_id = 136
+							province_id = 129
+							province_id = 105
+							province_id = 2148
+							province_id = 103
+							province_id = 106
+							province_id = 127
+							province_id = 128
+							province_id = 131
+							province_id = 134
+							province_id = 133
+							province_id = 43
+							province_id = 130
+							province_id = 126
+							province_id = 125
+							province_id = 2662
+							province_id = 123
+							province_id = 124
+							province_id = 138
+							province_id = 137
+						}
+					}
+					add_province_modifier = { name = dust_bowl duration = 1460 }
+				}
+				
+				any_country = {
+						any_owned = {
+						limit = {
+							OR = {
+								province_id = 135
+								province_id = 136
+								province_id = 129
+								province_id = 105
+								province_id = 2148
+								province_id = 103
+								province_id = 106
+								province_id = 127
+								province_id = 128
+								province_id = 131
+								province_id = 134
+								province_id = 133
+								province_id = 43
+								province_id = 130
+								province_id = 126
+								province_id = 125
+								province_id = 2662
+								province_id = 123
+								province_id = 124
+								province_id = 138
+								province_id = 137
+							}
+						}
+						add_province_modifier = { name = dust_bowl duration = 1460 }
+					}
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 0.2
+			modifier = {
+				factor = 0
+				money = 200000
+			}
+			modifier = {
+				factor = 100
+				NOT = { money = 200000 }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB16459"
+		treasury = -200000
+		random_list = {
+			34 = {
+				any_owned = {
+					limit = {
+						OR = {
+							province_id = 135
+							province_id = 136
+							province_id = 129
+							province_id = 105
+							province_id = 2148
+							province_id = 103
+							province_id = 106
+							province_id = 127
+							province_id = 128
+							province_id = 131
+							province_id = 134
+						}
+					}
+					add_province_modifier = { name = dust_bowl duration = 1460 }
+				}
+				any_country = {
+					any_owned = {
+						limit = {
+							OR = {
+								province_id = 135
+								province_id = 136
+								province_id = 129
+								province_id = 105
+								province_id = 2148
+								province_id = 103
+								province_id = 106
+								province_id = 127
+								province_id = 128
+								province_id = 131
+								province_id = 134
+							}
+						}
+						add_province_modifier = { name = dust_bowl duration = 1460 }
+					}
+				}
+			}
+			33 = {
+				any_owned = {
+					limit = {
+						OR = {
+							province_id = 135
+							province_id = 136
+							province_id = 129
+							province_id = 105
+							province_id = 2148
+							province_id = 103
+							province_id = 106
+							province_id = 127
+							province_id = 128
+							province_id = 131
+							province_id = 134
+						}
+					}
+					add_province_modifier = { name = dust_bowl duration = 1095 }
+				}
+				
+				any_country = {
+					any_owned = {
+						limit = {
+							OR = {
+								province_id = 135
+								province_id = 136
+								province_id = 129
+								province_id = 105
+								province_id = 2148
+								province_id = 103
+								province_id = 106
+								province_id = 127
+								province_id = 128
+								province_id = 131
+								province_id = 134
+							}
+						}
+						add_province_modifier = { name = dust_bowl duration = 1095 }
+					}
+				}
+			}
+			33 = {
+				any_owned = {
+					limit = {
+						OR = {
+							province_id = 135
+							province_id = 136
+							province_id = 129
+							province_id = 105
+							province_id = 2148
+							province_id = 103
+							province_id = 106
+							province_id = 127
+							province_id = 128
+							province_id = 131
+							province_id = 134
+						}
+					}
+					add_province_modifier = { name = dust_bowl duration = 730 }
+				}
+				
+				any_country = {
+					any_owned = {
+						limit = {
+							OR = {
+								province_id = 135
+								province_id = 136
+								province_id = 129
+								province_id = 105
+								province_id = 2148
+								province_id = 103
+								province_id = 106
+								province_id = 127
+								province_id = 128
+								province_id = 131
+								province_id = 134
+							}
+						}
+						add_province_modifier = { name = dust_bowl duration = 730 }
+					}
+				}
+			}
+		}
+		ai_chance = {
+			factor = 0.8
+			modifier = {
+				factor = 0
+				NOT = { money = 200000 }
+			}
+		}
+	}
+}
+

@@ -1,0 +1,286 @@
+country_event = {
+	id = 600057
+	title = "EVTNAME600057" #Colorados won
+	desc = "EVTDESC600057"
+	picture = "33orientals"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPT600057A"
+			set_country_flag = colorado_victory
+			political_reform = wealth_weighted_voting
+			political_reform = population_equal_weight
+			ruling_party_ideology = liberal
+			ARC = { country_event = 600058 }
+			2344 = {
+				remove_province_modifier = colorado_sympathies
+				add_province_modifier = { name = rivera_reforms duration = 365 }
+				any_pop = {
+					militancy = -9
+					consciousness = -9
+					ideology = { factor = 0.4 value = liberal }
+					ideology = { factor = -0.4 value = reactionary }
+				}
+			}
+			any_owned = {
+				limit = { NOT = { province_id = 2344 } }
+				any_pop = {
+					ideology = { factor = 0.6 value = liberal }
+					ideology = { factor = -0.2 value = reactionary }
+				}
+			}
+			relation = { who = BRZ value = 150 }
+			relation = { who = ENG value = 100 }
+			relation = { who = PRG value = -200 }
+			relation = { who = ARC value = -150 }
+			random_owned = {
+				limit = { exists = FRA }
+				owner = { relation = { who = FRA value = 100 } }
+			}	
+			random_owned = {
+				limit = { exists = BOR }
+				owner = { relation = { who = BOR value = 100 } }
+			}		
+			treasury = 1500
+			small_arms = 20
+			ammunition = 20
+			canned_food = 20
+			election = yes
+			neutrality = yes
+		}
+	}
+	
+country_event = {
+	id = 600058
+	title = "EVTNAME600058" #Rosas Answer
+	desc = "EVTDESC600058"
+	picture = "33orientals"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPT600058A" #Rivera is a usurper
+		URU = { set_country_flag = oribe_is_true_president }
+			ai_chance = {
+				factor = 100
+			}
+	}
+	
+	option = {
+		name = "EVTOPT600058B" #Rivera is the legitimate president
+		URU = { set_country_flag = rivera_is_true_president }
+		any_pop = {
+			scaled_consciousness = {
+				factor = 6
+				ideology = liberal
+					}
+			scaled_militancy = {
+				factor = 4
+				ideology = liberal
+				}
+			}
+		ai_chance = {
+			factor = 0
+			}
+		}
+}
+	
+country_event = {
+	id = 97060
+	title = "EVTNAME97060" #The Uruguayan Crisis
+	desc = "EVTDESC97060"
+	news = yes
+	news_desc_long = "EVTDESC97060_NEWS_LONG"
+	news_desc_medium = "EVTDESC97060_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC97060_NEWS_SHORT"
+	picture = "brazil_court"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = BRZ
+		war = no
+		neighbour = URU
+		year = 1864
+		has_country_flag = interfere_with_uruguay
+		URU = { ruling_party_ideology = conservative }
+		NOT = {
+			truce_with = URU
+			num_of_revolts = 1
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 6
+		modifier = {
+			factor = 0.8
+			year = 1865
+		}
+		modifier = {
+			factor = 0.8
+			year = 1866
+		}
+		modifier = {
+			factor = 0.5
+			year = 1868
+		}
+	}
+
+	option = {
+		name = "EVT97060OPTA"
+		set_country_flag = sent_uruguayan_ultimatum
+		badboy = 2
+		URU = { country_event = 97061 }
+		ai_chance = {
+			factor = 80
+		}
+	}
+	option = {
+		name = "EVT97060OPTB"
+		prestige = -5
+		badboy = -2
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 0.5
+				is_secondary_power = yes
+			}
+			modifier = {
+				factor = 0
+				is_greater_power = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = 97061
+	title = "EVTNAME97061" #The Brazilian Ultimatum
+	desc = "EVTDESC97061"
+	picture = "brazil_court"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT97061OPTA"
+		BRZ = { country_event = 97062 }
+		relation = {
+			who = BRZ
+			value = -100
+		}
+		leave_alliance = BRZ
+		ai_chance = {
+			factor = 90
+		}
+	}
+	option = {
+		name = "EVT97061OPTB"
+		prestige = -5
+		ruling_party_ideology = liberal
+		any_pop = {
+			ideology = {
+				value = liberal
+				factor = 0.05
+			}
+			scaled_militancy = {
+				ideology = conservative
+				factor = 4
+			}
+		}
+		create_alliance = BRZ
+		relation = {
+			who = BRZ
+			value = 400
+		}		
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+country_event = {
+	id = 97062
+	title = "EVTNAME97062" #Uruguay Rejects the Ultimatum
+	desc = "EVTDESC97062"
+	picture = "brazil_court"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT97062OPTA"
+		badboy = 2
+		casus_belli = {
+			target = URU
+			type = humiliate
+			months = 12
+		}
+		war = {
+			target = URU
+			attacker_goal = {
+				casus_belli = humiliate
+			}
+		}
+		URU = { set_country_flag = war_with_brazil }
+		ai_chance = {
+			factor = 0.95
+		}
+	}
+	option = {
+		name = "EVT97062OPTB"
+		prestige = -10
+		ai_chance = {
+			factor = 0.05
+		}
+	}
+}
+
+country_event = {
+	id = 97065
+	title = "EVTNAME97065" #Uruguay Submits
+	desc = "EVTDESC97065"
+	picture = "brazil_court"
+
+	trigger = {
+		tag = URU
+		has_country_flag = war_with_brazil
+		ruling_party_ideology = conservative
+		OR = {
+			AND = {
+				has_recently_lost_war = yes 
+				truce_with = BRZ
+			}
+			any_owned_province = {
+				is_capital = yes
+				controlled_by = BRZ
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVT97065OPTA"
+		clr_country_flag = war_with_brazil
+		random_country = {
+			limit = {
+				tag = BRZ
+				war_with = URU
+			}
+			country_event = 97066
+		}
+		ruling_party_ideology = liberal
+		any_pop = {
+			ideology = {
+				value = liberal
+				factor = 0.05
+			}
+			scaled_militancy = {
+				ideology = conservative
+				factor = 4
+			}
+		}
+	}
+}
