@@ -1,0 +1,7 @@
+owner = TCA
+controller = TCA
+add_core = TCA
+add_core = ARM
+add_core = PNT
+trade_goods = cattle
+life_rating = 35

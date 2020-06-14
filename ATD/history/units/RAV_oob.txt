@@ -1,0 +1,18 @@
+leader = {
+	name = "Artur Krieger"
+	date = 1836.1.1
+	type = land
+	personality = diplomatic
+	background = amateur
+	prestige = 0.3
+}
+
+army = {
+	name = "Ravernsburgische Landwehr"
+	location = 588
+	regiment = {
+		name= "1. Linieninfanteriebrigade"
+		type = infantry
+		home = 588
+	}
+}

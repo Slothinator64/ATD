@@ -1,0 +1,11 @@
+army = {
+	name = "Waldecker Heer"
+	location = 3257
+	
+	regiment = {
+		name = "Waldecksches Füselier-Bataillon"
+		type = infantry
+		home = 3257
+	}
+
+}

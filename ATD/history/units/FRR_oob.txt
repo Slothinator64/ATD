@@ -1,0 +1,37 @@
+leader = {
+	name = "Filiberto Micheletti"
+	date = 1836.1.1
+	type = land
+	personality = diplomatic
+	background = yesman
+	prestige = 0.3
+}
+
+army = {
+	name = "Esercito di Ferrara"
+	location = 742
+	regiment = {
+		name= "1. Fanteria di Linea"
+		type = infantry
+		home = 742
+	}
+
+	regiment = {
+		name= "2. Fanteria di Linea"
+		type = infantry
+		home = 742
+	}
+	
+	regiment = {
+		name= "3. Fanteria di Linea"
+		type = infantry
+		home = 738
+	}
+		
+	regiment = {
+		name= "1. Cavalleria Milanese"
+		type = cuirassier
+		home = 726
+	}
+}
+

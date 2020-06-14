@@ -1,0 +1,5 @@
+owner = SPA
+controller = SPA
+add_core = DJA
+trade_goods = timber
+life_rating = 32

@@ -1,0 +1,8 @@
+owner = MFR
+controller = MFR
+add_core = MFR
+add_core = CRS
+add_core = ITA
+add_core = GEN
+trade_goods = fish
+life_rating = 30

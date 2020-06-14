@@ -1,0 +1,102 @@
+#France and Sphere
+alliance = {
+	first = FRA
+	second = MFR
+	start_date = 1815.1.1
+	end_date = 1850.1.1
+}
+alliance = {
+	first = FRA
+	second = SRD
+	start_date = 1815.1.1
+	end_date = 1850.1.1
+}
+alliance = {
+	first = FRA
+	second = SVY
+	start_date = 1815.1.1
+	end_date = 1850.1.1
+}
+alliance = {
+	first = FRA
+	second = SWI
+	start_date = 1815.1.1
+	end_date = 1850.1.1
+}
+alliance = {
+	first = FRA
+	second = BAD
+	start_date = 1815.1.1
+	end_date = 1850.1.1
+}
+alliance = {
+	first = FRA
+	second = TST
+	start_date = 1815.1.1
+	end_date = 1850.1.1
+}
+alliance = {
+	first = FRA
+	second = AUS
+	start_date = 1815.1.1
+	end_date = 1850.1.1
+}
+
+#Spain and Sphere
+
+alliance = {
+	first = SPA
+	second = SYC
+	start_date = 1815.1.1
+	end_date = 1850.1.1
+}
+
+alliance = {
+	first = SPA
+	second = POR
+	start_date = 1815.1.1
+	end_date = 1850.1.1
+}
+
+#Ottomans and Sphere
+
+
+#Bohemia and Sphere
+alliance = {
+	first = BOH
+	second = SLS
+	start_date = 1815.1.1
+	end_date = 1850.1.1
+}
+
+#England and Sphere
+alliance = {
+	first = ENL
+	second = SCO
+	start_date = 1815.1.1
+	end_date = 1850.1.1
+}
+
+#Lithuania and Sphere
+alliance = {
+	first = LIT
+	second = HUN
+	start_date = 1815.1.1
+	end_date = 1850.1.1
+}
+
+#Norway and Lithuania
+alliance = {
+	first = NOR
+	second = LIT
+	start_date = 1815.1.1
+	end_date = 1850.1.1
+}
+
+#Spain and Brandenburg
+alliance = {
+	first = SPA
+	second = BRN
+	start_date = 1815.1.1
+	end_date = 1850.1.1
+}

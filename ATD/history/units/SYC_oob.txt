@@ -1,0 +1,31 @@
+leader = {
+	name = "Tobia Mortellaro"
+	date = 1836.1.1
+	type = land
+	personality = craven
+	background = cartographer
+	prestige = 0.3
+}
+
+army = {
+	name = "Esercito di Sicilia"
+	location = 762
+	regiment = {
+		name= "1. Fanteria di Linea - Re e Regina"
+		type = infantry
+		home = 762
+	}
+
+	regiment = {
+		name= "2. Fanteria di Linea - Duca di Calabria"
+		type = infantry
+		home = 762
+	}
+
+	regiment = {
+		name= "1. Cavalleria di Linea"
+		type = cuirassier
+		home = 763
+	}
+
+}

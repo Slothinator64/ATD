@@ -1,0 +1,28 @@
+ENL = {
+	value = 125
+}
+
+leader = {
+	name = "Grimar Arinbjoernsson"
+	date = 1836.1.1
+	type = land
+	personality = au_fait
+	background = clueless
+	prestige = 0.3
+}
+
+army = {
+	name = "Føroyar Heeren"
+	location = 253
+	regiment = {
+		name= "1.1. Division"
+		type = infantry
+		home = 253
+	}
+	regiment = {
+		name= "2.1. Division"
+		type = infantry
+		home = 253
+	}
+}
+

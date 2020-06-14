@@ -1,0 +1,41 @@
+
+#BRN = {
+#	value = 125
+#}
+
+leader = {
+	name = "Uwe Herber"
+	date = 1836.1.1
+	type = land
+	personality = aweless
+	background = immoral
+	prestige = 0.3
+}
+
+army = {
+
+	name = "Schleswig-Holsteinische Armee"
+	location = 369
+
+	regiment = {
+		name= "1. Schleswig-Hols. Landwehrbrigade"
+		type = infantry
+		home = 369
+	}
+	regiment = {
+		name= "2. Schleswig-Hols. Landwehrbrigade"
+		type = infantry
+		home = 529
+	}
+	regiment = {
+		name= "1. Schleswig-Hols. Landwehrbrigade"
+		type = infantry
+		home = 369
+	}
+	regiment = {
+		name= "2. Schleswig-Hols. Landwehrbrigade"
+		type = cuirassier
+		home = 529
+	}
+}
+

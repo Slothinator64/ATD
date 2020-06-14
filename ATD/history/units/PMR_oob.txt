@@ -1,0 +1,28 @@
+leader = {
+	name = "Gunter Heuberger"
+	date = 1836.1.1
+	type = land
+	personality = implacable
+	background = gifted_administrator
+	prestige = 0.3
+}
+
+army = {
+	name = "Armee von Pommern"
+	location = 546
+	regiment = {
+		name= "1. Infanterie-Brigade"
+		type = infantry
+		home = 546
+	}
+	regiment = {
+		name= "2. Infanterie-Brigade"
+		type = infantry
+		home = 546
+	}
+	regiment = {
+		name= "1. Cavalrie-Brigade"
+		type = cuirassier
+		home = 547
+	}
+}

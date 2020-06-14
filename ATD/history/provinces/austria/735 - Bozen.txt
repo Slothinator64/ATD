@@ -1,0 +1,5 @@
+owner = TST
+controller = TST
+add_core = TST
+trade_goods = grain
+life_rating = 35

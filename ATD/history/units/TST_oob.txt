@@ -1,0 +1,28 @@
+FRA = {
+	value = 125
+}
+
+leader = {
+	name = "Piersilvio Mario"
+	date = 1836.1.1
+	type = land
+	personality = implacable
+	background = clueless
+	prestige = 0.3
+}
+
+army = {
+	name = "Esercito di Trento"
+	location = 734
+	regiment = {
+		name= "1. Fanteria di Linea"
+		type = infantry
+		home = 734
+	}
+	regiment = {
+		name= "2. Fanteria di Linea"
+		type = infantry
+		home = 734
+	}
+}
+

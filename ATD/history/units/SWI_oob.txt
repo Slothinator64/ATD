@@ -1,0 +1,19 @@
+army = {
+	name = "Bundesausug I. Division"
+	location = 603
+	regiment = {
+		name= "Brigade der Infanterie"
+		type = infantry
+		home = 603
+	}
+	regiment = {
+		name= "Brigade der Infanterie"
+		type = infantry
+		home = 603
+	}
+	regiment = {
+		name= "Brigade der Kavallerie"
+		type = cavalry
+		home = 606
+	}
+}

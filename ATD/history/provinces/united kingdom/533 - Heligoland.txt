@@ -1,0 +1,6 @@
+owner = OLD
+controller = OLD
+add_core = HGL
+trade_goods = fish
+life_rating = 30
+terrain = new_world_small_island

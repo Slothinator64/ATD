@@ -1,0 +1,630 @@
+SCN = {
+	value = 50		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+}
+
+BRN = {
+	value = 100
+}
+
+LIT = {
+	value = 50
+}
+
+RUS = {
+	value = -50
+}
+
+ENL = {
+	value = -50
+}
+
+leader = {
+	name = "Einar Flaten"
+	date = 1840.1.1
+	type = land
+	personality = cautious
+	background = cursed_luck
+	prestige = 0.3
+}
+
+leader = {
+	name = "Sindre Sandvig"
+	date = 1850.1.1
+	type = land
+	personality = charismatic
+	background = debutante
+	prestige = 0.2
+}
+
+leader = {
+	name = "Kristen Ruud"
+	date = 1860.1.1
+	type = land
+	personality = chickenhearted
+	background = diplomat
+	prestige = 0.1
+}
+
+leader = {
+	name = "Hans Heien"
+	date = 1860.1.1
+	type = land
+	personality = chivalrous
+	background = disgraced
+	prestige = 0
+}
+
+leader = {
+	name = "Stig Hougen"
+	date = 1834.1.1
+	type = sea
+	personality = hellbent
+	background = gifted_administrator
+	prestige = 0.3
+}
+
+leader = {
+	name = "Sigurd Eikeli"
+	date = 1844.1.1
+	type = sea
+	personality = heroic
+	background = hated
+	prestige = 0.2
+}
+
+leader = {
+	name = "Aslak Sannes"
+	date = 1854.1.1
+	type = sea
+	personality = imperious
+	background = immoral
+	prestige = 0.1
+}
+
+leader = {
+	name = "Dag Klepp"
+	date = 1864.1.1
+	type = sea
+	personality = impetuous
+	background = incompetent
+	prestige = 0
+}
+
+leader = {
+	name = "Karsten Aarhus"
+	date = 1864.1.1
+	type = sea
+	personality = implacable
+	background = innovative_tactician
+	prestige = 0
+}
+
+leader = {
+	name = "Leiv Skyberg"
+	date = 1864.1.1
+	type = sea
+	personality = impulsive
+	background = madman
+	prestige = 0
+}
+
+
+army = {
+	name = "Svensk Haer"
+	location = 322
+	regiment = {
+		name= "Svea Livgarde"
+		type = infantry
+		home = 322
+	}
+
+	regiment = {
+		name= "Södermanlands Regiment"
+		type = infantry
+		home = 326
+	}
+
+	regiment = {
+		name= "Första LivgrenadjärRegimentt"
+		type = infantry
+		home = 325
+	}
+
+	regiment = {
+		name= "Upplands Regiment"
+		type = infantry
+		home = 324
+	}
+
+	regiment = {
+		name= "Västgöta Regiment"
+		type = cuirassier
+		home = 330
+	}
+
+	regiment = {
+		name= "Kalmar Regiment"
+		type = cuirassier
+		home = 332
+	}
+
+	regiment = {
+		name= "Södra Skånska InfanteriRegimentt"
+		type = artillery
+		home = 333
+	}
+
+}
+
+army = {
+	name = "Norsk Haer"
+	location = 313
+	regiment = {
+		name= "1. Livgarde"
+		type = infantry
+		home = 332
+	}
+
+	regiment = {
+		name= "2. Regiment"
+		type = infantry
+		home = 321
+	}
+
+	regiment = {
+		name= "3. LivgrenadjärRegimentt"
+		type = infantry
+		home = 313
+	}
+
+	regiment = {
+		name= "4. Regiment"
+		type = infantry
+		home = 252
+	}
+
+	regiment = {
+		name= "5. Regiment"
+		type = cuirassier
+		home = 305
+	}
+
+	regiment = {
+		name= "6. Regiment"
+		type = cuirassier
+		home = 306
+	}
+
+	regiment = {
+		name= "7. Regiment"
+		type = cuirassier
+		home = 307
+	}
+
+	regiment = {
+		name= "8. Regiment"
+		type = artillery
+		home = 308
+	}
+
+}
+
+army = {
+	name = "Finsk Haer"
+	location = 343
+	regiment = {
+		name= "1. Livgarde"
+		type = infantry
+		home = 343
+	}
+
+	regiment = {
+		name= "2. Regiment"
+		type = infantry
+		home = 344
+	}
+
+	regiment = {
+		name= "3. LivgrenadjärRegimentt"
+		type = infantry
+		home = 345
+	}
+
+	regiment = {
+		name= "4. Regiment"
+		type = infantry
+		home = 246
+	}
+
+	regiment = {
+		name= "5. Regiment"
+		type = cuirassier
+		home = 347
+	}
+
+	regiment = {
+		name= "6. Regiment"
+		type = cuirassier
+		home = 366
+	}
+
+	regiment = {
+		name= "8. Regiment"
+		type = artillery
+		home = 313
+	}
+
+}
+
+
+army = {
+	name = "1. Indian Haer"
+	location = 1236
+	regiment = {
+		name= "1. Indian Regiment"
+		type = infantry
+		home = 1236
+	}
+
+	regiment = {
+		name= "2. Indian Regiment"
+		type = infantry
+		home = 1237
+	}
+
+	regiment = {
+		name= "3. Indian Regiment"
+		type = infantry
+		home = 1238
+	}
+	
+	regiment = {
+		name= "4. Indian Regiment"
+		type = infantry
+		home = 1239
+	}
+	
+	regiment = {
+		name= "1. Livgarde"
+		type = cuirassier
+		home = 343
+	}
+
+	regiment = {
+		name= "2. Regiment"
+		type = cuirassier
+		home = 344
+	}
+
+	regiment = {
+		name= "3. LivgrenadjärRegimentt"
+		type = artillery
+		home = 345
+	}
+
+}
+
+
+army = {
+	name = "2. Indian Haer"
+	location = 1297
+	regiment = {
+		name= "1. Indian Regiment"
+		type = infantry
+		home = 1297
+	}
+
+	regiment = {
+		name= "2. Indian Regiment"
+		type = infantry
+		home = 1298
+	}
+
+	regiment = {
+		name= "3. Indian Regiment"
+		type = infantry
+		home = 1299
+	}
+	
+	regiment = {
+		name= "4. Indian Regiment"
+		type = infantry
+		home = 1300
+	}
+	
+	regiment = {
+		name= "1. Livgarde"
+		type = cuirassier
+		home = 322
+	}
+
+	regiment = {
+		name= "2. Regiment"
+		type = cuirassier
+		home = 325
+	}
+
+	regiment = {
+		name= "3. LivgrenadjärRegimentt"
+		type = artillery
+		home = 326
+	}
+
+}
+
+navy = {
+	name = "Baltic Navy"
+	location = 322
+	ship = {
+		name= "Freia"
+		type = manowar
+	}
+
+	ship = {
+		name= "Desideira"
+		type = manowar
+	}
+
+	ship = {
+		name= "Ellida"
+		type = manowar
+	}
+
+	ship = {
+		name= "Nordssthernen"
+		type = manowar
+	}
+
+	ship = {
+		name= "Camilla"
+		type = frigate
+	}
+
+	ship = {
+		name= "Af Chapman"
+		type = frigate
+	}
+
+	ship = {
+		name= "Eurydice"
+		type = frigate
+	}
+
+	ship = {
+		name= "Galatea"
+		type = frigate
+	}
+	
+	ship = {
+		name= "Nornen"
+		type = frigate
+	}
+
+	ship = {
+		name= "Nidaros"
+		type = frigate
+	}
+
+	ship = {
+		name= "Ørnen"
+		type = frigate
+	}
+
+	ship = {
+		name= "Kong Sverre"
+		type = frigate
+	}
+
+	ship = {
+		name= "St Olaf"
+		type = frigate
+	}
+
+	ship = {
+		name= "Desideira"
+		type = frigate
+	}
+
+	ship = {
+		name= "1st Transport Flotilla"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "2nd Transport Flotilla"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "3rd Transport Flotilla"
+		type = clipper_transport
+	}
+	
+	ship = {
+		name= "4th Transport Flotilla"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "5th Transport Flotilla"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "6th Transport Flotilla"
+		type = clipper_transport
+	}
+	
+	ship = {
+		name= "7th Transport Flotilla"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "8th Transport Flotilla"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "9th Transport Flotilla"
+		type = clipper_transport
+	}
+	
+	ship = {
+		name= "10th Transport Flotilla"
+		type = clipper_transport
+	}
+
+}
+
+navy = {
+	name = "North Sea Navy"
+	location = 313
+	ship = {
+		name= "Freia"
+		type = manowar
+	}
+
+	ship = {
+		name= "Desideira"
+		type = manowar
+	}
+
+	ship = {
+		name= "Camilla"
+		type = frigate
+	}
+
+	ship = {
+		name= "Af Chapman"
+		type = frigate
+	}
+
+	ship = {
+		name= "Eurydice"
+		type = frigate
+	}
+
+	ship = {
+		name= "Galatea"
+		type = frigate
+	}
+	
+	ship = {
+		name= "Nornen"
+		type = frigate
+	}
+
+	ship = {
+		name= "1st Transport Flotilla"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "2nd Transport Flotilla"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "3rd Transport Flotilla"
+		type = clipper_transport
+	}
+	
+	ship = {
+		name= "4th Transport Flotilla"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "5th Transport Flotilla"
+		type = clipper_transport
+	}
+
+}
+
+navy = {
+	name = "Indian Navy"
+	location = 1251
+	ship = {
+		name= "Freia"
+		type = manowar
+	}
+
+	ship = {
+		name= "Desideira"
+		type = manowar
+	}
+	
+	ship = {
+		name= "Glommen"
+		type = manowar
+	}
+
+	ship = {
+		name= "Camilla"
+		type = frigate
+	}
+
+	ship = {
+		name= "Af Chapman"
+		type = frigate
+	}
+
+	ship = {
+		name= "Eurydice"
+		type = frigate
+	}
+
+	ship = {
+		name= "Galatea"
+		type = frigate
+	}
+	
+	ship = {
+		name= "Nornen"
+		type = frigate
+	}
+	
+	ship = {
+		name= "Ørnen"
+		type = frigate
+	}
+
+	ship = {
+		name= "1st Transport Flotilla"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "2nd Transport Flotilla"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "3rd Transport Flotilla"
+		type = clipper_transport
+	}
+	
+	ship = {
+		name= "4th Transport Flotilla"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "5th Transport Flotilla"
+		type = clipper_transport
+	}
+	
+	ship = {
+		name= "6th Transport Flotilla"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "7th Transport Flotilla"
+		type = clipper_transport
+	}
+
+}

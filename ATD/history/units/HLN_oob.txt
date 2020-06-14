@@ -1,0 +1,23 @@
+leader = {
+	name = "Mark Kaspers"
+	date = 1836.1.1
+	type = land
+	personality = cautious
+	background = unfit
+	prestige = 0.3
+}
+
+army = {
+	name = "Hollander Leger"
+	location = 375
+	regiment = {
+		name = "1e Infanterie Brigade"
+		type = infantry
+		home = 375
+	}
+	regiment = {
+		name = "2e Infanterie Brigade"
+		type = infantry
+		home = 375
+	}
+}

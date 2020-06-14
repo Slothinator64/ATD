@@ -1,0 +1,113 @@
+LIT = {
+	value = 125
+}
+
+leader = {
+	name = "Balint Orban"
+	date = 1836.1.1
+	type = land
+	personality = lilylivered
+	background = rising_star
+	prestige = 0.3
+}
+
+leader = {
+	name = "Victor Radics"
+	date = 1836.1.1
+	type = land
+	personality = craven
+	background = cartographer
+	prestige = 0.2
+}
+
+army = {
+	name = "Army of Budapest"
+	location = 641
+	regiment = {
+		name= "I. Infantry"
+		type = infantry
+		home = 641
+	}
+
+	regiment = {
+		name= "II. Infantry"
+		type = infantry
+		home = 641
+	}
+	
+	regiment = {
+		name= "III. Infantry"
+		type = infantry
+		home = 645
+	}
+	
+	regiment = {
+		name= "IV. Infantry"
+		type = infantry
+		home = 646
+	}
+
+	regiment = {
+		name= "I. Cavalry"
+		type = cuirassier
+		home = 647
+	}
+	
+	regiment = {
+		name= "II. Cavalry"
+		type = cuirassier
+		home = 648
+	}
+
+	regiment = {
+		name= "I. Artillery"
+		type = artillery
+		home = 649
+	}
+}
+
+army = {
+	name = "Army of Romania"
+	location = 654
+	regiment = {
+		name= "I. Infantry"
+		type = infantry
+		home = 654
+	}
+
+	regiment = {
+		name= "II. Infantry"
+		type = infantry
+		home = 650
+	}
+	
+	regiment = {
+		name= "III. Infantry"
+		type = infantry
+		home = 651
+	}
+	
+	regiment = {
+		name= "IV. Infantry"
+		type = infantry
+		home = 652
+	}
+
+	regiment = {
+		name= "I. Cavalry"
+		type = cuirassier
+		home = 653
+	}
+	
+	regiment = {
+		name= "II. Cavalry"
+		type = cuirassier
+		home = 659
+	}
+
+	regiment = {
+		name= "I. Artillery"
+		type = artillery
+		home = 661
+	}
+}

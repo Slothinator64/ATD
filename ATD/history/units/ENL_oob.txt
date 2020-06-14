@@ -1,0 +1,444 @@
+#Sphere of Influence
+
+SCO = {
+	value = 125		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+}
+
+FOR = {
+	value = 125		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+}
+
+NOR = {
+	value = -50
+}
+
+FRA = {
+	value = -50
+}
+
+
+#Leaders
+
+leader = {
+	name = "John Fox Burgoyne"
+	date = 1836.1.1
+	type = land
+	personality = able
+	background = engineer
+	prestige = 0.3
+}
+
+leader = {
+	name = "George Brown"
+	date = 1836.1.1
+	type = land
+	personality = harsh
+	background = cavalry_school
+	prestige = 0.2
+}
+
+leader = {
+	name = "Sir James Dundas"
+	date = 1836.1.1
+	type = sea
+	personality = cautious
+	background = elderly
+	prestige = 0.3
+}
+
+leader = {
+	name = "James Grant"
+	date = 1836.1.1
+	type = land
+	personality = brilliant
+	background = cavalry_school
+	prestige = 0.1
+}
+
+leader = {
+	name = "Sir Fairfax Moresby"
+	date = 1836.1.1
+	type = sea
+	personality = able
+	background = cartographer
+	prestige = 0.2
+}
+
+leader = {
+	name = "Sir George R. Mundy"
+	date = 1836.1.1
+	type = sea
+	personality = bigoted
+	background = elderly
+	prestige = 0.1
+}
+
+army = {
+	name = "Royal Army"
+	location = 300
+	regiment = {
+		name= "1.Royal Guards Division"
+		type = infantry
+		home = 300
+	}
+
+	regiment = {
+		name= "2.Royal Guards Division"
+		type = infantry
+		home = 300
+	}
+
+	regiment = {
+		name= "3.Royal Guards Division"
+		type = infantry
+		home = 263
+	}
+	
+	regiment = {
+		name= "4.Royal Guards Division"
+		type = infantry
+		home = 263
+	}
+
+	regiment = {
+		name= "1.Royal Guards Cavalry Division"
+		type = cuirassier
+		home = 300
+	}
+
+	regiment = {
+		name= "2.Royal Guards Cavalry Division"
+		type = cuirassier
+		home = 300
+	}
+
+	regiment = {
+		name= "3.Royal Guards Cavalry Division"
+		type = cuirassier
+		home = 293
+	}
+	
+	regiment = {
+		name= "3.Royal Guards Artillery Division"
+		type = artillery
+		home = 290
+	}
+
+}
+
+army = {
+	name = "Home Army"
+	location = 293
+	regiment = {
+		name= "1.1. Division"
+		type = infantry
+		home = 278
+	}
+
+	regiment = {
+		name= "2.1. Division"
+		type = infantry
+		home = 277
+	}
+
+	regiment = {
+		name= "3.1. Division"
+		type = infantry
+		home = 284
+	}
+
+	regiment = {
+		name= "1.2. Division"
+		type = infantry
+		home = 291
+	}
+
+	regiment = {
+		name= "2.2. Division"
+		type = cuirassier
+		home = 292
+	}
+
+	regiment = {
+		name= "3.2. Division"
+		type = cuirassier
+		home = 295
+	}
+
+	regiment = {
+		name= "3.6. Division"
+		type = artillery
+		home = 290
+	}
+}
+
+army = {
+	name = "Royal Irish Army"
+	location = 263
+	regiment = {
+		name= "1.7. Division"
+		type = infantry
+		home = 300
+	}
+
+	regiment = {
+		name= "2.7. Division"
+		type = infantry
+		home = 255
+	}
+
+	regiment = {
+		name= "3.7. Division"
+		type = infantry
+		home = 259
+	}
+	
+	regiment = {
+		name= "1.4. Division"
+		type = infantry
+		home = 282
+	}
+	
+	regiment = {
+		name= "1.3. Division"
+		type = cuirassier
+		home = 287
+	}
+
+	regiment = {
+		name= "2.3. Division"
+		type = cuirassier
+		home = 294
+	}
+
+	regiment = {
+		name= "1.6. Division"
+		type = artillery
+		home = 289
+	}
+
+}
+
+army = {
+	name = "Indian Army"
+	location = 1321
+	regiment = {
+		name= "1.8. Division"
+		type = cuirassier
+		home = 303
+	}
+
+	regiment = {
+		name= "2.8. Division"
+		type = cuirassier
+		home = 284
+	}
+
+	regiment = {
+		name= "3.8. Division"
+		type = infantry
+		home = 273
+	}
+
+	regiment = {
+		name= "1.12. Division"
+		type = infantry
+		home = 266
+	}
+
+	regiment = {
+		name= "3.12. Division"
+		type = artillery
+		home = 261
+	}
+
+	regiment = {
+		name= "1.1. Indian Division"
+		type = infantry
+		home = 1293
+	}
+
+	regiment = {
+		name= "2.1. Indian Division"
+		type = infantry
+		home = 1309
+	}
+
+}
+
+army = {
+	name = "American Army"
+	location = 84
+	regiment = {
+		name= "1.9. Division"
+		type = infantry
+		home = 296
+	}
+
+	regiment = {
+		name= "2.9. Division"
+		type = infantry
+		home = 286
+	}
+
+	regiment = {
+		name= "3.9. Division"
+		type = cuirassier
+		home = 274
+	}
+}
+
+
+navy = {
+	name = "Channel Fleet"
+	location = 303
+	ship = {
+		name= "HMS Warrior"
+		type = manowar
+	}
+		
+	ship = {
+		name= "HMS Aboukir" #Plymouth
+		type = manowar
+	}
+
+	ship = {
+		name= "HMS Centurion" #Plymouth
+		type = manowar
+	}
+	
+	ship = {
+		name= "HMS Ariadne"
+		type = frigate
+	}
+
+	ship = {
+		name= "HMS Diadem"
+		type = frigate
+	}
+	
+	ship = {
+		name= "HMS Shannon"
+		type = frigate
+	}
+
+	ship = {
+		name= "HMS Euryalus"
+		type = frigate
+	}
+	
+	ship = {
+		name= "HMS Octavia"
+		type = frigate
+	}
+
+	ship = {
+		name= "HMS Sutlej"
+		type = frigate
+	}
+	
+	ship = {
+		name= "1st Transport Flotilla"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "2nd Transport Flotilla"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "3rd Transport Flotilla"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "4th Transport Flotilla"
+		type = clipper_transport
+	}
+	
+	ship = {
+		name= "5th Transport Flotilla"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "6th Transport Flotilla"
+		type = clipper_transport
+	}
+
+}
+
+navy = {
+	name = "Particular Service Squadron"
+	location = 260 #Cork 
+
+	ship = {
+		name= "HMS Emerald"
+		type = frigate
+	}
+	
+	ship = {
+		name= "7th Transport Flotilla"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "8th Transport Flotilla"
+		type = clipper_transport
+	}
+
+}
+
+navy = {
+	name = "North America Station"
+	location = 84 #San Francisco
+	
+	ship = {
+		name= "HMS Mersey"
+		type = frigate
+	}
+	
+	ship = {
+		name= "9th Transport Flotilla"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "10th Transport Flotilla"
+		type = clipper_transport
+	}
+
+}
+
+navy = {
+	name = "East Indies Station"
+	location = 1321
+	ship = {
+		name= "HMS Calcutta"
+		type = manowar
+	}
+
+	ship = {
+		name= "HMS Impérieuse"
+		type = frigate
+	}
+
+	ship = {
+		name= "HMS Chesapeake"
+		type = frigate
+	}
+	
+	ship = {
+		name= "11th Transport Flotilla"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "12th Transport Flotilla"
+		type = clipper_transport
+	}
+
+}

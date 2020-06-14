@@ -1,0 +1,31 @@
+leader = {
+	name = "Slobodan Princip"
+	date = 1861.1.1
+	type = land
+	personality = yellow
+	background = sycophant
+	prestige = 0.3
+}
+
+army = {
+	name = "Serbian Army"
+	location = 798
+	regiment = {
+		name= "1.1. Division"
+		type = infantry
+		home = 798
+	}
+
+	regiment = {
+		name= "2.1. Division"
+		type = infantry
+		home = 798
+	}
+	
+	regiment = {
+		name= "3.1. Division"
+		type = cavalry
+		home = 799
+	}
+}
+

@@ -1,0 +1,184 @@
+#Other GP's
+LIT = { value = -100 }
+FRA = { value = 125 }
+TUR = { value = 0 }
+
+leader = {
+	name = "Julius von Haynau"
+	date = 1835.1.1
+	type = land
+	personality = wrathful
+	background = natural_born_leader
+	prestige = 0.3
+}
+
+leader = {
+	name = "von Mittrowitz-Nettolitzky"
+	date = 1835.1.1
+	type = land
+	personality = active_p
+	background = aristocrat
+	prestige = 0.2
+}
+
+leader = {
+	name = "Albrecht Fitzner"
+	date = 1836.1.1
+	type = sea
+	personality = active_p
+	background = aristocrat
+	prestige = 0.3
+}
+
+
+#Army
+
+army = {
+	name = "I. Armee"
+	location = 619
+	regiment = {
+		name= "1.1. Kavalleriedivision"
+		type = cuirassier
+		home = 619
+	}
+
+	regiment = {
+		name= "2.1. Kavalleriedivision"
+		type = cuirassier
+		home = 639
+	}
+
+	regiment = {
+		name= "3.1. Kavalleriedivision"
+		type = cuirassier
+		home = 639
+	}
+
+	regiment = {
+		name= "2.2. Infanteriedivision"
+		type = infantry
+		home = 619
+	}
+
+	regiment = {
+		name= "3.2. Infanteriedivision"
+		type = infantry
+		home = 771
+	}
+
+	regiment = {
+		name= "1.3. Infanteriedivision"
+		type = infantry
+		home = 618
+	}
+
+	regiment = {
+		name= "2.3. Infanteriedivision"
+		type = infantry
+		home = 773
+	}
+
+	regiment = {
+		name= "3.3. Infanteriedivision"
+		type = artillery
+		home = 773
+	}
+}
+
+army = {
+	name = "II. Armee"
+	location = 599
+	regiment = {
+		name= "1.1. Kavalleriedivision"
+		type = cuirassier
+		home = 599
+	}
+
+	regiment = {
+		name= "2.1. Kavalleriedivision"
+		type = cuirassier
+		home = 599
+	}
+
+	regiment = {
+		name= "3.1. Kavalleriedivision"
+		type = cuirassier
+		home = 600
+	}
+
+	regiment = {
+		name= "2.2. Infanteriedivision"
+		type = infantry
+		home = 600
+	}
+
+	regiment = {
+		name= "3.2. Infanteriedivision"
+		type = infantry
+		home = 601
+	}
+
+	regiment = {
+		name= "1.3. Infanteriedivision"
+		type = infantry
+		home = 601
+	}
+
+	regiment = {
+		name= "2.3. Infanteriedivision"
+		type = infantry
+		home = 602
+	}
+
+	regiment = {
+		name= "3.3. Infanteriedivision"
+		type = artillery
+		home = 602
+	}
+}
+
+army = {
+	name = "III. Armee"
+	location = 623
+	regiment = {
+		name= "1.1. Kavalleriedivision"
+		type = cuirassier
+		home = 623
+	}
+
+	regiment = {
+		name= "2.1. Kavalleriedivision"
+		type = cuirassier
+		home = 623
+	}
+
+	regiment = {
+		name= "2.2. Infanteriedivision"
+		type = infantry
+		home = 622
+	}
+
+	regiment = {
+		name= "3.2. Infanteriedivision"
+		type = infantry
+		home = 621
+	}
+
+	regiment = {
+		name= "1.3. Infanteriedivision"
+		type = infantry
+		home = 620
+	}
+
+	regiment = {
+		name= "2.3. Infanteriedivision"
+		type = infantry
+		home = 619
+	}
+
+	regiment = {
+		name= "3.3. Infanteriedivision"
+		type = artillery
+		home = 618
+	}
+}

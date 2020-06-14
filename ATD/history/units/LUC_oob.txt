@@ -1,0 +1,19 @@
+leader = {
+	name = "Tobia Giaccone"
+	date = 1836.1.1
+	type = land
+	personality = shrinking_violet
+	background = rising_star
+	prestige = 0.3
+}
+
+army = {
+	name = "Esercito di Lucca"
+	location = 746
+	regiment = {
+		name= "1. Fanteria di Linea"
+		type = infantry
+		home = 746
+	}
+}
+

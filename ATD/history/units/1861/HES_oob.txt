@@ -1,0 +1,22 @@
+army = {
+	name = "Groﬂherzogliche Armee"
+	location = 567
+	regiment = {
+		name= "1. Groﬂherzogliche Infanterie-Brigade"
+		type = infantry
+		home = 567
+	}
+	
+	regiment = {
+		name= "2. Groﬂherzogliche Infanterie-Brigade"
+		type = infantry
+		home = 567
+	}
+	
+	regiment = {
+		name= "1. Groﬂherzogliche Cavalrie-Brigade"
+		type = cavalry
+		home = 565
+	}
+
+}

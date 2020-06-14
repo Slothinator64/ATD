@@ -1,0 +1,6 @@
+owner = RAV
+controller = RAV
+add_core = RAV
+add_core = GER
+trade_goods = timber
+life_rating = 40

@@ -1,0 +1,465 @@
+POR = {
+	value = 125		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+}
+
+SYC = {
+	value = 50		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+}
+
+FRR = {
+	value = 50		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+}
+
+FRA = {
+	value = 50
+}
+
+POR = {
+	value = 125
+}
+
+BRN = {
+	value = 50
+}
+
+#Leaders
+
+leader = {
+	name = "Francisco Serrano"
+	date = 1833.1.1 #1833
+	type = land
+	personality = expert
+	background = war_college
+	prestige = 0.3
+}
+
+leader = {
+	name = "Narváez"
+	date = 1835.1.1
+	type = land
+	personality = efficient
+	background = powerful_friends
+	prestige = 0.2
+}
+
+leader = {
+	name = "Leopoldo O'Donnell"
+	date = 1836.1.1
+	type = land
+	personality = efficient
+	background = rising_star
+	prestige = 0.1
+}
+
+leader = {
+	name = "M. de la Concha"
+	date = 1836.1.1
+	type = land
+	personality = brilliant
+	background = rising_star
+	prestige = 0
+}
+
+leader = {
+	name = "Joan Prim"
+	date = 1836.1.1
+	type = sea
+	personality = impulsive
+	background = diplomat
+	prestige = 0.3
+}
+
+leader = {
+	name = "Pascual Cervera"
+	date = 1836.1.1
+	type = sea
+	personality = impulsive
+	background = sad_sack
+	prestige = 0.2
+}
+
+leader = {
+	name = "Juan Bautiste Topete"
+	date = 1836.1.1
+	type = sea
+	personality = romantic
+	background = adventurer
+	prestige = 0.1
+}
+
+navy = {
+	name = "1a Escuadra del Norte"
+	location = 474
+	ship = {
+		name= "Rey Don Francisco de Asís"
+		type = manowar
+	}
+
+	ship = {
+		name= "Reina Doña Isabel II"
+		type = manowar
+	}
+	ship = {
+		name= "Bailén"
+		type = frigate
+	}
+
+	ship = {
+		name= "Reina María Cristina"
+		type = frigate
+	}
+	
+	ship = {
+		name= "Cortes"
+		type = frigate
+	}
+	
+	ship = {
+		name= "Esperanza"
+		type = frigate
+	}
+	
+	ship = {
+		name= "Favorita"
+		type = clipper_transport
+	}
+	
+	ship = {
+		name= "Ferrolana"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "Mazarredo"
+		type = clipper_transport
+	}
+	
+	ship = {
+		name= "Berenguela"
+		type = clipper_transport
+	}
+}
+
+navy = {
+	name = "Escuadra de las Indias"
+	location = 1384
+	
+	ship = {
+		name= "Hispania"
+		type = manowar
+	}
+	
+	ship = {
+		name= "Singapore"
+		type = manowar
+	}
+	
+	ship = {
+		name= "Berenguela"
+		type = frigate
+	}
+	
+	ship = {
+		name= "Reina Blanca"
+		type = frigate
+	}
+	
+	ship = {
+		name= "Petronila"
+		type = frigate
+	}
+	
+	ship = {
+		name= "Hernán Cortés"
+		type = frigate
+	}
+
+	ship = {
+		name= "Isabel la Católica"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "Jorge Juan"
+		type = clipper_transport
+	}
+	
+	ship = {
+		name= "Blasco de Garay"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "Vasco Núñez de Balboa"
+		type = clipper_transport
+	}
+}
+
+navy = {
+	name = "Escuadra del Mediterráneo"
+	location = 498
+	ship = {
+		name= "Princesa de Asturias"
+		type = manowar
+	}
+	
+	ship = {
+		name= "Lealtad"
+		type = frigate
+	}
+	
+	ship = {
+		name= "Churruca"
+		type = frigate
+	}
+
+	ship = {
+		name= "Colón"
+		type = clipper_transport
+	}
+	
+	ship = {
+		name= "Pizzaro"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "Victoria de las Tunas"
+		type = clipper_transport
+	}
+
+}
+
+army = {
+	name = "Ejército del Norte"
+	location = 498
+	regiment = {
+		name= "1.1a División de Infantería"
+		type = infantry
+		home = 495
+	}
+
+	regiment = {
+		name= "2.1a División de Infantería"
+		type = infantry
+		home = 497
+	}
+
+	regiment = {
+		name= "3.1a División de Infantería"
+		type = artillery
+		home = 503
+	}
+
+	regiment = {
+		name= "1.2a División de Infantería"
+		type = infantry
+		home = 503
+	}
+
+	regiment = {
+		name= "2.2a División de Infantería"
+		type = infantry
+		home = 503
+	}
+
+	regiment = {
+		name= "3.2a División de Infantería"
+		type = artillery
+		home = 503
+	}
+
+	regiment = {
+		name= "1.1a División de Caballería"
+		type = cuirassier
+		home = 487
+	}
+
+	regiment = {
+		name= "2.1a División de Caballería"
+		type = cuirassier
+		home = 487
+	}
+
+	regiment = {
+		name= "3.1a División de Caballería"
+		type = cuirassier
+		home = 487
+	}
+
+}
+
+army = {
+	name = "Ejército del Sur"
+	location = 513
+	regiment = {
+		name= "1.5a División de Infantería"
+		type = infantry
+		home = 513
+	}
+
+	regiment = {
+		name= "2.5a División de Infantería"
+		type = infantry
+		home = 513
+	}
+
+	regiment = {
+		name= "3.5a División de Infantería"
+		type = infantry
+		home = 514
+	}
+
+	regiment = {
+		name= "1.6a División de Infantería"
+		type = infantry
+		home = 512
+	}
+
+	regiment = {
+		name= "2.6a División de Infantería"
+		type = artillery
+		home = 489
+	}
+
+	regiment = {
+		name= "3.6a División de Infantería"
+		type = artillery
+		home = 510
+	}
+
+	regiment = {
+		name= "1.7a División de Caballería"
+		type = cuirassier
+		home = 509
+	}
+
+	regiment = {
+		name= "2.7a División de Caballería"
+		type = cuirassier
+		home = 509
+	}
+
+	regiment = {
+		name= "3.7a División de Caballería"
+		type = cuirassier
+		home = 491
+	}
+
+}
+
+army = {
+	name = "Ejército de India"
+	location = 1257
+	regiment = {
+		name= "1.1a Infantería Colonial"
+		type = infantry
+		home = 1257
+	}
+
+	regiment = {
+		name= "2.1a Infantería Colonial"
+		type = infantry
+		home = 1259
+	}
+
+	regiment = {
+		name= "3.1a Infantería Colonial"
+		type = infantry
+		home = 2566
+	}
+	
+	regiment = {
+		name= "4.1a Infantería Colonial"
+		type = infantry
+		home = 1345
+	}
+
+	regiment = {
+		name= "4.1a Infanteria Colonial"
+		type = artillery
+		home = 487
+	}
+
+	regiment = {
+		name= "1.2a Caballeria Colonial"
+		type = cuirassier
+		home = 476
+	}
+
+	regiment = {
+		name= "2.2a Caballeria Colonial"
+		type = cuirassier
+		home = 476
+	}
+
+	regiment = {
+		name= "3.2a Caballeria Colonial"
+		type = cuirassier
+		home = 487
+	}
+	
+	regiment = {
+		name= "3.2a Infanteria Colonial"
+		type = artillery
+		home = 487
+	}
+
+}
+
+army = {
+	name = "Ejército de Indonesia"
+	location = 1399
+	regiment = {
+		name= "1.4a Infantería Colonial"
+		type = infantry
+		home = 1399
+	}
+
+	regiment = {
+		name= "2.4a Infantería Colonial"
+		type = infantry
+		home = 1384
+	}
+
+	regiment = {
+		name= "3.4a Infantería Colonial"
+		type = infantry
+		home = 1398
+	}
+
+	regiment = {
+		name= "1.5a Infantería Colonial"
+		type = infantry
+		home = 1404
+	}
+
+	regiment = {
+		name= "2.5a Caballeria Colonial"
+		type = cuirassier
+		home = 474
+	}
+	
+	regiment = {
+		name= "2.6a Caballeria Colonial"
+		type = cuirassier
+		home = 475
+	}
+	
+	regiment = {
+		name= "2.7a Caballeria Colonial"
+		type = cuirassier
+		home = 477
+	}
+
+	regiment = {
+		name= "3.5a Infantería Colonial"
+		type = artillery
+		home = 478
+	}
+
+}
+

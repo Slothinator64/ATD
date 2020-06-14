@@ -1,0 +1,13 @@
+owner = ANS
+controller = ANS
+add_core = ANS
+add_core = GER
+trade_goods = grain
+life_rating = 42
+terrain = nuremberg
+state_building = {
+	level = 1
+	building = canned_food_factory
+	upgrade = yes
+}
+1861.1.1 = { railroad = 3 }

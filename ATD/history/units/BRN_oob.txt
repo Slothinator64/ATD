@@ -1,0 +1,309 @@
+#SOIs
+
+SWH = {
+	value = 50
+	level = 5
+	influence_value = 0
+}
+
+JTL = {
+	value = 50
+	level = 5
+	influence_value = 0
+}
+
+BOH = {
+	value = 50
+	level = 5
+	influence_value = 0
+}
+
+SLS = {
+	value = 50
+	level = 5
+	influence_value = 0
+}
+
+HLN = {
+	value = 50
+	level = 5
+	influence_value = 0
+}
+
+PMR = {
+	value = 50
+	level = 5
+	influence_value = 0
+}
+
+HES = {
+	value = 50
+	level = 5
+	influence_value = 0
+}
+
+OLD = {
+	value = 50
+	level = 5
+	influence_value = 0
+}
+
+SWH = {
+	value = 50
+	level = 5
+	influence_value = 0
+}
+
+NOR = {
+	value = 50
+}
+FRA = {
+	value = -50
+}
+LIT = {
+	value = -50
+}
+
+#Leaders
+
+leader = {
+	name = "Heinrich von Wrangel"
+	date = 1836.1.1
+	type = land
+	personality = efficient
+	background = elderly
+	prestige = 0.3
+}
+
+leader = {
+	name = "Albrecht Seibert"
+	date = 1836.1.1
+	type = land
+	personality = disciplined
+	background = cavalry_school
+	prestige = 0.2
+}
+
+leader = {
+	name = "von Hindersin"
+	date = 1836.1.1
+	type = land
+	personality = competent
+	background = artillerist
+	prestige = 0.2
+}
+
+leader = {
+	name = "Adalbert Brass"
+	date = 1836.1.1
+	type = sea
+	personality = competent
+	background = gifted_administrator
+	prestige = 0.2
+}
+
+leader = {
+	name = "Eduard von Bonin"
+	date = 1836.1.1
+	type = sea
+	personality = gallant
+	background = drillmaster
+	prestige = 0.2
+}
+
+
+army = {
+	name = "I. Garde Korps"
+	location = 549
+	regiment = {
+		name= "1.1. Garde Division"
+		type = infantry
+		home = 549
+	}
+
+	regiment = {
+		name= "2.1. Garde Division"
+		type = infantry
+		home = 549
+	}
+
+	regiment = {
+		name= "3.1. Garde Division"
+		type = infantry
+		home = 549
+	}
+
+	regiment = {
+		name= "4.1. Garde Division"
+		type = infantry
+		home = 549
+	}
+
+	regiment = {
+		name= "1.1. Garde Kavalleriedivision"
+		type = cuirassier
+		home = 550
+	}
+
+	regiment = {
+		name= "2.1. Garde Kavalleriedivision"
+		type = cuirassier
+		home = 580
+	}
+
+	regiment = {
+		name= "1.2. Garde Division"
+		type = artillery
+		home = 584
+	}
+
+}
+
+
+army = {
+	name = "II. Korps"
+	location = 580
+	regiment = {
+		name= "1.1. Division"
+		type = infantry
+		home = 580
+	}
+
+	regiment = {
+		name= "2.1. Division"
+		type = infantry
+		home = 580
+	}
+
+	regiment = {
+		name= "3.1. Division"
+		type = infantry
+		home = 581
+	}
+
+	regiment = {
+		name= "4.1. Division"
+		type = infantry
+		home = 582
+	}
+
+	regiment = {
+		name= "1.1. Garde Kavalleriedivision"
+		type = cuirassier
+		home = 584
+	}
+
+	regiment = {
+		name= "2.1. Garde Kavalleriedivision"
+		type = cuirassier
+		home = 681
+	}
+
+	regiment = {
+		name= "1.2. Garde Division"
+		type = artillery
+		home = 692
+	}
+}
+
+army = {
+	name = "III. Korps"
+	location = 551
+	regiment = {
+		name= "1.1. Division"
+		type = infantry
+		home = 551
+	}
+
+	regiment = {
+		name= "2.1. Division"
+		type = infantry
+		home = 551
+	}
+
+	regiment = {
+		name= "3.1. Division"
+		type = infantry
+		home = 551
+	}
+
+	regiment = {
+		name= "4.1. Division"
+		type = infantry
+		home = 551
+	}
+
+	regiment = {
+		name= "1.1. Garde Kavalleriedivision"
+		type = cuirassier
+		home = 548
+	}
+
+	regiment = {
+		name= "2.1. Garde Kavalleriedivision"
+		type = cuirassier
+		home = 549
+	}
+
+	regiment = {
+		name= "1.2. Garde Division"
+		type = artillery
+		home = 548
+	}
+}
+
+navy = {
+	name = "Brandenburger Fleet"
+	location = 548
+	ship = {
+		name= "Balthasar von Esens"
+		type = manowar
+	}
+
+	ship = {
+		name= "Heinrich Krefting"
+		type = manowar
+	}
+	
+	ship = {
+		name= "Arcona"
+		type = frigate
+	}
+
+	ship = {
+		name= "Gazelle"
+		type = frigate
+	}
+
+	ship = {
+		name= "Gefion"
+		type = frigate
+	}
+
+	ship = {
+		name= "Thetis"
+		type = frigate
+	}
+
+	ship = {
+		name= "Barbarossa"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "Danzig"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "Loreley"
+		type = clipper_transport
+	}
+	
+	ship = {
+		name= "Johann Schmidt"
+		type = clipper_transport
+	}
+
+}
+

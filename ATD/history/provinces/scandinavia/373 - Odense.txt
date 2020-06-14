@@ -1,0 +1,6 @@
+owner = SCN
+controller = SCN
+add_core = SCN
+add_core = DEN
+trade_goods = grain
+life_rating = 35

@@ -1,0 +1,93 @@
+ENL = {
+	value = 125
+}
+
+leader = {
+	name = "Dominic Boyle"
+	date = 1836.1.1
+	type = land
+	personality = yellow
+	background = cavalry_school
+	prestige = 0.3
+}
+
+leader = {
+	name = "Eric Turnbull"
+	date = 1836.1.1
+	type = sea
+	personality = implacable
+	background = toady
+	prestige = 0.3
+}
+
+army = {
+	name = "Army of Scotland"
+	location = 269
+	regiment = {
+		name= "1. Infantry"
+		type = infantry
+		home = 269
+	}
+
+	regiment = {
+		name= "2. Infantry"
+		type = infantry
+		home = 269
+	}
+	
+	regiment = {
+		name= "3. Infantry"
+		type = infantry
+		home = 270
+	}
+	
+	regiment = {
+		name= "4. Infantry"
+		type = infantry
+		home = 268
+	}
+		
+	regiment = {
+		name= "1. Cavalry"
+		type = cuirassier
+		home = 267
+	}
+	
+	regiment = {
+		name= "2. Cavalry"
+		type = cuirassier
+		home = 271
+	}
+	
+	regiment = {
+		name= "1. Artillery"
+		type = artillery
+		home = 266
+	}
+}
+
+navy = {
+	name = "Scottish Fleet"
+	location = 269
+	
+	ship = {
+		name= "Scotia"
+		type = frigate
+	}
+	
+	ship = {
+		name= "Amazon"
+		type = frigate
+	}
+
+	ship = {
+		name= "1o Sea Transport"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "2o Sea Transport"
+		type = clipper_transport
+	}
+
+}

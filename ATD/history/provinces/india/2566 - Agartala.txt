@@ -1,0 +1,8 @@
+owner = SPA
+controller = SPA
+add_core = HND
+add_core = ASM
+add_core = BNG
+trade_goods = grain
+life_rating = 35
+colonial = 2

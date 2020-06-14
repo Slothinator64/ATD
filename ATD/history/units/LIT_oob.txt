@@ -1,0 +1,500 @@
+HUN = {
+	value = 125		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+}
+
+BUL = {
+	value = 50		#relation
+	level = 3		#3=cordial, 4 = friendly, 5 sphere
+}
+
+NOR = {
+	value = 50
+}
+
+RUS = {
+	value = -50
+}
+
+AUS = {
+	value = -100
+}
+
+TUR = {
+	value = -100
+}
+
+leader = {
+	name = "Adolfas Paleckis"
+	date = 1833.1.1 #1833
+	type = land
+	personality = expert
+	background = war_college
+	prestige = 0.3
+}
+
+leader = {
+	name = "Petras Basanavicius"
+	date = 1835.1.1
+	type = land
+	personality = efficient
+	background = powerful_friends
+	prestige = 0.2
+}
+
+leader = {
+	name = "Jonas Ciurlionis"
+	date = 1836.1.1
+	type = land
+	personality = efficient
+	background = rising_star
+	prestige = 0.1
+}
+
+leader = {
+	name = "Kipras Pozela"
+	date = 1836.1.1
+	type = land
+	personality = brilliant
+	background = rising_star
+	prestige = 0
+}
+
+leader = {
+	name = "Jonusas Paulauskas"
+	date = 1836.1.1
+	type = land
+	personality = bigoted
+	background = elderly
+	prestige = 0
+}
+
+leader = {
+	name = "Augustinas Daukantas"
+	date = 1836.1.1
+	type = sea
+	personality = impulsive
+	background = diplomat
+	prestige = 0.3
+}
+
+leader = {
+	name = "Steponas Stauaitis"
+	date = 1836.1.1
+	type = sea
+	personality = impulsive
+	background = sad_sack
+	prestige = 0.2
+}
+
+leader = {
+	name = "Vytautas Svedas"
+	date = 1836.1.1
+	type = sea
+	personality = romantic
+	background = adventurer
+	prestige = 0.1
+}
+
+
+army = {
+	name = "Royal Lithuanian Army"
+	location = 360
+	regiment = {
+		name= "1.Infantry Division"
+		type = infantry
+		home = 360
+	}
+
+	regiment = {
+		name= "2.Infantry Division"
+		type = infantry
+		home = 361
+	}
+
+	regiment = {
+		name= "3.Infantry Division"
+		type = infantry
+		home = 362
+	}
+	
+	regiment = {
+		name= "4.Infantry Division"
+		type = infantry
+		home = 363
+	}
+
+	regiment = {
+		name= "1.Cavalry Division"
+		type = cuirassier
+		home = 364
+	}
+
+	regiment = {
+		name= "2.Cavalry Division"
+		type = cuirassier
+		home = 365
+	}
+
+	regiment = {
+		name= "3.Cavalry Division"
+		type = cuirassier
+		home = 676
+	}
+	
+	regiment = {
+		name= "1.Artillery Division"
+		type = artillery
+		home = 677
+	}
+	
+	regiment = {
+		name= "2.Artillery Division"
+		type = artillery
+		home = 678
+	}
+
+}
+
+
+army = {
+	name = "Polish Army"
+	location = 707
+	regiment = {
+		name= "1.Infantry Division"
+		type = infantry
+		home = 707
+	}
+
+	regiment = {
+		name= "2.Infantry Division"
+		type = infantry
+		home = 709
+	}
+
+	regiment = {
+		name= "3.Infantry Division"
+		type = infantry
+		home = 711
+	}
+	
+	regiment = {
+		name= "4.Infantry Division"
+		type = infantry
+		home = 715
+	}
+
+	regiment = {
+		name= "1.Cavalry Division"
+		type = cuirassier
+		home = 718
+	}
+
+	regiment = {
+		name= "2.Cavalry Division"
+		type = cuirassier
+		home = 719
+	}
+
+	regiment = {
+		name= "3.Cavalry Division"
+		type = cuirassier
+		home = 938
+	}
+	
+	regiment = {
+		name= "1.Artillery Division"
+		type = artillery
+		home = 939
+	}
+	
+	regiment = {
+		name= "2.Artillery Division"
+		type = artillery
+		home = 940
+	}
+
+}
+
+
+army = {
+	name = "Ruthenian Army"
+	location = 718
+	regiment = {
+		name= "1.Infantry Division"
+		type = infantry
+		home = 941
+	}
+
+	regiment = {
+		name= "2.Infantry Division"
+		type = infantry
+		home = 942
+	}
+
+	regiment = {
+		name= "3.Infantry Division"
+		type = infantry
+		home = 944
+	}
+	
+	regiment = {
+		name= "4.Infantry Division"
+		type = infantry
+		home = 945
+	}
+
+	regiment = {
+		name= "1.Cavalry Division"
+		type = cuirassier
+		home = 946
+	}
+
+	regiment = {
+		name= "2.Cavalry Division"
+		type = cuirassier
+		home = 947
+	}
+
+	regiment = {
+		name= "3.Cavalry Division"
+		type = cuirassier
+		home = 948
+	}
+	
+	regiment = {
+		name= "1.Artillery Division"
+		type = artillery
+		home = 949
+	}
+	
+	regiment = {
+		name= "2.Artillery Division"
+		type = artillery
+		home = 954
+	}
+
+}
+
+
+army = {
+	name = "Ukranian Army"
+	location = 958
+	regiment = {
+		name= "1.Infantry Division"
+		type = infantry
+		home = 955
+	}
+
+	regiment = {
+		name= "2.Infantry Division"
+		type = infantry
+		home = 956
+	}
+
+	regiment = {
+		name= "3.Infantry Division"
+		type = infantry
+		home = 957
+	}
+	
+	regiment = {
+		name= "4.Infantry Division"
+		type = infantry
+		home = 958
+	}
+
+	regiment = {
+		name= "1.Cavalry Division"
+		type = cuirassier
+		home = 959
+	}
+
+	regiment = {
+		name= "2.Cavalry Division"
+		type = cuirassier
+		home = 960
+	}
+
+	regiment = {
+		name= "3.Cavalry Division"
+		type = cuirassier
+		home = 961
+	}
+	
+	regiment = {
+		name= "1.Artillery Division"
+		type = artillery
+		home = 962
+	}
+	
+	regiment = {
+		name= "2.Artillery Division"
+		type = artillery
+		home = 963
+	}
+
+}
+
+
+army = {
+	name = "Southern Army"
+	location = 676
+	regiment = {
+		name= "1.Infantry Division"
+		type = infantry
+		home = 968
+	}
+
+	regiment = {
+		name= "2.Infantry Division"
+		type = infantry
+		home = 969
+	}
+
+	regiment = {
+		name= "3.Infantry Division"
+		type = infantry
+		home = 970
+	}
+	
+	regiment = {
+		name= "4.Infantry Division"
+		type = infantry
+		home = 971
+	}
+
+	regiment = {
+		name= "1.Cavalry Division"
+		type = cuirassier
+		home = 972
+	}
+
+	regiment = {
+		name= "2.Cavalry Division"
+		type = cuirassier
+		home = 1016
+	}
+	
+	regiment = {
+		name= "1.Artillery Division"
+		type = artillery
+		home = 360
+	}
+
+}
+
+navy = {
+	name = "Baltic Fleet"
+	location = 695
+	ship = {
+		name= Kaunas
+		type = manowar
+	}
+		
+	ship = {
+		name= Zemaitija
+		type = manowar
+	}
+	
+	ship = {
+		name= Jogailaitis
+		type = frigate
+	}
+
+	ship = {
+		name= "Vytautas Didysis"
+		type = frigate
+	}
+	
+	ship = {
+		name= Lietuva
+		type = frigate
+	}
+
+	ship = {
+		name= Mindaugas
+		type = frigate
+	}
+	
+	ship = {
+		name= "1st Transport Flotilla"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "2nd Transport Flotilla"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "3rd Transport Flotilla"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "4th Transport Flotilla"
+		type = clipper_transport
+	}
+	
+	ship = {
+		name= "5th Transport Flotilla"
+		type = clipper_transport
+	}
+
+}
+
+navy = {
+	name = "Black Sea Fleet"
+	location = 968
+	ship = {
+		name= Moletai
+		type = manowar
+	}
+		
+	ship = {
+		name= Vilnius
+		type = manowar
+	}
+	
+	ship = {
+		name= Siauliai
+		type = frigate
+	}
+
+	ship = {
+		name= Plunge
+		type = frigate
+	}
+	
+	ship = {
+		name= Palanga
+		type = frigate
+	}
+
+	ship = {
+		name= Silute
+		type = frigate
+	}
+	
+	ship = {
+		name= "1st Transport Flotilla"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "2nd Transport Flotilla"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "3rd Transport Flotilla"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "4th Transport Flotilla"
+		type = clipper_transport
+	}
+
+}

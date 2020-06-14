@@ -1,0 +1,106 @@
+leader = {
+	name = "Santo Pollina"
+	date = 1836.1.1
+	type = land
+	personality = imperious
+	background = school_of_defense
+	prestige = 0.3
+}
+
+leader = {
+	name = "Bruto Nunziata"
+	date = 1836.1.1
+	type = sea
+	personality = brash
+	background = sycophant
+	prestige = 0.3
+}
+
+army = {
+	name = "Esercito Pontificio"
+	location = 749
+	regiment = {
+		name= "1. Zuavi Pontifici"
+		type = infantry
+		home = 749
+	}
+
+	regiment = {
+		name= "2. Zuavi Pontifici"
+		type = infantry
+		home = 749
+	}
+	
+	regiment = {
+		name= "3. Zuavi Pontifici"
+		type = infantry
+		home = 750
+	}
+	
+	regiment = {
+		name= "4. Zuavi Pontifici"
+		type = infantry
+		home = 751
+	}
+	
+	regiment = {
+		name= "1. Cavallereggi Pontifici"
+		type = cuirassier
+		home = 752
+	}
+	
+	regiment = {
+		name= "2. Cavallereggi Pontifici"
+		type = cuirassier
+		home = 753
+	}
+	
+	regiment = {
+		name= "3. Cavallereggi Pontifici"
+		type = cuirassier
+		home = 754
+	}
+
+	regiment = {
+		name= "1. Artiglieri Pontifici"
+		type = artillery
+		home = 755
+	}
+	
+	regiment = {
+		name= "2. Artiglieri Pontifici"
+		type = artillery
+		home = 756
+	}
+}
+
+navy = {
+	name = "Flotta Romana"
+	location = 749
+	
+	ship = {
+		name= "Julius II"
+		type = manowar
+	}
+	
+	ship = {
+		name= "San Paolo"
+		type = frigate
+	}
+	
+	ship = {
+		name= "San Pietro"
+		type = frigate
+	}
+
+	ship = {
+		name= "1o Trasporto Marittimo"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "2o Trasporto Marittimo"
+		type = clipper_transport
+	}
+
+}

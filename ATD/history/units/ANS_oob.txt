@@ -1,0 +1,18 @@
+leader = {
+	name = "Berend Eichinger"
+	date = 1836.1.1
+	type = land
+	personality = resolute
+	background = clueless
+	prestige = 0.3
+}
+
+army = {
+	name = "Ansbacher Armee"
+	location = 590
+	regiment = {
+		name= "1. Infanteriebrigade"
+		type = infantry
+		home = 590
+	}
+}

@@ -1,0 +1,18 @@
+leader = {
+	name = "Naut Kaspers"
+	date = 1836.1.1
+	type = land
+	personality = cautious
+	background = unfit
+	prestige = 0.3
+}
+
+army = {
+	name = "Brabantse Leger"
+	location = 387
+	regiment = {
+		name = "1e Infanterie Brigade"
+		type = infantry
+		home = 387
+	}
+}

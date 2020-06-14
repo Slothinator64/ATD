@@ -1,0 +1,42 @@
+FRA = {
+	value = 125
+}
+
+leader = {
+	name = "Victor Seiden"
+	date = 1836.1.1
+	type = land
+	personality = aweless
+	background = yesman
+	prestige = 0.3
+}
+
+army = {
+	name = "Badische Armee"
+	location = 586
+	
+	regiment = {
+		name = "1. Badische Infanterie-Brigade"
+		type = infantry
+		home = 586
+	}
+	
+	regiment = {
+		name = "2. Badische Infanterie-Brigade"
+		type = infantry
+		home = 587
+	}
+	
+	regiment = {
+		name = "3. Badische Infanterie-Brigade"
+		type = infantry
+		home = 586
+	}
+	
+	regiment = {
+		name = "1. Badische Kavallerie-Brigade"
+		type = cuirassier
+		home = 409
+	}
+}
+

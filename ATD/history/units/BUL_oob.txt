@@ -1,0 +1,32 @@
+leader = {
+	name = "Rosen Borisov Zaikov"
+	date = 1836.1.1
+	type = land
+	personality = yellow
+	background = sycophant
+	prestige = 0.3
+}
+
+army = {
+	name = "Army of Bulgaria"
+	location = 809
+	regiment = {
+		name= "1st Bulgarian Infantry"
+		type = infantry
+		home = 809
+	}
+
+	regiment = {
+		name= "2nd Bulgarian Infantry"
+		type = infantry
+		home = 809
+	}
+
+	regiment = {
+		name= "1st Bulgarian cuirassier"
+		type = cuirassier
+		home = 810
+	}
+
+}
+

@@ -1,0 +1,35 @@
+FRA = {
+	value = 125
+}
+
+leader = {
+	name = "Luigi Schenone"
+	date = 1836.1.1
+	type = land
+	personality = brilliant
+	background = school_of_defense
+	prestige = 0.3
+}
+
+army = {
+	name = "Esercito del Monferrato"
+	location = 723
+	regiment = {
+		name= "1. Fanteria di Linea"
+		type = infantry
+		home = 723
+	}
+
+	regiment = {
+		name= "2. Fanteria di Linea"
+		type = infantry
+		home = 723
+	}
+		
+	regiment = {
+		name= "1. Cavalleria Genovese"
+		type = cuirassier
+		home = 724
+	}
+}
+

@@ -1,0 +1,6 @@
+owner = SPA
+controller = SPA
+add_core = DJA
+trade_goods = dye
+life_rating = 35
+colonial = 2

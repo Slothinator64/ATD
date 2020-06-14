@@ -1,0 +1,33 @@
+leader = {
+	name = "Storm Skou"
+	date = 1836.1.1
+	type = land
+	personality = hellbent
+	background = amateur
+	prestige = 0.3
+}
+
+army = {
+	name = "Skoonelainen Haeren"
+	location = 335
+	regiment = {
+		name= "1.1. Infanteridivision"
+		type = infantry
+		home = 372
+	}
+	regiment = {
+		name= "2.1. Infanteridivision"
+		type = infantry
+		home = 372
+	}
+	regiment = {
+		name= "3.1. Infanteridivision"
+		type = infantry
+		home = 334
+	}
+	regiment = {
+		name= "1.1. Kavalleridivision"
+		type = cuirassier
+		home = 334
+	}
+}

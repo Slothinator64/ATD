@@ -1,0 +1,38 @@
+leader = {
+	name = "Siegfried Frucht"
+	date = 1836.1.1
+	type = land
+	personality = shrinking_violet
+	background = pawn
+	prestige = 0.3
+}
+
+army = {
+	name = "Königlich Sächsische Armee"
+	location = 558
+	regiment = {
+		name= "1. Infanteriebrigade"
+		type = infantry
+		home = 558
+	}
+
+	regiment = {
+		name= "2. Infanteriebrigade"
+		type = infantry
+		home = 559
+	}
+
+	regiment = {
+		name= "3. Infanteriebrigade"
+		type = infantry
+		home = 560
+	}
+	
+	regiment = {
+		name= "1. Kavalleriebrigade"
+		type = cuirassier
+		home = 558
+	}
+
+}
+

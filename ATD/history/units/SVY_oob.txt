@@ -1,0 +1,37 @@
+#Relations
+
+FRA = { 
+	value = 125
+}
+
+leader = {
+	name = "Egisto Bacco"
+	date = 1836.1.1
+	type = land
+	personality = brilliant
+	background = school_of_defense
+	prestige = 0.3
+}
+
+army = {
+	name = "Esercito di Savoia"
+	location = 720
+	regiment = {
+		name= "1.Fanteria di Linea"
+		type = infantry
+		home = 720
+	}
+
+	regiment = {
+		name= "2.Fanteria di Linea"
+		type = infantry
+		home = 720
+	}
+
+	regiment = {
+		name= "1.Carabinieri Reali"
+		type = cuirassier
+		home = 721
+	}
+
+}

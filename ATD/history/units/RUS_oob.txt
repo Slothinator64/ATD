@@ -1,0 +1,772 @@
+#Sphere of Influence
+
+#Other GP's
+#GPs
+LIT = {	value = -50 }
+TUR = {	value = -125 }
+RUS = {	value = -50 }
+
+
+army = {
+	name = "1-i Armeiskii Korpus" #Ingria Army
+	location = 994
+	regiment = {
+		name= "1.1-ya Gvardeiskaya Pekhotnaya Diviziya"
+		type = infantry
+		home = 994
+	}
+
+	regiment = {
+		name= "1.2-ya Gvardeiskaya Pekhotnaya Diviziya"
+		type = infantry
+		home = 994
+	}
+
+	regiment = {
+		name= "1.3-ya Gvardeiskaya Pekhotnaya Diviziya"
+		type = infantry
+		home = 994
+	}
+
+	regiment = {
+		name= "1.1-ya Pekhotnaya Diviziya"
+		type = infantry
+		home = 994
+	}
+	
+	regiment = {
+		name= "1.1-ya Gvardeiskaya Kavaleriiskaya Diviziya"
+		type = cuirassier
+		home = 997
+	}
+
+	regiment = {
+		name= "1.2-ya Gvardeiskaya Kavaleriiskaya Diviziya"
+		type = cuirassier
+		home = 997
+	}
+	
+	regiment = {
+		name= "1.3-ya Gvardeiskaya Kavaleriiskaya Diviziya"
+		type = cuirassier
+		home = 2580
+	}
+	
+	regiment = {
+		name= "1.1-ya Artilleriiskii Diviziya"
+		type = artillery
+		home = 996
+	}
+	
+	regiment = {
+		name= "1.2-ya Artilleriiskii Diviziya"
+		type = artillery
+		home = 996
+	}
+	
+}
+
+army = {
+	name = "2-i Armeiskii Korpus" #Smolensk Army
+	location = 943
+
+	regiment = {
+		name= "2.1-ya Pekhotnaya Diviziya"
+		type = infantry
+		home = 943
+	}
+
+	regiment = {
+		name= "2.2-ya Pekhotnaya Diviziya"
+		type = infantry
+		home = 1014
+	}
+
+	regiment = {
+		name= "2.3-ya Pekhotnaya Diviziya"
+		type = infantry
+		home = 998
+	}
+
+	regiment = {
+		name= "2.4-ya Pekhotnaya Diviziya"
+		type = infantry
+		home = 1015
+	}
+	
+	regiment = {
+		name= "2.1-ya Gvardeiskaya Kavaleriiskaya Diviziya"
+		type = cuirassier
+		home = 1008
+	}
+
+	regiment = {
+		name= "2.2-ya Gvardeiskaya Kavaleriiskaya Diviziya"
+		type = cuirassier
+		home = 1017
+	}
+	
+	regiment = {
+		name= "2.3-ya Gvardeiskaya Kavaleriiskaya Diviziya"
+		type = cuirassier
+		home = 1018
+	}
+	
+	regiment = {
+		name = "2.1-ya Artilleriiskii Diviziya"
+		type = artillery
+		home = 981
+	}
+
+	regiment = {
+		name = "2.2-ya Artilleriiskii Diviziya"
+		type = artillery
+		home = 985
+	}
+}
+
+army = {
+	name = "3-i Armeiskii Korpus" #Vilna/Marijampole - Baltic Army
+	location = 992
+
+	regiment = {
+		name = "3.1-ya Pekhotnaya Diviziya"
+		type = infantry
+		home = 977
+	}
+
+	regiment = {
+		name = "3.2-ya Pekhotnaya Diviziya"
+		type = infantry
+		home = 938
+	}
+	
+	regiment = {
+		name = "3.3-ya Pekhotnaya Diviziya"
+		type = infantry
+		home = 987
+	}
+	
+	regiment = {
+		name = "3.4-ya Pekhotnaya Diviziya"
+		type = infantry
+		home = 2700
+	}
+	
+	regiment = {
+		name = "3.1-ya Gvardeiskaya Kavaleriiskaya Diviziya"
+		type = cuirassier
+		home = 362
+	}
+
+	regiment = {
+		name = "3.2-ya Gvardeiskaya Kavaleriiskaya Diviziya"
+		type = cuirassier
+		home = 361
+	}
+	
+	regiment = {
+		name = "3.3-ya Gvardeiskaya Kavaleriiskaya Diviziya"
+		type = cuirassier
+		home = 989
+	}
+
+	regiment = {
+		name = "3.1-ya Artilleriiskii Diviziya"
+		type = artillery
+		home = 990
+	}
+	
+	regiment = {
+		name = "3.2-ya Artilleriiskii Diviziya"
+		type = artillery
+		home = 1017
+	}
+}
+
+army = {
+	name = "4-i Armeiskii Korpus" #Kiev/Ukrainian Army
+	location = 1182	
+	regiment = {
+		name = "4.1-ya Pekhotnaya Diviziya"
+		type = infantry
+		home = 991
+	}
+	
+	regiment = {
+		name = "4.2-ya Pekhotnaya Diviziya"
+		type = infantry
+		home = 992
+	}
+
+	regiment = {
+		name = "4.3-ya Pekhotnaya Diviziya"
+		type = infantry
+		home = 993
+	}
+
+	regiment = {
+		name = "4.4-ya Pekhotnaya Diviziya"
+		type = infantry
+		home = 994
+	}
+	
+	regiment = {
+		name = "4.1-ya Gvardeiskaya Kavaleriiskaya Diviziya"
+		type = cuirassier
+		home = 995
+	}
+	
+	regiment = {
+		name = "4.2-ya Gvardeiskaya Kavaleriiskaya Diviziya"
+		type = cuirassier
+		home = 996
+	}
+	
+	regiment = {
+		name = "4.3-ya Gvardeiskaya Kavaleriiskaya Diviziya"
+		type = cuirassier
+		home = 1018
+	}
+
+	
+	regiment = {
+		name = "4.1-ya Artilleriiskii Diviziya"
+		type = artillery
+		home = 997
+	}
+
+	regiment = {
+		name = "4.2-ya Artilleriiskii Diviziya"
+		type = artillery
+		home = 1008
+	}
+}
+
+army = {
+	name = "5-i Armeiskii Korpus"
+	location = 1008
+	
+	regiment = {
+		name = "5.1-ya Pekhotnaya Diviziya"
+		type = infantry
+		home = 1022
+	}
+
+	regiment = {
+		name = "5.2-ya Pekhotnaya Diviziya"
+		type = infantry
+		home = 1012
+	}
+	
+	regiment = {
+		name = "5.3-ya Pekhotnaya Diviziya"
+		type = infantry
+		home = 1012
+	}
+	
+	regiment = {
+		name = "5.4-ya Pekhotnaya Diviziya"
+		type = infantry
+		home = 1012
+	}
+	
+	regiment = {
+		name= "5.1-ya Gvardeiskaya Kavaleriiskaya Diviziya"
+		type = cuirassier
+		home = 1008
+	}
+	
+	regiment = {
+		name= "5.2-ya Gvardeiskaya Kavaleriiskaya Diviziya"
+		type = cuirassier
+		home = 1008
+	}
+	
+	regiment = {
+		name= "5.3-ya Gvardeiskaya Kavaleriiskaya Diviziya"
+		type = cuirassier
+		home = 2580
+	}
+
+	regiment = {
+		name= "5.1-ya Artilleriiskii Diviziya"
+		type = artillery
+		home = 1013
+	}
+}
+
+army = {
+	name = "6-i Armeiskii Korpus" #Crimean Army
+	location = 977
+	regiment = {
+		name= "6.1-ya Pekhotnaya Diviziya"
+		type = infantry
+		home = 1009
+	}
+
+	regiment = {
+		name= "6.2-ya Pekhotnaya Diviziya"
+		type = infantry
+		home = 1010
+	}
+
+	regiment = {
+		name= "6.3-ya Pekhotnaya Diviziya"
+		type = infantry
+		home = 1010
+	}
+
+	regiment = {
+		name= "6.4-ya Pekhotnaya Diviziya"
+		type = infantry
+		home = 1010
+	}
+
+	regiment = {
+		name= "6.1-ya Pekhotnaya Diviziya"
+		type = cuirassier
+		home = 1042
+	}
+
+	regiment = {
+		name= "6.2-ya Kavalerijskaya Diviziya"
+		type = cuirassier
+		home = 1015
+	}
+	
+	regiment = {
+		name= "6.3-ya Kavalerijskaya Diviziya"
+		type = cuirassier
+		home = 1014
+	}
+	
+	regiment = {
+		name= "5.2-ya Artilleriiskii Diviziya"
+		type = artillery
+		home = 1013
+	}
+
+}
+
+army = {
+	name = "7-i Armeiskii Korpus"
+	location = 1075
+	
+	regiment = {
+		name= "7.1-ya Pekhotnaya Diviziya"
+		type = infantry
+		home = 1009
+	}
+
+	regiment = {
+		name= "7.2-ya Pekhotnaya Diviziya"
+		type = infantry
+		home = 1025
+	}
+
+	regiment = {
+		name= "7.3-ya Pekhotnaya Diviziya"
+		type = infantry
+		home = 1025
+	}
+
+	regiment = {
+		name= "7.4-ya Pekhotnaya Diviziya"
+		type = infantry
+		home = 1025
+	}
+
+	regiment = {
+		name= "7.1-ya Kavalerijskaya Diviziya"
+		type = cuirassier
+		home = 1021
+	}
+
+	regiment = {
+		name= "7.2-ya Kavalerijskaya Diviziya"
+		type = cuirassier
+		home = 1021
+	}
+
+	regiment = {
+		name= "7.3-ya Kavalerijskaya Diviziya"
+		type = cuirassier
+		home = 1021
+	}
+	
+	regiment = {
+		name= "7.1-ya Artilleriiskii Diviziya"
+		type = artillery
+		home = 1043
+	}
+	
+}
+
+army = {
+	name = "8-i Armeiskii Korpus"
+	location = 1058
+
+	regiment = {
+		name= "8.1-ya Pekhotnaya Diviziya"
+		type = infantry
+		home = 1044
+	}
+
+	regiment = {
+		name= "8.2-ya Pekhotnaya Diviziya"
+		type = infantry
+		home = 1058
+	}
+
+	regiment = {
+		name= "8.3-ya Pekhotnaya Diviziya"
+		type = infantry
+		home = 1059
+	}
+
+	regiment = {
+		name= "8.4-ya Pekhotnaya Diviziya"
+		type = infantry
+		home = 1060
+	}
+	
+	regiment = {
+		name= "8.1-ya Kavalerijskaya Diviziya"
+		type = cuirassier
+		home = 1008
+	}
+	
+	regiment = {
+		name= "8.2-ya Kavalerijskaya Diviziya"
+		type = cuirassier
+		home = 1061
+	}
+	
+	regiment = {
+		name= "8.3-ya Kavalerijskaya Diviziya"
+		type = cuirassier
+		home = 2686
+	}
+	
+	regiment = {
+		name= "1.1-ya Kavkazskii Artilleriiskii Diviziya"
+		type = artillery
+		home = 1008
+	}
+}
+
+navy = {
+	name = "Imperial Black Sea Fleet"
+	location = 981
+	ship = {
+		name= "Nord Adler"
+		type = manowar
+	}
+
+	ship = {
+		name= "Prints Gustav"
+		type = manowar
+	}
+
+	ship = {
+		name= "Ne Tron Menya"
+		type = manowar
+	}
+
+	ship = {
+		name= "Svyastoslav"
+		type = manowar
+	}
+
+	ship = {
+		name= "Chrabryi"
+		type = manowar
+	}
+
+	ship = {
+		name= "Smelyi"
+		type = frigate
+	}
+
+	ship = {
+		name= "Tri Svyatitelei"
+		type = frigate
+	}
+
+	ship = {
+		name= "Yupiter"
+		type = frigate
+	}
+
+	ship = {
+		name= "Chesma"
+		type = frigate
+	}
+
+	ship = {
+		name= "Mironosets"
+		type = frigate
+	}
+
+	ship = {
+		name= "Asia"
+		type = frigate
+	}
+
+	ship = {
+		name= "Azov"
+		type = frigate
+	}
+
+	ship = {
+		name= "Rossiya"
+		type = frigate
+	}
+
+	ship = {
+		name= "Saratov"
+		type = frigate
+	}
+
+	ship = {
+		name= "Blagodat'"
+		type = frigate
+	}
+
+	ship = {
+		name= "1. Transportnaya Flotiliya"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "2. Transportnaya Flotiliya"
+		type = clipper_transport
+	}
+	
+	ship = {
+		name= "3. Transportnaya Flotiliya"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "4. Transportnaya Flotiliya"
+		type = clipper_transport
+	}
+	
+	ship = {
+		name= "5. Transportnaya Flotiliya"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "6. Transportnaya Flotiliya"
+		type = clipper_transport
+	}
+	
+	ship = {
+		name= "7. Transportnaya Flotiliya"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "8. Transportnaya Flotiliya"
+		type = clipper_transport
+	}
+	
+	ship = {
+		name= "9. Transportnaya Flotiliya"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "10. Transportnaya Flotiliya"
+		type = clipper_transport
+	}
+
+}
+
+navy = {
+	name = "Imperial Northern Fleet"
+	location = 994
+	ship = {
+		name= "Dvenadtsat' Apostolov"
+		type = manowar
+	}
+
+	ship = {
+		name= "Poltava"
+		type = manowar
+	}
+	
+	ship = {
+		name= "Ratnyi"
+		type = frigate
+	}
+
+	ship = {
+		name= "Hiagudil"
+		type = frigate
+	}
+
+	ship = {
+		name= "Gangut"
+		type = frigate
+	}
+
+	ship = {
+		name= "Ezekiel"
+		type = frigate
+	}
+
+	ship = {
+		name= "Tsar Konstantin"
+		type = frigate
+	}
+
+	ship = {
+		name= "Yaroslav"
+		type = frigate
+	}
+
+	ship = {
+		name= "11. Transportnaya Flotiliya"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "12. Transportnaya Flotiliya"
+		type = clipper_transport
+	}
+	
+	ship = {
+		name= "13. Transportnaya Flotiliya"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "14. Transportnaya Flotiliya"
+		type = clipper_transport
+	}
+	
+	ship = {
+		name= "15. Transportnaya Flotiliya"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "16. Transportnaya Flotiliya"
+		type = clipper_transport
+	}
+
+}
+
+leader = {
+	name = "Prince Vasilchikov"
+	picture = rus_gen_vasilchikov
+	date = 1801.1.1
+	type = land
+	personality = competent
+	background = powerful_friends
+	prestige = 0.3
+}
+
+leader = {
+	name = "Prince Mikhail Vorontsov"
+	picture = rus_gen_vorontsov
+	date = 1814.1.1
+	type = land
+	personality = daring
+	background = gifted_administrator
+	prestige = 0.2
+}
+
+leader = {
+	name = "Pyotr Chicherin"
+	picture = rus_gen_chicherin
+	date = 1835.1.1
+	type = land
+	personality = earnest
+	background = cavalry_school
+	prestige = 0.1
+}
+
+leader = {
+	name = "Alexander Chernyshev"
+	picture = rus_gen_chernyshev
+	date = 1821.1.1
+	type = land
+	personality = intelligent
+	background = diplomat
+	prestige = 0
+}
+
+leader = {
+	name = "Prince Menshikov"
+	picture = rus_adm_menshikov
+	date = 1833.1.1
+	type = sea
+	personality = lackluster
+	background = clueless
+	prestige = 0.3
+}
+
+leader = {
+	name = "Ivan Paskevich"
+	picture = rus_gen_paskevich
+	date = 1812.1.1
+	type = land
+	personality = merciless
+	background = school_of_offense
+	prestige = 0
+}
+
+leader = {
+	name = "Matvey Khrapovitsky"
+	picture = rus_gen_khrapovitsky
+	date = 1835.1.1
+	type = land
+	personality = able
+	background = war_college
+	prestige = 0
+}
+
+leader = {
+	name = "Mikhail Lazarev"
+	picture = rus_adm_lazarev
+	date = 1827.1.1
+	type = sea
+	personality = au_fait
+	background = innovative_tactician
+	prestige = 0.2
+}
+
+leader = {
+	name = "Nikolai Muraviev-Karsky"
+	picture = rus_gen_muravievkarsky
+	date = 1827.1.1
+	type = land
+	personality = defiant
+	background = natural_born_leader
+	prestige = 0.1
+}
+
+leader = {
+	name = "Pyotr Volkonsky"
+	picture = rus_gen_volkonsky
+	date = 1812.1.1
+	type = sea
+	personality = intelligent
+	background = elderly
+	prestige = 0.1
+}
+
+leader = {
+	name = "Pavel Grabbe"
+	date = 1836.1.1
+	type = sea
+	personality = keen
+	background = school_of_firepower
+	prestige = 0
+}
+

@@ -1,0 +1,48 @@
+army = {
+	name = "Kavkazskii Korpus"
+	location = 1090
+	regiment = {
+		name = "1.1-ya Kavkazskii Pekhotnaya Diviziya"
+		type = irregular
+		home = 1090
+	}
+	regiment = {
+		name = "1.2-ya Kavkazskii Pekhotnaya Diviziya"
+		type = irregular
+		home = 1091
+	}
+	regiment = {
+		name = "1.3-ya Kavkazskii Pekhotnaya Diviziya"
+		type = irregular
+		home = 1092
+	}
+	regiment = {
+		name = "1.4-ya Kavkazskii Pekhotnaya Diviziya"
+		type = irregular
+		home = 1093
+	}
+	regiment = {
+		name = "2.1-ya Kavkazskii Pekhotnaya Diviziya"
+		type = cavalry
+		home = 1096
+	}
+	regiment = {
+		name = "2.2-ya Kavkazskii Pekhotnaya Diviziya"
+		type = cavalry
+		home = 1098
+	}
+	regiment = {
+		name = "2.3-ya Kavkazskii Pekhotnaya Diviziya"
+		type = cavalry
+		home = 1099
+	}
+}
+
+leader = {
+	name = "Georg Andreas von Rosen"
+	picture = european_general_14
+	date = 1800.1.1
+	type = land
+	personality = soldierly
+	background = rising_star
+}

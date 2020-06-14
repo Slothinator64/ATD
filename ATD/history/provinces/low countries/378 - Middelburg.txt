@@ -1,0 +1,6 @@
+owner = HLN
+controller = HLN
+add_core = NET
+add_core = HLN
+trade_goods = fish
+life_rating = 35

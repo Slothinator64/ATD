@@ -1,0 +1,31 @@
+leader = {
+	name = "Tobia Mortellaro"
+	date = 1836.1.1
+	type = land
+	personality = shrinking_violet
+	background = rising_star
+	prestige = 0.3
+}
+
+army = {
+	name = "Esercito Toscano"
+	location = 744
+	regiment = {
+		name= "1. Fanteria di Linea"
+		type = infantry
+		home = 744
+	}
+
+	regiment = {
+		name= "2. Fanteria di Linea"
+		type = infantry
+		home = 745
+	}
+
+	regiment = {
+		name= "1. Cavallereggi"
+		type = cuirassier
+		home = 748
+	}
+}
+

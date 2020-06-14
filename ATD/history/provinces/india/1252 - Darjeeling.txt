@@ -1,0 +1,7 @@
+owner = NOR
+controller = NOR
+add_core = HND
+add_core = BNG
+trade_goods = wool
+life_rating = 35
+colonial = 2

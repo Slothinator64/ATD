@@ -1,0 +1,90 @@
+leader = {
+	name = "Kristars Lielmanis"
+	date = 1836.1.1
+	type = land
+	personality = able
+	background = natural_born_leader
+	prestige = 0.3
+}
+
+leader = {
+	name = "Mariens Lielmanis"
+	date = 1836.1.1
+	type = sea
+	personality = defiant
+	background = diplomat
+	prestige = 0.3
+}
+
+army = {
+	name = "I. Korps"
+	location = 354
+	regiment = {
+		name= "I. Linieninfanteriebrigade"
+		type = infantry
+		home = 354
+	}
+
+	regiment = {
+		name= "II. Linieninfanteriebrigade"
+		type = infantry
+		home = 353
+	}
+	
+	regiment = {
+		name= "III. Linieninfanteriebrigade"
+		type = infantry
+		home = 355
+	}
+	
+	regiment = {
+		name= "IV. Linieninfanteriebrigade"
+		type = infantry
+		home = 352
+	}
+
+	regiment = {
+		name= "I. Kavalleriebrigade"
+		type = cuirassier
+		home = 356
+	}
+	
+	regiment = {
+		name= "II. Kavalleriebrigade"
+		type = cuirassier
+		home = 351
+	}
+
+	regiment = {
+		name= "I. Artilleriebrigade"
+		type = artillery
+		home = 357
+	}
+}
+
+
+navy = {
+	name = "Baltic Fleet"
+	location = 354
+	
+	ship = {
+		name= "Saule"
+		type = frigate
+	}
+	
+	ship = {
+		name= "Livonia"
+		type = frigate
+	}
+
+	ship = {
+		name= "1o Sea Transport"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "2o Sea Transport"
+		type = clipper_transport
+	}
+
+}

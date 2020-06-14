@@ -1,0 +1,30 @@
+leader = {
+	name = "Fabian Krakowiak"
+	date = 1836.1.1
+	type = land
+	personality = craven
+	background = pawn
+	prestige = 0.3
+}
+
+army = {
+	name = "Armia Slaskiej"
+	location = 682
+	
+	regiment = {
+		name = "1. Brygada"
+		type = infantry
+		home = 682
+	}
+	regiment = {
+		name = "2. Brygada"
+		type = infantry
+		home = 682
+	}
+	regiment = {
+		name = "3. Brygada"
+		type = cuirassier
+		home = 683
+	}
+}
+

@@ -1,0 +1,7 @@
+owner = FRA
+controller = FRA
+colonial = 2
+add_core = ARG
+trade_goods = grain
+terrain = montane_forest
+life_rating = 35

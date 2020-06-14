@@ -1,0 +1,73 @@
+leader = {
+	name = "Enrico Barresi"
+	date = 1836.1.1
+	type = land
+	personality = incapable
+	background = gifted_administrator
+	prestige = 0.3
+}
+
+leader = {
+	name = "Terzo de Rocco"
+	date = 1836.1.1
+	type = sea
+	personality = deeply_religious
+	background = cartographer
+	prestige = 0.3
+}
+
+army = {
+	name = "Esercito di Venezia"
+	location = 729
+	regiment = {
+		name= "1. Fanteria di Linea"
+		type = infantry
+		home = 729
+	}
+
+	regiment = {
+		name= "2. Fanteria di Linea"
+		type = infantry
+		home = 729
+	}
+	
+	regiment = {
+		name= "3. Fanteria di Linea"
+		type = infantry
+		home = 730
+	}
+		
+	regiment = {
+		name= "1. Cavalleria Bresciana"
+		type = cuirassier
+		home = 728
+	}
+	
+	regiment = {
+		name= "2. Cavalleria Bergamasca"
+		type = cuirassier
+		home = 727
+	}
+}
+
+
+navy = {
+	name = "Flotta Veneziana"
+	location = 729
+	
+	ship = {
+		name= "Enrico Dandolo"
+		type = frigate
+	}
+
+	ship = {
+		name= "1o Trasporto Marittimo"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "2o Trasporto Marittimo"
+		type = clipper_transport
+	}
+
+}

@@ -1,0 +1,682 @@
+#Sphere
+
+NAS = {
+	value = 50
+	level = 5
+	influence_value = 0
+}
+
+SAX = {
+	value = 50
+	level = 5
+	influence_value = 0
+}
+
+BAD = {
+	value = 125
+	level = 5
+	influence_value = 0
+}
+
+SWI = {
+	value = 125
+	level = 5
+	influence_value = 0
+}
+
+AUS = {
+	value = 50
+	level = 5
+	influence_value = 0
+}
+
+SVY = {
+	value = 125
+	level = 5
+	influence_value = 0
+}
+
+MFR = {
+	value = 125
+	level = 5
+	influence_value = 0
+}
+
+TST = {
+	value = 50
+	level = 5
+	influence_value = 0
+}
+
+VEN = {
+	value = 50
+	level = 5
+	influence_value = 0
+}
+
+SRD = {
+	value = 50
+	level = 5
+	influence_value = 0
+}
+
+BRB = {
+	value = 50
+	level = 5
+	influence_value = 0
+}
+
+#GPs
+ENL = { value = 25 }
+SPA = { value = -50 }
+BRN = { value = -50 }
+
+leader = {
+		name = "Bertrand Clauzel"
+		date = 1803.1.1
+		type = land
+		personality = inefficient
+		background = elderly
+		prestige = 0.3
+	}
+	
+leader = {
+	name = "de la Piconnerie"
+	date = 1836.1.1
+	type = land
+	personality = confident
+	background = professor
+	prestige = 0.2
+}
+
+leader = {
+	name = "Jean-Isidore Harispe"
+	date = 1830.1.1
+	type = land
+	personality = heroic
+	background = natural_born_leader
+	prestige = 0.1
+}
+
+leader = {
+	name = "Guy-Victor Duperré"
+	date = 1811.1.1
+	type = sea
+	personality = au_fait
+	background = natural_born_leader
+	prestige = 0.3
+}
+
+leader = {
+	name = "Comte de Castelanne"
+	date = 1823.1.1
+	type = land
+	personality = incapable
+	background = aristocrat
+	prestige = 0
+}
+
+leader = {
+	name = "Jacques Achard"
+	date = 1823.1.1
+	type = land
+	personality = relentless
+	background = elderly
+	prestige = 0
+}
+
+leader = {
+	name = "Charles Baudin"
+	date = 1836.1.1
+	type = sea
+	personality = stouthearted
+	background = unfit
+	prestige = 0.2
+}
+
+
+leader = {
+	name = "de la Brunerie"
+	date = 1836.1.1
+	type = sea
+	personality = stouthearted
+	background = unfit
+	prestige = 0.1
+}
+
+army = {
+	name = "Garde Royale"
+	location = 425
+	regiment = {
+		name= "1.Garde Royale"
+		type = infantry
+		home = 425
+	}
+
+	regiment = {
+		name= "2.Garde Royale"
+		type = infantry
+		home = 426
+	}
+
+	regiment = {
+		name= "3.Garde Royale"
+		type = infantry
+		home = 427
+	}
+	
+	regiment = {
+		name= "4.Garde Royale"
+		type = infantry
+		home = 438
+	}
+	
+	regiment = {
+		name= "1ère Division de Cuirassiers"
+		type = cuirassier
+		home = 420
+	}
+	
+	regiment = {
+		name= "2ème Division de Cuirassiers"
+		type = cuirassier
+		home = 446
+	}
+
+	regiment = {
+		name= "3ème Division de Cuirassiers"
+		type = cuirassier
+		home = 400
+	}
+	
+	regiment = {
+		name= "1.1ère Division d'Artillerie"
+		type = artillery
+		home = 425
+	}
+	
+	regiment = {
+		name= "2.1ère Division d'Artillerie"
+		type = artillery
+		home = 400
+	}
+
+}
+
+army = {
+	name = "1ère Armée"
+	location = 414
+	
+	regiment = {
+		name= "1.1ème Division d'Infanterie"
+		type = infantry
+		home = 441
+	}
+
+	regiment = {
+		name= "2.1ème Division d'Infanterie"
+		type = infantry
+		home = 2570
+	}
+
+	regiment = {
+		name= "3.1ème Division d'Infanterie"
+		type = infantry
+		home = 404
+	}
+	
+	regiment = {
+		name= "2.1ère Division d'Infanterie"
+		type = infantry
+		home = 399
+	}
+	
+	regiment = {
+		name= "1ère Division de Cuirassiers"
+		type = cuirassier
+		home = 458
+	}
+	
+	regiment = {
+		name= "2ème Division de Cuirassiers"
+		type = cuirassier
+		home = 402
+	}
+
+	regiment = {
+		name= "3ème Division de Cuirassiers"
+		type = cuirassier
+		home = 403
+	}
+
+	regiment = {
+		name= "1.1ème Division d'Artillerie"
+		type = artillery
+		home = 399
+	}
+	
+	regiment = {
+		name= "2.1ème Division d'Artillerie"
+		type = artillery
+		home = 400
+	}
+
+}
+	
+army = {
+	name = "2ème Armée"
+	location = 471
+
+	regiment = {
+		name= "1.Garde Royale"
+		type = infantry
+		home = 440
+	}
+	
+	regiment = {
+		name= "1.7ème Division d'Infanterie"
+		type = infantry
+		home = 415
+	}
+
+	regiment = {
+		name= "2.7ème Division d'Infanterie"
+		type = infantry
+		home = 416
+	}
+
+	regiment = {
+		name= "3.7ème Division d'Infanterie"
+		type = infantry
+		home = 417
+	}
+
+	regiment = {
+		name= "1ère Division de Cuirassers"
+		type = cuirassier
+		home = 418
+	}
+
+	regiment = {
+		name= "2ème Division de Cuirassers"
+		type = cuirassier
+		home = 406
+	}
+	
+	regiment = {
+		name= "3ème Division de Cuirassers"
+		type = cuirassier
+		home = 452
+	}
+
+	regiment = {
+		name= "3.1ère Division d'Artillerie"
+		type = artillery
+		home = 453
+	}
+	
+	regiment = {
+		name= "4.1ère Division d'Artillerie"
+		type = artillery
+		home = 399
+	}
+
+}
+
+army = {
+	name = "3ème Armée"
+	
+	location = 458
+	regiment = {
+		name= "1.4ème Division d'Infanterie"
+		type = infantry
+		home = 425
+	}
+
+	regiment = {
+		name= "2.4ème Division d'Infanterie"
+		type = infantry
+		home = 423
+	}
+
+	regiment = {
+		name= "3.4ème Division d'Infanterie"
+		type = infantry
+		home = 432
+	}
+
+	regiment = {
+		name= "1.5ème Division d'Infanterie"
+		type = infantry
+		home = 439
+	}
+
+	regiment = {
+		name= "2.5ème Division de Cuirassiers"
+		type = cuirassier
+		home = 433
+	}
+
+	regiment = {
+		name= "3.5ème Division de Cuirassiers"
+		type = cuirassier
+		home = 431
+	}
+	
+	regiment = {
+		name= "5.7ème Division de Cuirassiers"
+		type = cuirassier
+		home = 448
+	}
+
+	regiment = {
+		name= "1ème Division d'Artillerie"
+		type = artillery
+		home = 442
+	}
+	
+}
+
+
+army = {
+	name = "1ère Armée d'Amerique"
+	location = 243
+	
+	regiment = {
+		name= "1ère Division Coloniale"
+		type = infantry
+		home = 242
+	}
+
+	regiment = {
+		name= "2ème Division Coloniale"
+		type = infantry
+		home = 243
+	}
+	
+	regiment = {
+		name= "3ème Division Coloniale"
+		type = infantry
+		home = 244
+	}
+	
+	regiment = {
+		name= "1.1ère Division de cavalerie"
+		type = cuirassier
+		home = 422
+	}
+
+	regiment = {
+		name= "2.1ère Division de cavalerie"
+		type = cuirassier
+		home = 436
+	}
+	
+	regiment = {
+		name= "1ère Division d'Artillerie"
+		type = artillery
+		home = 459
+	}
+}
+
+army = {
+	name = "2ème Armée d'Amerique"
+	location = 200
+	
+	regiment = {
+		name= "1ère Division Coloniale"
+		type = infantry
+		home = 199
+	}
+
+	regiment = {
+		name= "2ème Division Coloniale"
+		type = infantry
+		home = 200
+	}
+	
+	regiment = {
+		name= "3ème Division Coloniale"
+		type = infantry
+		home = 201
+	}
+	
+	regiment = {
+		name= "1.8ème Division de Cuirassiers"
+		type = cuirassier
+		home = 455
+	}
+
+	regiment = {
+		name= "2.8ème Division de Cuirassiers"
+		type = cuirassier
+		home = 457
+	}
+
+	regiment = {
+		name= "1ère Division d'Artillerie"
+		type = artillery
+		home = 449
+	}
+
+}
+
+army = {
+	name = "Garnison du Argentine"
+	location = 2324
+	regiment = {
+		name= "1ère Division Coloniale"
+		type = infantry
+		home = 2323
+	}
+
+	regiment = {
+		name= "2ème Division Coloniale"
+		type = infantry
+		home = 2324
+	}
+	
+	regiment = {
+		name= "3ème Division Coloniale"
+		type = infantry
+		home = 2325
+	}
+	
+	regiment = {
+		name= "1.10ème Division de Cuirassiers"
+		type = cuirassier
+		home = 411
+	}
+
+	regiment = {
+		name= "2.10ème Division de Cuirassiers"
+		type = cuirassier
+		home = 407
+	}
+
+	regiment = {
+		name= "3.10ème Division d'Artillerie"
+		type = artillery
+		home = 444
+	}
+
+}
+
+army = {
+	name = "Garnison de les Philipines"
+	location = 1455
+	regiment = {
+		name= "1ère Division Coloniale"
+		type = infantry
+		home = 1455
+	}
+
+	regiment = {
+		name= "2ème Division Coloniale"
+		type = infantry
+		home = 1456
+	}
+	
+	regiment = {
+		name= "3ème Division Coloniale"
+		type = infantry
+		home = 1457
+	}
+	
+	regiment = {
+		name= "1.11ème Division de Cuirassiers"
+		type = cuirassier
+		home = 467
+	}
+
+	regiment = {
+		name= "2.11ème Division de Cuirassiers"
+		type = cuirassier
+		home = 454
+	}
+
+	regiment = {
+		name= "3.11ème Division d'Artillerie"
+		type = artillery
+		home = 428
+	}
+
+}
+
+navy = {
+	name = "Escadre du Nord"
+	location = 420
+	ship = {
+		name= "Couronne"
+		type = manowar
+	}
+
+	ship = {
+		name= "Superbe"
+		type = manowar
+	}
+
+	ship = {
+		name= "Duchesse de Berry"
+		type = frigate
+	}
+
+	ship = {
+		name= "Thétis"
+		type = frigate
+	}
+
+	ship = {
+		name= "Astrée"
+		type = frigate
+	}
+
+	ship = {
+		name= "Amazone"
+		type = frigate
+	}
+
+	ship = {
+		name= "1ère Flotille de Transport"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "2ème Flotille de Transport"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "3ème Flotille de Transport"
+		type = clipper_transport
+	}
+	
+	ship = {
+		name= "4ème Flotille de Transport"
+		type = clipper_transport
+	}
+
+}
+
+navy = {
+	name = "Escadre de Méditerranée"
+	location = 470
+
+	ship = {
+		name= "Royal Louis "
+		type = manowar
+	}
+
+	ship = {
+		name= "Commerces de Paris"
+		type = manowar
+	}
+
+	ship = {
+		name= "Erigone"
+		type = frigate
+	}
+
+	ship = {
+		name= "Nereide"
+		type = frigate
+	}
+
+	ship = {
+		name= "Gloire"
+		type = frigate
+	}
+
+	ship = {
+		name= "Reine Blanche"
+		type = frigate
+	}
+
+	ship = {
+		name= "4ème Flotille de Transport"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "5ème Flotille de Transport"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "6ème Flotille de Transport"
+		type = clipper_transport
+	}
+	
+	ship = {
+		name= "7ème Flotille de Transport"
+		type = clipper_transport
+	}
+
+}
+
+navy = {
+	name = "Escadre de l'Amerique du Nord"
+	location = 243
+	ship = {
+		name= "Terpsichore"
+		type = frigate
+	}
+
+	ship = {
+		name= "Arthémise"
+		type = frigate
+	}
+
+	ship = {
+		name= "5ème Flotille de Transport"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "6ème Flotille de Transport"
+		type = clipper_transport
+	}
+
+}
+	
+	

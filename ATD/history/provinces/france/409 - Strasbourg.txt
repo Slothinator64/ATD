@@ -1,0 +1,7 @@
+owner = BAD
+controller = BAD
+add_core = BAD
+trade_goods = grain
+life_rating = 31
+terrain = strasburg
+1861.1.1 = { railroad = 3 }

@@ -1,0 +1,55 @@
+leader = {
+	name = "Gabriel Válek"
+	date = 1836.1.1
+	type = land
+	personality = implacable
+	background = sycophant
+	prestige = 0.3
+}
+
+army = {
+	name = "Army of Bohemia"
+	location = 625
+	regiment = {
+		name= "1. Infantry"
+		type = infantry
+		home = 625
+	}
+
+	regiment = {
+		name= "2. Infantry"
+		type = infantry
+		home = 625
+	}
+	
+	regiment = {
+		name= "3. Infantry"
+		type = infantry
+		home = 626
+	}
+	
+	regiment = {
+		name= "4. Infantry"
+		type = infantry
+		home = 627
+	}
+		
+	regiment = {
+		name= "1. Cavalry"
+		type = cuirassier
+		home = 628
+	}
+	
+	regiment = {
+		name= "2. Cavalry"
+		type = cuirassier
+		home = 629
+	}
+	
+	regiment = {
+		name= "1. Artillery"
+		type = artillery
+		home = 630
+	}
+}
+

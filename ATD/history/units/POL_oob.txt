@@ -1,0 +1,143 @@
+leader = {
+	name = "Gustaw Podbielski"
+	date = 1836.1.1
+	type = land
+	personality = lilylivered
+	background = cartographer
+	prestige = 0.3
+}
+
+leader = {
+	name = "Antoni Kosub"
+	date = 1836.1.1
+	type = land
+	personality = craven
+	background = rising_star
+	prestige = 0.2
+}
+
+leader = {
+	name = "Klaudiusz Mostek"
+	date = 1836.1.1
+	type = sea
+	personality = clever
+	background = rising_star
+	prestige = 0.3
+}
+
+army = {
+	name = "Army of Warsaw"
+	location = 706
+	regiment = {
+		name= "I. Infantry"
+		type = infantry
+		home = 706
+	}
+
+	regiment = {
+		name= "II. Infantry"
+		type = infantry
+		home = 699
+	}
+	
+	regiment = {
+		name= "III. Infantry"
+		type = infantry
+		home = 708
+	}
+
+	regiment = {
+		name= "I. Cavalry"
+		type = cuirassier
+		home = 703
+	}
+	
+	regiment = {
+		name= "II. Cavalry"
+		type = cuirassier
+		home = 701
+	}
+
+	regiment = {
+		name= "I. Artillery"
+		type = artillery
+		home = 710
+	}
+}
+
+army = {
+	name = "Army of Gdansk"
+	location = 690
+	regiment = {
+		name= "I. Infantry"
+		type = infantry
+		home = 712
+	}
+
+	regiment = {
+		name= "II. Infantry"
+		type = infantry
+		home = 691
+	}
+	
+	regiment = {
+		name= "III. Infantry"
+		type = infantry
+		home = 693
+	}
+
+	regiment = {
+		name= "I. Cavalry"
+		type = cuirassier
+		home = 713
+	}
+	
+	regiment = {
+		name= "II. Cavalry"
+		type = cuirassier
+		home = 712
+	}
+
+	regiment = {
+		name= "I. Artillery"
+		type = artillery
+		home = 713
+	}
+}
+
+navy = {
+	name = "Gdansk Fleet"
+	location = 690
+	
+	ship = {
+		name= "Wisla"
+		type = manowar
+	}
+	
+	ship = {
+		name= "Anna"
+		type = frigate
+	}
+	
+	ship = {
+		name= "Maria"
+		type = frigate
+	}
+
+	ship = {
+		name= "1o Sea Transport"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "2o Sea Transport"
+		type = clipper_transport
+	}
+	
+	ship = {
+		name= "3o Sea Transport"
+		type = clipper_transport
+	}
+
+}
+

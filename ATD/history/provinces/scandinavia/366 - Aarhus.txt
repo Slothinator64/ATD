@@ -1,0 +1,6 @@
+owner = JTL
+controller = JTL
+add_core = JTL
+add_core = DEN
+trade_goods = grain
+life_rating = 35

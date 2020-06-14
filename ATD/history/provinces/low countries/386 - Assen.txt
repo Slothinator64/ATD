@@ -1,0 +1,6 @@
+owner = BRN
+controller = BRN
+add_core = BRN
+add_core = NET
+trade_goods = wool
+life_rating = 35

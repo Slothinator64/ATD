@@ -1,0 +1,6 @@
+owner = AUS
+controller = AUS
+add_core = SER
+add_core = SIE
+trade_goods = grain
+life_rating = 35

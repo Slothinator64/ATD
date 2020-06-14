@@ -1,0 +1,18 @@
+leader = {
+	name = "Wolfgang Joachim"
+	date = 1836.1.1
+	type = land
+	personality = clever
+	background = old_school
+	prestige = 0.3
+}
+
+army = {
+	name = "Bischofsarmee"
+	location = 570
+	regiment = {
+		name= "1. Infanteriebrigade"
+		type = infantry
+		home = 570
+	}
+}

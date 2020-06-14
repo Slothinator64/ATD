@@ -1,0 +1,28 @@
+leader = {
+	name = "Christer Brodd"
+	date = 1836.1.1
+	type = land
+	personality = impetuous
+	background = cursed_luck
+	prestige = 0.3
+}
+
+army = {
+	name = "Jutlande Haeren"
+	location = 368
+	regiment = {
+		name= "1.1. Infanteridivision"
+		type = infantry
+		home = 366
+	}
+	regiment = {
+		name= "2.1. Infanteridivision"
+		type = infantry
+		home = 366
+	}
+	regiment = {
+		name= "1.1. Kavalleridivision"
+		type = cuirassier
+		home = 367
+	}
+}

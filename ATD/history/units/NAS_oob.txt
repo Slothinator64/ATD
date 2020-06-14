@@ -1,0 +1,32 @@
+leader = {
+	name = "Marian Rahner"
+	date = 1836.1.1
+	type = land
+	personality = lilylivered
+	background = natural_born_leader
+	prestige = 0.3
+}
+
+army = {
+	name = "Nassauische Heer"
+	location = 565
+	
+	regiment = {
+		name = "1. Infanteriebrigade"
+		type = infantry
+		home = 578
+	}
+	
+	regiment = {
+		name = "2. Infanteriebrigade"
+		type = infantry
+		home = 578
+	}
+	
+	regiment = {
+		name = "1. Cavalleriebrigade"
+		type = cuirassier
+		home = 572
+	}
+}
+
